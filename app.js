@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const cookieSession = require("cookie-session");
 const passport = require('passport');
 const mongoose = require("mongoose");
+const socket = require("socket.io");
 const passportLocalMongoose = require("passport-local-mongoose");
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const keys = require("./rootaccess.js");
@@ -16,7 +17,7 @@ const app = express();
 mongoose.connect("mongodb://localhost:27017/swiftprep-videos", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 
 app.set('view engine', 'ejs');
-
+app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended : true }));
 app.use(cookieSession({
     maxAge: 6*60*60*1000,
@@ -33,6 +34,7 @@ var Video = mongoose.model("Video", videoSchema);
 var userSchema = new mongoose.Schema({
     username: String,
     googleID: String,
+    loggedDevices: {type: Number, default: 0}
 });
 var User = mongoose.model("User", userSchema);
 
@@ -87,13 +89,13 @@ app.get('/', function(req, res) {
 //Search results
 app.post('/search', function(req, res) {
     var s = req.body.search;
-    res.render('results', {link: keys.aws.urlCode, file: s});
+    res.render('showVideo', {link: keys.aws.urlCode, file: s});
 });
 
 //View private page(only if the user is logged in)
 app.get('/view', function(req, res) {
     if(req.user) {
-        res.render('results', {link: keys.aws.urlCode, file: 'BITS-CS-5-MI-2'});
+        res.render('showVideo', {link: keys.aws.urlCode, file: 'BITS-CS-5-MI-2'});
     } else {
         res.redirect('/google');
     }
@@ -118,6 +120,27 @@ app.get('/logout', function(req, res) {
 });
 
 //listener
-app.listen(3000, "localhost", function(){
+var server = app.listen(3000, "localhost", function(){
     console.log("SERVER IS RUNNING!");
  });
+
+var io = socket(server);
+io.on('connection', (socket) => {
+    console.log("Made socket connection.");
+
+    socket.on('play', function(curUser) {
+        User.findById(curUser, function(err, foundUser) {
+            foundUser.loggedDevices++;
+            console.log(foundUser.loggedDevices);
+            socket.emit('play', foundUser.loggedDevices);
+        });
+    });
+
+    socket.on('pause', function(curUser) {
+        User.findById(curUser, function(err, foundUser) {
+            foundUser.loggedDevices--;
+            console.log(foundUser.loggedDevices);
+            socket.emit('pause', foundUser.loggedDevices);
+        });
+    });
+});
