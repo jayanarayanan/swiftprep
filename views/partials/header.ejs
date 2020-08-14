@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftPrep</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:3000/stylesheets/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <div style="width: 75%; margin-left: auto; margin-right: auto;">
+    <nav class="navbar">
+        <a class="navbar-brand">SwiftPrep</a>
+            <% if(!currentUser){ %>
+              <a class="nav-link" href="/google">Login</a>
+            <% } else { %>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <%= currentUser.username %>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                      <button class="dropdown-item" type="button">Profile</button>
+                      <div class="dropdown-divider"></div>
+                      <a href="/logout" class=" dropdown-item btn btn-primary">Logout</a>
+                    </div>
+                  </div>
+            <% } %>
+      </nav>
+    </div>

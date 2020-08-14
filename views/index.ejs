@@ -1,36 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link  rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-    <title>Homepage</title>
-</head>
-<body>
+<%- include ("./partials/header") %>
 
-        <br><br><br>
-        <form action="/search" method="POST">
-            <input type="text" name="search">
-            <input type="submit" value="Search Query"> 
-        </form>
-<br><br>
-        <form action="/pes" method="GET">
-            <input type="submit" value="PES Syllabus"> 
-        </form><br>
-        <br>
-        <form action="/view" method="GET">
-            <input type="submit" value="Private"> 
-        </form><br>
-        <% if(!currentUser) { %>
+    <div id="indexCard">
+        <img class="img-fluid" src="http://localhost:3000/images/index-card.png">
+        <% if(!currentUser){ %>
         <form action="/google" method="GET">
-            <input type="submit" value="Login with Google"> 
-        </form><br>
+            <input id="butn" class="btn btn-primary" type="submit" value="Lets Go!">
+        </form>
         <% } else { %>
-            <h3>Welcome <%= currentUser.username %></h3>
-        <form action="/logout" method="GET">
-            <input type="submit" value="Logout"> 
-        </form><br>
         <% } %>
-</body>
-</html>
+    </div>
+
+    <div class="features">
+        <div class="feature-item">
+            <img class="featureImg" src="http://localhost:3000/images/dummy.jpg">
+            <div class="content">
+            <h2><strong>Feature Heading</strong></h2>
+            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, doloribus maxime. Obcaecati, provident quos? Minus perspiciatis nemo voluptatibus id possimus quos sunt aliquam magni ipsam expedita! Aperiam molestiae hic voluptatum!</h4>
+        </div>
+        </div>
+        <div class="feature-item">
+            <div class="content2">
+                <h2><strong>Feature Heading</strong></h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, doloribus maxime. Obcaecati, provident quos? Minus perspiciatis nemo voluptatibus id possimus quos sunt aliquam magni ipsam expedita! Aperiam molestiae hic voluptatum!</h4>
+            </div>
+            <img class="featureImg2" src="http://localhost:3000/images/dummy.jpg">
+        </div>
+        <div class="feature-item">
+            <img class="featureImg" src="http://localhost:3000/images/dummy.jpg">
+            <div class="content">
+            <h2><strong>Feature Heading</strong></h2>
+            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, doloribus maxime. Obcaecati, provident quos? Minus perspiciatis nemo voluptatibus id possimus quos sunt aliquam magni ipsam expedita! Aperiam molestiae hic voluptatum!</h4>
+        </div>
+        </div>
+    </div>
+
+<%- include ("./partials/footer") %>

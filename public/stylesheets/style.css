@@ -1,0 +1,93 @@
+#footer {
+clear: both;
+position: relative;
+height: 200px;
+margin-top: -100px;
+}
+
+#indexCard {
+    position: relative;
+    margin: 50px auto;
+    max-width: 70%;
+}
+
+#indexCard #butn {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+@media (max-width: 650px) {
+    #butn {
+      font-size:8px;
+      padding:3px 4px;
+    }
+  }
+
+@media (min-width: 650px) {
+    #butn {
+      font-size:11px;
+      padding:4px 6px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    #butn {
+      font-size:12px;
+      padding:6px 12px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    #butn {
+      font-size:14px;
+      padding:8px 12px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    #butn {
+      padding:10px 22px;
+      font-size:18px;
+    }
+  }
+
+.features {
+    margin: 40px 100px;
+    overflow: hidden;
+}
+.feature-item {
+  display: block; 
+  clear: both;
+}
+
+.feature-item .featureImg {
+    min-width: 30%;
+    max-width: 30%;
+    margin: 250px 100px;
+    float: left;
+}
+
+.feature-item .content {
+    min-width: 30%;
+    max-width: 40%;
+    margin: 300px 120px;
+    float: right;
+}
+
+.feature-item .featureImg2 {
+    min-width: 30%;
+    max-width: 30%;
+    margin: 150px 100px;
+    float: right;
+}
+
+.feature-item .content2 {
+    min-width: 30%;
+    max-width: 40%;
+    margin: 200px 120px;
+    float: left;
+}
+

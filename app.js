@@ -105,6 +105,7 @@ app.get('/view', function(req, res) {
 //Login page
 app.get('/google', passport.authenticate('google', {
     scope: ['profile'],
+    prompt: 'select_account'
 })
 );
 
