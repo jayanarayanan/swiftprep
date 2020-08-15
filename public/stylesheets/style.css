@@ -2,12 +2,12 @@
 clear: both;
 position: relative;
 height: 200px;
-margin-top: -100px;
+margin-top: -50px;
 }
 
 #indexCard {
     position: relative;
-    margin: 50px auto;
+    margin: 75px auto;
     max-width: 70%;
 }
 
@@ -24,6 +24,49 @@ margin-top: -100px;
       font-size:8px;
       padding:3px 4px;
     }
+    .features {
+      margin: 30px 30px;
+      overflow: hidden;
+  }
+  .feature-item {
+    display: block; 
+    clear: both;
+  }
+  
+   .featureImg {
+      position: relative;
+      display: block; 
+      margin: 80px auto;
+      max-width: 70%;
+      min-width: 70%;
+  }
+  
+  .content {
+      display: block; 
+      margin: 50px auto;
+      max-width: 80%;
+  }
+  
+   .featureImg2 {
+    position: relative;
+    display: block; 
+    margin: 80px auto;
+    max-width: 70%;
+    min-width: 70%;
+  }
+  
+   .content2 {
+    margin: 50px auto;
+    display: block; 
+    max-width: 80%;
+  }
+  .content-head{
+    font-size: 2.5vw;
+  }
+
+    .content-text {
+    font-size: 2.2vw;
+  }
   }
 
 @media (min-width: 650px) {
@@ -31,12 +74,62 @@ margin-top: -100px;
       font-size:11px;
       padding:4px 6px;
     }
+    .features {
+      margin: 30px 30px;
+      overflow: hidden;
+  }
+  .feature-item {
+    display: block; 
+    clear: both;
+  }
+  
+   .featureImg {
+      position: relative;
+      display: block; 
+      margin: 80px auto;
+      max-width: 50%;
+      min-width: 50%;
+  }
+  
+   .content {
+      display: block; 
+      margin: 50px auto;
+      max-width: 75%;
+  }
+  
+   .featureImg2 {
+    position: relative;
+    display: block; 
+    margin: 80px auto;
+    max-width: 50%;
+    min-width: 50%;
+  }
+  
+   .content2 {
+    margin: 50px auto;
+    display: block; 
+    max-width: 75%;
+  }
+  .content-head{
+    font-size: 2.3vw;
+  }
+
+    .content-text {
+    font-size: 2vw;
+  }
   }
   
   @media (min-width: 768px) {
     #butn {
       font-size:12px;
       padding:6px 12px;
+    }
+    .content-head{
+      font-size: 2vw;
+    }
+  
+      .content-text {
+      font-size: 1.8vw;
     }
   }
   
@@ -45,6 +138,13 @@ margin-top: -100px;
       font-size:14px;
       padding:8px 12px;
     }
+    .content-head{
+      font-size: 1.8vw;
+    }
+  
+      .content-text {
+      font-size: 1.5vw;
+    }
   }
   
   @media (min-width: 1200px) {
@@ -52,42 +152,91 @@ margin-top: -100px;
       padding:10px 22px;
       font-size:18px;
     }
+    .features {
+      margin: 30px 60px;
+      overflow: hidden;
+  }
+  .feature-item {
+    display: block; 
+    clear: both;
+  }
+  
+  .featureImg {
+      min-width: 30%;
+      max-width: 30%;
+      margin: 150px 70px;
+      float: left;
+  }
+  
+   .content {
+      min-width: 30%;
+      max-width: 40%;
+      margin: 120px 80px;
+      float: right;
+      font-size: 2vw;
+  }
+  
+   .featureImg2 {
+      min-width: 30%;
+      max-width: 30%;
+      margin: 100px 75px;
+      float: right;
+  }
+  
+    .content2 {
+      min-width: 30%;
+      max-width: 40%;
+      margin: 120px 80px;
+      float: left;
+      font-size: 2vw;
+  }
+  .content-head{
+    font-size: 1.5vw;
   }
 
-.features {
-    margin: 40px 100px;
-    overflow: hidden;
-}
-.feature-item {
-  display: block; 
-  clear: both;
-}
+    .content-text {
+    font-size: 1.2vw;
+  }
+  }
+  @media (min-width: 1670px) {
 
-.feature-item .featureImg {
-    min-width: 30%;
-    max-width: 30%;
-    margin: 250px 100px;
-    float: left;
-}
+    .features {
+      margin: 40px 100px;
+      overflow: hidden;
+  }
+  .feature-item {
+    display: block; 
+    clear: both;
+  }
+  
+    .featureImg {
+      min-width: 30%;
+      max-width: 30%;
+      margin: 250px 100px;
+      float: left;
+  }
+  
+ .content {
+      min-width: 30%;
+      max-width: 40%;
+      margin: 300px 120px;
+      float: right;
+  }
+  
+  .featureImg2 {
+      min-width: 30%;
+      max-width: 30%;
+      margin: 150px 100px;
+      float: right;
+  }
+  
+   .content2 {
+      min-width: 30%;
+      max-width: 40%;
+      margin: 200px 120px;
+      float: left;
+  }
+  }
 
-.feature-item .content {
-    min-width: 30%;
-    max-width: 40%;
-    margin: 300px 120px;
-    float: right;
-}
 
-.feature-item .featureImg2 {
-    min-width: 30%;
-    max-width: 30%;
-    margin: 150px 100px;
-    float: right;
-}
-
-.feature-item .content2 {
-    min-width: 30%;
-    max-width: 40%;
-    margin: 200px 120px;
-    float: left;
-}
 
