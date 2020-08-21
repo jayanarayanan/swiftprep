@@ -238,5 +238,10 @@ margin-top: -50px;
   }
   }
 
+  .dp {
+    border-radius: 50%;
+    max-width: 60px;
+  }
+
 
 

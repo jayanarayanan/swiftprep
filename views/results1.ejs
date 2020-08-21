@@ -1,0 +1,56 @@
+<%- include ("./partials/header") %>
+
+<div style="max-width: 1100px" >
+    <video id="video1" class="video-js vjs-default-skin vjs-big-play-centered" controls  data-setup='{"playbackRates": [1, 1.25, 1.5, 1.75, 2], "fluid": true}'>
+        <source src="https://<%= link %>.cloudfront.net/<%= video.VName %>.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<p class='commenthead'><strong> Comments </strong></p><br>
+
+<form action ='/view/<%= video._id %>/comment' method ='POST'>
+    <div class='form-group'>
+    <input class='comment' type='text' name='comment' placeholder='add new comment'>
+    </div>
+    <div class='form-group'>
+    <input class='submit' type="submit" name="submit" value="Comment">
+    </div>
+</form>
+
+<% if (typeof video.comments != 'undefined' && video.comments != null) { %>
+    <% video.comments.forEach(function(comment){ %>
+<div class="media">
+    <img src="<%= comment.author.dp %>" class="mr-3 dp" alt="...">
+    <div class="media-body">
+      <h5 class="mt-0"><%= comment.author.username %></h5>
+      <%= comment.text %>
+      <% if(comment.replies != null) { %>
+        <% comment.replies.forEach(function(reply){ %>
+      <div class="media mt-3">
+        <ul>
+            <li class="media">
+                <a class="mr-3" href="#">
+                    <img src="<%= reply.author.dp %>" class="mr-3 dp" alt="...">
+                  </a>
+                  <div class="media-body">
+                    <h5 class="mt-0"><%= reply.author.username %></h5>
+                    <%= reply.text %>
+                    <% })} %>
+                  </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+        <form action ='/view/<%= video._id %>/<%= comment._id %>/reply' method ='POST'>
+            <div class='form-group'>
+            <input class='reply' type='text' name='reply' placeholder='add new reply'>
+            </div>
+            <div >
+            <button class='replybut'>Reply</button>
+            </div>
+        </form>
+    <% })} %>
+<%- include ("./partials/footer") %>
