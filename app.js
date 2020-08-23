@@ -37,6 +37,7 @@ var User = mongoose.model("User", userSchema);
 
 var commentSchema = new mongoose.Schema({
     text: String,
+    created: {type: Date, default: Date.now},
     author: {
           id: {
               type: mongoose.Schema.Types.ObjectId,
@@ -47,6 +48,7 @@ var commentSchema = new mongoose.Schema({
          },
     replies: [{
             text: String,
+            created: {type: Date, default: Date.now},
             author: {
                 id: {
                     type: mongoose.Schema.Types.ObjectId,
@@ -60,8 +62,22 @@ var commentSchema = new mongoose.Schema({
 var Comment = mongoose.model("Comment", commentSchema);
 
 var videoSchema = new mongoose.Schema({
-    VName: String,
-    Mentor: String,
+    College: String,
+    Branch: [{
+        name: String,
+        Sem: [{
+            number: Number,
+            Subject: [{
+                name: String,
+                short: String,
+                Chapter: [{
+                    number: Number,
+                    VName: String,
+                    Mentor: String,
+                }],
+            }],
+        }],
+    }],
     comments: [
         {
            type: mongoose.Schema.Types.ObjectId,
@@ -132,6 +148,22 @@ app.use(function(req, res, next){
 app.get('/', function(req, res) {
     res.render('index');
 });
+
+//filter page
+// app.get('/filter', function(req, res) {
+//     res.render('filter');
+// })
+
+//listing subjects
+app.post('/filter', function(req, res) {
+    Video.find({College: req.body.college, Branch: req.body.branch, Sem: req.body.sem}, function(err, foundVideos) {
+        if(err) {
+            console.log(err);
+        } else {
+            res.render("list", {videos: foundVideos});
+        }
+    })
+})
 
 //View video page
 app.get('/view/:id', function(req, res) {

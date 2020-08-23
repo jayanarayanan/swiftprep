@@ -23,22 +23,22 @@
 <div class="media">
     <img src="<%= comment.author.dp %>" class="mr-3 dp" alt="...">
     <div class="media-body">
-      <h5 class="mt-0"><%= comment.author.username %></h5>
-      <%= comment.text %>
-      <% if(comment.replies != null) { %>
-        <% comment.replies.forEach(function(reply){ %>
+      <h5 class="mt-0"><%= comment.author.username %> <small><small><i> <%= comment.created.toUTCString() %></i></small></small></h5>
+      <%= comment.text %> <br>
       <div class="media mt-3">
         <ul>
+          <% if(comment.replies != null) { %>
+            <% comment.replies.forEach(function(reply){ %>
             <li class="media">
                 <a class="mr-3" href="#">
                     <img src="<%= reply.author.dp %>" class="mr-3 dp" alt="...">
                   </a>
                   <div class="media-body">
-                    <h5 class="mt-0"><%= reply.author.username %></h5>
+                    <h5 class="mt-0"><%= reply.author.username %> <small><small><i> <%= reply.created.toUTCString() %></i></small></small></h5>
                     <%= reply.text %>
-                    <% })} %>
                   </div>
-            </li>
+            </li><br>
+            <% })} %>
         </ul>
       </div>
     </div>
