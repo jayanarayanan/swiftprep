@@ -62,22 +62,12 @@ var commentSchema = new mongoose.Schema({
 var Comment = mongoose.model("Comment", commentSchema);
 
 var videoSchema = new mongoose.Schema({
-    College: String,
-    Branch: [{
-        name: String,
-        Sem: [{
-            number: Number,
-            Subject: [{
-                name: String,
-                short: String,
-                Chapter: [{
-                    number: Number,
-                    VName: String,
-                    Mentor: String,
-                }],
-            }],
-        }],
-    }],
+    CBS: String,
+    Subject: String,
+    SubShort: String,
+    Chapter: Number,
+    VName: String,
+    Mentor: String,
     comments: [
         {
            type: mongoose.Schema.Types.ObjectId,
@@ -149,18 +139,29 @@ app.get('/', function(req, res) {
     res.render('index');
 });
 
-//filter page
-// app.get('/filter', function(req, res) {
-//     res.render('filter');
-// })
+// filter page
+app.get('/filter', function(req, res) {
+    res.render('filter');
+})
 
 //listing subjects
 app.post('/filter', function(req, res) {
-    Video.find({College: req.body.college, Branch: req.body.branch, Sem: req.body.sem}, function(err, foundVideos) {
+    var cbs = req.body.college + "-" + req.body.branch + "-" + "5";
+    Video.find({CBS: cbs}, function(err, foundVideos) {
         if(err) {
             console.log(err);
         } else {
-            res.render("list", {videos: foundVideos});
+            Video.aggregate([{
+            $match: { "CBS": cbs}},
+            {$group: { 
+                _id: "$Subject" }
+            }], function(err, subUnique) {
+                if(err) {
+                    console.log(err);
+                } else {
+                    res.render("list", {videos: foundVideos, subunique: subUnique});
+                }
+            });
         }
     })
 })
@@ -238,7 +239,7 @@ app.get('/google', passport.authenticate('google', {
 
 //Passport auth
 app.get('/google/redirect', passport.authenticate('google'), function(req, res) {
-    res.redirect('/');
+    res.redirect('/filter');
 });
 
 //logout page
@@ -281,4 +282,6 @@ var server = app.listen(3000, "localhost", function(){
 //     });
 // });
 
-//Video.create({VName: 'BITS-CS-1-MI-2', Mentor: 'Aditya'});
+//Video.create({CBS: 'PES-CSE-5', Subject: 'Machine Intelligence', SubShort: 'MI', Chapter: 1, VName: 'PES-CSE-5-MI-1', Mentor: 'Aditya'});
+// Video.create({CBS: 'PES-CSE-5', Subject: 'Machine Intelligence', SubShort: 'MI', Chapter: 2, VName: 'PES-CSE-5-MI-2', Mentor: 'Aditya'});
+// Video.create({CBS: 'PES-ECE-5', Subject: 'Computer Organization', SubShort: 'CO', Chapter: 1, VName: 'PES-CSE-5-CO-1', Mentor: 'Aditya'});

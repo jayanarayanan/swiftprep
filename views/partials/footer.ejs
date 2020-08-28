@@ -5,9 +5,15 @@
       <li class="list-inline-item">
         <h5 class="mb-1">Start your prep!</h5>
       </li>
+      <% if(!currentUser){ %>
       <li class="list-inline-item">
         <a href="/google" class="btn btn-primary btn-rounded">Sign up!</a>
       </li>
+      <% } else { %>
+        <li class="list-inline-item">
+          <a href="/filter" class="btn btn-primary btn-rounded">Lets Go!</a>
+        </li>
+        <% } %>
     </ul>
   
     <hr>

@@ -5,25 +5,101 @@ height: 200px;
 margin-top: -50px;
 }
 
+html, body {
+  margin:0px;
+  height:100%;
+}
+
+.pg2-bg {
+  background-image: url('http://localhost:3000/images/page2-bg.jpeg');
+  width:100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.pg2-dd {
+  max-width: 60%;
+  padding-left: 20%;
+  padding-top: 15%;
+}
+.pg2-hd {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2.0vw;
+}
+
+.pg3-bg {
+  background-image: url('http://localhost:3000/images/page3-bg.jpeg');
+  width:100%;
+  height: 100%;
+  background-size: cover;
+}
+
+#cards {
+  display:inline-block;
+}
+
+.logo {
+  max-height: 25px;
+}
+
+.thumbnail {
+  max-width: 100%;
+}
+
+.sections {
+  text-align: center;
+  font-size: 40px;
+  margin: 60px auto;
+}
+
 #indexCard {
     position: relative;
-    margin: 75px auto;
-    max-width: 70%;
+    margin: 0 auto;
+    min-width: 100%;
+}
+
+#indexCard #centered {
+  position: absolute;
+  top: 37%;
+  left: 20%;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.ic-1 {
+  color: #0C82DA;
+  font-size: 2.0vw;
+}
+
+.ic-2 {
+  color: white;
+  font-size: 2.0vw;
+}
+
+.ic-3 {
+  color: #3EE384;
+  font-size: 2.0vw;
+}
+
+.indexImg {
+  min-width: 100%;
+  max-width: 100%;
 }
 
 #indexCard #butn {
     position: absolute;
-    top: 58%;
-    left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
 
 @media (max-width: 650px) {
-    #butn {
-      font-size:8px;
-      padding:3px 4px;
-    }
+
+  #butn {
+    top: 63%;
+    left: 42.5%;
+    font-size: 1.0vw; 
+    padding: 1px 2px;
+  }
     .features {
       margin: 30px 30px;
       overflow: hidden;
@@ -65,17 +141,22 @@ margin-top: -50px;
   }
 
     .content-text {
-    font-size: 2.2vw;
+    font-size: 2.6vw;
+    font-family: 'Quicksand', sans-serif;
+    color: #68E0CF;
   }
   }
 
 @media (min-width: 650px) {
-    #butn {
-      font-size:11px;
-      padding:4px 6px;
-    }
+
+  #butn {
+    top: 62%;
+    left: 42.5%;
+    font-size: 1.0vw; 
+    padding: 2px 3.5px;
+  }
     .features {
-      margin: 30px 30px;
+      margin: 80px 30px;
       overflow: hidden;
   }
   .feature-item {
@@ -86,27 +167,83 @@ margin-top: -50px;
    .featureImg {
       position: relative;
       display: block; 
-      margin: 80px auto;
+      margin: 80px auto 0;
       max-width: 50%;
       min-width: 50%;
   }
   
    .content {
       display: block; 
-      margin: 50px auto;
+      margin: 10px auto 40px;
       max-width: 75%;
   }
   
    .featureImg2 {
     position: relative;
     display: block; 
-    margin: 80px auto;
+    margin: 0 auto 80px;
     max-width: 50%;
     min-width: 50%;
   }
   
    .content2 {
-    margin: 50px auto;
+    margin: 40px auto 10px;
+    display: block; 
+    max-width: 75%;
+  }
+  .content-head{
+    font-size: 2.3vw;
+  }
+
+    .content-text {
+    font-size: 2.4vw;
+    font-family: 'Quicksand', sans-serif;
+    color: #68E0CF;
+  }
+  }
+  
+  @media (min-width: 768px) {
+
+    #butn {
+      top: 61%;
+      left: 42.5%;
+      font-size: 1.0vw; 
+      padding: 3px 5px;
+    }
+    .features {
+      margin: 80px auto;
+      overflow: hidden;
+      min-width: 768px;
+  }
+  .feature-item {
+    display: block; 
+    clear: both;
+  }
+  
+   .featureImg {
+      position: relative;
+      display: block; 
+      margin: 0 auto;
+      max-width: 50%;
+      min-width: 50%;
+  }
+  
+   .content {
+      display: block; 
+      margin: auto auto;
+      max-width: 75%;
+  }
+  
+   .featureImg2 {
+    position: relative;
+    display: block; 
+    margin: 0 auto;
+    max-width: 50%;
+    min-width: 50%;
+  }
+  
+   .content2 {
+    margin: auto auto;
     display: block; 
     max-width: 75%;
   }
@@ -116,132 +253,66 @@ margin-top: -50px;
 
     .content-text {
     font-size: 2vw;
+    font-family: 'Quicksand', sans-serif;
+    color: #68E0CF;
   }
   }
   
-  @media (min-width: 768px) {
+  @media (min-width: 1230px) {
+
     #butn {
-      font-size:12px;
-      padding:6px 12px;
-    }
-    .content-head{
-      font-size: 2vw;
-    }
-  
-      .content-text {
-      font-size: 1.8vw;
-    }
-  }
-  
-  @media (min-width: 992px) {
-    #butn {
-      font-size:14px;
-      padding:8px 12px;
-    }
-    .content-head{
-      font-size: 1.8vw;
-    }
-  
-      .content-text {
-      font-size: 1.5vw;
-    }
-  }
-  
-  @media (min-width: 1200px) {
-    #butn {
-      padding:10px 22px;
-      font-size:18px;
+      top: 59.5%;
+      left: 42.5%;
+      font-size: 1.0vw; 
+      padding: 4px 6px;
     }
     .features {
-      margin: 30px 60px;
+      margin: 100px auto;
       overflow: hidden;
+      min-width: 1230px;
   }
   .feature-item {
     display: block; 
     clear: both;
-  }
-  
-  .featureImg {
-      min-width: 30%;
-      max-width: 30%;
-      margin: 150px 70px;
-      float: left;
-  }
-  
-   .content {
-      min-width: 30%;
-      max-width: 40%;
-      margin: 120px 80px;
-      float: right;
-      font-size: 2vw;
-  }
-  
-   .featureImg2 {
-      min-width: 30%;
-      max-width: 30%;
-      margin: 100px 75px;
-      float: right;
-  }
-  
-    .content2 {
-      min-width: 30%;
-      max-width: 40%;
-      margin: 120px 80px;
-      float: left;
-      font-size: 2vw;
-  }
-  .content-head{
-    font-size: 1.5vw;
-  }
-
-    .content-text {
-    font-size: 1.2vw;
-  }
-  }
-  @media (min-width: 1670px) {
-
-    .features {
-      margin: 40px 100px;
-      overflow: hidden;
-  }
-  .feature-item {
-    display: block; 
-    clear: both;
+    padding: 100px 50px;
   }
   
     .featureImg {
       min-width: 30%;
       max-width: 30%;
-      margin: 250px 100px;
+      margin: 0 80px;
       float: left;
   }
   
  .content {
       min-width: 30%;
       max-width: 40%;
-      margin: 300px 120px;
+      margin: 80px 80px;
       float: right;
   }
   
   .featureImg2 {
       min-width: 30%;
       max-width: 30%;
-      margin: 150px 100px;
+      margin: 0 80px;
       float: right;
   }
   
    .content2 {
       min-width: 30%;
       max-width: 40%;
-      margin: 200px 120px;
+      margin: 80px 80px;
       float: left;
   }
+  .content-text {
+    font-family: 'Quicksand', sans-serif;
+    color: #68E0CF;
+    font-size: 1.8vw;
+  }
+
   }
 
   .dp {
     border-radius: 50%;
     max-width: 60px;
   }
-
-
-

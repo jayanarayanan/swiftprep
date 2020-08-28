@@ -1,5 +1,54 @@
 <%- include ("./partials/header") %>
 
+<div class="pg2-bg">
+<div class="pg2-dd">
+<h1 class="pg2-hd">What do you wanna study today?</h1>
+<form action="/filter" method="POST">
+    <div class="input-group mb-3 ">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">College: </label>
+        </div>
+    <select class="custom-select" name="college" id="college" onchange="collChoice(this)">
+        <option value="Select College">Select College</option>
+        <option value="BITS">BITS</option>
+        <option value="PES">PES</option>
+        <option value="VIT">VIT</option>
+    </select><br></div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Branch: </label>
+        </div>
+    <select class="custom-select" name="branch" id="branch">
+        <option value="Select Stream">Select Stream</option>
+    </select><br></div>
+    <input type="submit" value="Go!">
+</form>
+</div>
+</div>
+<script>
+    var info = {
+              "Select College": ["Select Stream (SS)"],
+              "BITS":["Select Stream (SS)",
+                      "Mechanical Engineering (ME)",
+                      "Computer Science Engineering (CSE)",
+                      "Electrical and Electronics Engineering (EEE)",
+                      "Electronics and Instrumentation Engineering (EIE)"],
+              "PES": ["Select Stream (SS)",
+                      "Mechanical Engineering (ME)",
+                      "Computer Science Engineering (CSE)",
+                      "Electrical and Electronics Engineering (EEE)",
+                      "Electronics and Communication Engineering (ECE)"],
+              "VIT": ["Sorry, this college is unsupported (SS)"]
+            }
 
+    function collChoice(id) {
+        var val = id.value;
+        $("#branch").empty();
+        info[val].forEach(v => {
+            newvalue = v.match(/\(([^)]+)\)/)[1];
+            $("#branch").append("<option value='" + newvalue + "'>" + v + "</option>");
+        });
+    }
+</script>
 
 <%- include ("./partials/footer") %>

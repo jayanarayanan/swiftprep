@@ -11,7 +11,10 @@
 
 <form action ='/view/<%= video._id %>/comment' method ='POST'>
     <div class='form-group'>
-    <input class='comment' type='text' name='comment' placeholder='add new comment'>
+    <input class='comment' type='text' id="comment" name='comment' placeholder='add new comment'>
+    <div class="invalid-feedback">
+      Please enter a valid comment.
+    </div>
     </div>
     <div class='form-group'>
     <input class='submit' type="submit" name="submit" value="Comment">
@@ -46,11 +49,40 @@
 
         <form action ='/view/<%= video._id %>/<%= comment._id %>/reply' method ='POST'>
             <div class='form-group'>
-            <input class='reply' type='text' name='reply' placeholder='add new reply'>
+            <input class='reply' type='text' id="reply" name='reply' placeholder='add new reply'>
+            <div class="invalid-feedback">
+              Please enter a valid reply.
+            </div>
             </div>
             <div >
-            <button class='replybut'>Reply</button>
+              <input class='submit' type="submit" name="submit" value="Reply">
             </div>
         </form>
     <% })} %>
+    <script>
+      $(document).ready(function (){
+        validateC();
+    validateR();
+    $('#reply').change(validateR);
+    $('#comment').change(validateC);
+});
+
+function validateC(){
+    if ($('#comment').val().length > 0) {
+        $("input[type=submit]").prop("disabled", false);
+    }
+    else {
+        $("input[type=submit]").prop("disabled", true);
+    }
+}
+
+function validateR(){
+    if ($('#reply').val().length > 0) {
+        $("input[type=submit]").prop("disabled", false);
+    }
+    else {
+        $("input[type=submit]").prop("disabled", true);
+    }
+}
+    </script>
 <%- include ("./partials/footer") %>

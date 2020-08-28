@@ -5,26 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SwiftPrep</title>
     <link rel="stylesheet" type="text/css" href="http://localhost:3000/stylesheets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet"> 
+  </head>
 <body>
-    <div style="width: 75%; margin-left: auto; margin-right: auto;">
+    <div style="width: 82%; margin-left: auto; margin-right: auto;">
     <nav class="navbar">
-        <a class="navbar-brand">SwiftPrep</a>
+        <a href="/" class="navbar-brand"><img class="logo" src="http://localhost:3000/images/logo.png"></a>
             <% if(!currentUser){ %>
               <a class="nav-link" href="/google">Login</a>
             <% } else { %>
                 <div class="dropdown">
                     <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <%= currentUser.username %>
+                        Profile
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                      <button class="dropdown-item" type="button">Profile</button>
-                      <a href="/view/5f40fa391435766608c3b21d" class=" dropdown-item btn btn-primary">Video 1</a>
+                      <button class="dropdown-item" type="button"><%= currentUser.username %></button>
                       <div class="dropdown-divider"></div>
                       <a href="/logout" class=" dropdown-item btn btn-primary">Logout</a>
                     </div>
                   </div>
             <% } %>
+          </div>
       </nav>
     </div>

@@ -1,0 +1,23 @@
+<%- include ("./partials/header") %>
+<div class="pg3-bg">
+<% subunique.forEach(function(subU) {%>
+    <h1> <%= subU._id %></h1> <br>
+    <% videos.forEach(function(video) {%>
+        <% if(video.Subject == subU._id) {%>
+            <div class="card w-20" id="cards" style="width: 18rem;">
+                <a href="/view/<%= video._id %>"><img class="thumbnail" src="https://images.unsplash.com/photo-1597393580483-4f928fc9fca1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+                </a>
+                <div class="card-body">
+                    <h4><%= video.SubShort %> - <%= video.Chapter %></h4>
+                </div>
+              </div>
+        <% } %>
+    <% }) %> <br>
+<% }) %>
+</div>
+<%- include ("./partials/footer") %>
+
+    <!-- ECE Subjects:
+    Microwave engineering
+    computer organization
+    communication engineering -->
