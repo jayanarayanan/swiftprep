@@ -7,7 +7,81 @@
     </video>
 </div>
 
-<p class='commenthead'><strong> Comments </strong></p><br>
+<div class="ui comments">
+  <h3 class="ui dividing header">Comments</h3>
+  <form action ='/view/<%= video._id %>/comment' method ='POST' class="ui reply form">
+    <div class="field">
+      <textarea name='comment' class="comment"></textarea>
+    </div>
+    <div class="ui blue labeled submit icon button">
+      <i class="icon edit"></i> Add Comment
+    </div>
+  </form>
+  <% if (typeof video.comments != 'undefined' && video.comments != null) { %>
+    <% video.comments.forEach(function(comment){ %>
+  <div class="comment">
+    <a class="avatar">
+      <img src="<%= comment.author.dp %>">
+    </a>
+    <div class="content">
+      <a class="author"><%= comment.author.username %></a>
+      <div class="metadata">
+        <span class="date"><%= comment.created.toUTCString() %></span>
+      </div>
+      <div class="text">
+        <%= comment.text %>
+      </div>
+      <div class="actions">
+        <a class="reply">Reply</a>
+      </div>
+    </div>
+  
+  <div class="comments">
+    <% if(comment.replies != null) { %>
+      <% comment.replies.forEach(function(reply){ %>
+    <div class="comment">
+      <a class="avatar">
+        <img src="<%= reply.author.dp %>">
+      </a>
+      <div class="content">
+        <a class="author"><%= reply.author.username %></a>
+        <div class="metadata">
+          <span class="date"><%= reply.created.toUTCString() %></span>
+        </div>
+        <div class="text">
+          <%= reply.text %>
+        </div>
+      </div>
+    </div>
+    <% })} %>
+  </div>
+</div>
+<form id="reply-form" action ='/view/<%= video._id %>/<%= comment._id %>/reply' method ='POST' class="ui reply form">
+  <div class="field">
+    <textarea name="reply" class="reply"></textarea>
+  </div>
+  <div class="ui blue labeled submit icon button">
+    <i class="icon edit"></i> Add Reply
+  </div>
+</form>
+  <% })} %>
+  </div>
+
+
+<script>
+  $(".actions").click(function(){
+    $("#reply-form").fadeToggle(1000);
+})
+</script>
+
+
+
+
+
+
+
+
+<!-- <p class='commenthead'><strong> Comments </strong></p><br>
 
 <form action ='/view/<%= video._id %>/comment' method ='POST'>
     <div class='form-group'>
@@ -84,5 +158,5 @@ function validateR(){
         $("input[type=submit]").prop("disabled", true);
     }
 }
-    </script>
+    </script> -->
 <%- include ("./partials/footer") %>

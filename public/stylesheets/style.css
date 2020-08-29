@@ -117,7 +117,7 @@ html, body {
       min-width: 70%;
   }
   
-  .content {
+  .content1 {
       display: block; 
       margin: 50px auto;
       max-width: 80%;
@@ -172,7 +172,7 @@ html, body {
       min-width: 50%;
   }
   
-   .content {
+   .content1 {
       display: block; 
       margin: 10px auto 40px;
       max-width: 75%;
@@ -228,7 +228,7 @@ html, body {
       min-width: 50%;
   }
   
-   .content {
+   .content1 {
       display: block; 
       margin: auto auto;
       max-width: 75%;
@@ -284,7 +284,7 @@ html, body {
       float: left;
   }
   
- .content {
+ .content1 {
       min-width: 30%;
       max-width: 40%;
       margin: 80px 80px;
