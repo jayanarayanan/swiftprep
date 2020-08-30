@@ -45,12 +45,12 @@
     </video>
 </div>
 
-<div id="pg4-c">
+<!-- <div id="pg4-c">
 <div class="ui comments">
   <h3 class="ui dividing header">Comments</h3> <br>
   <form action ='/view/<%= video._id %>/comment' method ='POST' class="ui reply form">
     <div class="field">
-      <textarea name='comment' class="comment"></textarea>
+      <textarea name='comment' class="comment" tabindex="2"></textarea>
     </div>
     <button class="ui blue labeled submit icon button" type="submit">
       <i class="icon edit"></i> Add Comment
@@ -71,7 +71,7 @@
         <%= comment.text %>
       </div>
       <div class="actions">
-        <a class="reply">Reply</a>
+        <button class="reply">Reply</button>
       </div>
     </div>
   
@@ -96,21 +96,89 @@
   </div>
 </div>
 <form id="reply-form" action ='/view/<%= video._id %>/<%= comment._id %>/reply' method ='POST' class="ui reply form">
-  <div class="field">
-    <textarea name="reply" class="reply"></textarea>
+  <div id="reply-form">
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Example textarea</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
-  <button class="ui blue labeled submit icon button" type="submit">
-    <i class="icon edit"></i> Add Reply
+  <button type="button" class="btn btn-info" type="submit">
+     Add Reply
   </button>
+</div>
 </form>
+<hr>
   <% })} %>
   </div>
+</div> -->
+
+
+
+
+<div id="comment-o" class="container bootstrap snippets bootdey">
+  <div class="row">
+  <div class="col-md-12">
+      <div class="blog-comment">
+      <h3 class="text-success">Comments</h3>
+              <hr/>
+              <form action ='/view/<%= video._id %>/comment' method ='POST'>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Add Comment</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" name="comment" rows="2"></textarea>
+                </div>
+                <button class="btn btn-info" type="submit">
+                  Add Comment
+               </button>
+              </form><br>
+      <ul class="comments">
+        <% if (typeof video.comments != 'undefined' && video.comments != null) { %>
+          <% video.comments.forEach(function(comment){ %>
+      <li class="clearfix" id="listt">
+        <img src="<%= comment.author.dp %>" class="avatar" alt="">
+        <div class="post-comments">
+            <p class="meta">
+              <a href="#"><big><%= comment.author.username %></big></a> 
+              <%= comment.created.toUTCString() %>
+              <a href="#" id="<%= comment._id %>" onclick="toggleReplyBox(this.id)" style="float: right;"><small>Reply</small></a>
+            </p>
+            <p>
+              <%= comment.text %>
+            </p>
+        </div>
+        <ul class="comments">
+          <% if(comment.replies != null) { %>
+            <% comment.replies.forEach(function(reply){ %>
+            <li class="clearfix">
+                <img src="<%= reply.author.dp %>" class="avatar" alt="">
+                <div class="post-comments">
+                    <p class="meta"><%= reply.created.toUTCString() %> <a href="#"><%= reply.author.username %></a> says : <i class="pull-right"><a href="#"></a></i></p>
+                    <p>
+                      <%= reply.text %>
+                    </p>
+                </div>
+            </li> <% })} %>
+        </ul>
+        <form action ='/view/<%= video._id %>/<%= comment._id %>/reply' method ='POST' class="<%= comment._id %>" style="display: none;">
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Add Reply</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" name="reply" rows="1"></textarea>
+          </div>
+          <button class="btn btn-info" type="submit">
+             Add Reply
+          </button>
+        </form> <br>
+      </li> <% })} %>
+      </ul>
+    </div>
+  </div>
+</div>
 </div>
 
+
 <script>
-  $(".actions").click(function(){
-    $("#reply-form").fadeToggle(1000);
-})
+  function toggleReplyBox(CommentID) {
+    $('.'+CommentID).fadeToggle(500);
+}
+
 </script>
 
 <%- include ("./partials/footer") %>
