@@ -43,6 +43,10 @@ html, body {
   max-height: 25px;
 }
 
+#pg4-c {
+  margin-left: 30px;
+}
+
 .thumbnail {
   max-width: 100%;
 }

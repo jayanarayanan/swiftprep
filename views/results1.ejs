@@ -1,4 +1,42 @@
-<%- include ("./partials/header") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftPrep</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:3000/stylesheets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet"> 
+    <link href= 
+"https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+            rel="stylesheet" /> 
+  
+    <script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"> 
+    </script> 
+  </head>
+<body>
+    <div style="width: 82%; margin-left: auto; margin-right: auto;">
+    <nav class="navbar">
+        <a href="/" class="navbar-brand"><img class="logo" src="http://localhost:3000/images/logo.png"></a>
+            <% if(!currentUser){ %>
+              <a class="nav-link" href="/google">Login</a>
+            <% } else { %>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Profile
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                      <button class="dropdown-item" type="button"><%= currentUser.username %></button>
+                      <div class="dropdown-divider"></div>
+                      <a href="/logout" class=" dropdown-item btn btn-primary">Logout</a>
+                    </div>
+                  </div>
+            <% } %>
+          </div>
+      </nav>
+    </div>
 
 <div style="max-width: 1100px" >
     <video id="video1" class="video-js vjs-default-skin vjs-big-play-centered" controls  data-setup='{"playbackRates": [1, 1.25, 1.5, 1.75, 2], "fluid": true}'>
@@ -7,15 +45,16 @@
     </video>
 </div>
 
+<div id="pg4-c">
 <div class="ui comments">
-  <h3 class="ui dividing header">Comments</h3>
+  <h3 class="ui dividing header">Comments</h3> <br>
   <form action ='/view/<%= video._id %>/comment' method ='POST' class="ui reply form">
     <div class="field">
       <textarea name='comment' class="comment"></textarea>
     </div>
-    <div class="ui blue labeled submit icon button">
+    <button class="ui blue labeled submit icon button" type="submit">
       <i class="icon edit"></i> Add Comment
-    </div>
+    </button>
   </form>
   <% if (typeof video.comments != 'undefined' && video.comments != null) { %>
     <% video.comments.forEach(function(comment){ %>
@@ -60,13 +99,13 @@
   <div class="field">
     <textarea name="reply" class="reply"></textarea>
   </div>
-  <div class="ui blue labeled submit icon button">
+  <button class="ui blue labeled submit icon button" type="submit">
     <i class="icon edit"></i> Add Reply
-  </div>
+  </button>
 </form>
   <% })} %>
   </div>
-
+</div>
 
 <script>
   $(".actions").click(function(){
@@ -74,89 +113,4 @@
 })
 </script>
 
-
-
-
-
-
-
-
-<!-- <p class='commenthead'><strong> Comments </strong></p><br>
-
-<form action ='/view/<%= video._id %>/comment' method ='POST'>
-    <div class='form-group'>
-    <input class='comment' type='text' id="comment" name='comment' placeholder='add new comment'>
-    <div class="invalid-feedback">
-      Please enter a valid comment.
-    </div>
-    </div>
-    <div class='form-group'>
-    <input class='submit' type="submit" name="submit" value="Comment">
-    </div>
-</form>
-
-<% if (typeof video.comments != 'undefined' && video.comments != null) { %>
-    <% video.comments.forEach(function(comment){ %>
-<div class="media">
-    <img src="<%= comment.author.dp %>" class="mr-3 dp" alt="...">
-    <div class="media-body">
-      <h5 class="mt-0"><%= comment.author.username %> <small><small><i> <%= comment.created.toUTCString() %></i></small></small></h5>
-      <%= comment.text %> <br>
-      <div class="media mt-3">
-        <ul>
-          <% if(comment.replies != null) { %>
-            <% comment.replies.forEach(function(reply){ %>
-            <li class="media">
-                <a class="mr-3" href="#">
-                    <img src="<%= reply.author.dp %>" class="mr-3 dp" alt="...">
-                  </a>
-                  <div class="media-body">
-                    <h5 class="mt-0"><%= reply.author.username %> <small><small><i> <%= reply.created.toUTCString() %></i></small></small></h5>
-                    <%= reply.text %>
-                  </div>
-            </li><br>
-            <% })} %>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-        <form action ='/view/<%= video._id %>/<%= comment._id %>/reply' method ='POST'>
-            <div class='form-group'>
-            <input class='reply' type='text' id="reply" name='reply' placeholder='add new reply'>
-            <div class="invalid-feedback">
-              Please enter a valid reply.
-            </div>
-            </div>
-            <div >
-              <input class='submit' type="submit" name="submit" value="Reply">
-            </div>
-        </form>
-    <% })} %>
-    <script>
-      $(document).ready(function (){
-        validateC();
-    validateR();
-    $('#reply').change(validateR);
-    $('#comment').change(validateC);
-});
-
-function validateC(){
-    if ($('#comment').val().length > 0) {
-        $("input[type=submit]").prop("disabled", false);
-    }
-    else {
-        $("input[type=submit]").prop("disabled", true);
-    }
-}
-
-function validateR(){
-    if ($('#reply').val().length > 0) {
-        $("input[type=submit]").prop("disabled", false);
-    }
-    else {
-        $("input[type=submit]").prop("disabled", true);
-    }
-}
-    </script> -->
 <%- include ("./partials/footer") %>

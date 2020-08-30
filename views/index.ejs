@@ -47,10 +47,23 @@
             <div class="featureImg2">
             <img class="img-fluid" src="http://localhost:3000/images/index-4.png"></div>
         </div>
-    </div><hr style="clear: both;" />
+    </div>
 
-    <!-- <div id="indexCard">
-        <img class="img-fluid" src="http://localhost:3000/images/stats.png">
-    </div> -->
+    <footer id="footer" class="page-footer font-small stylish-color-dark pt-4">
+  
+        <ul class="list-unstyled list-inline text-center py-2">
+          <li class="list-inline-item">
+            <h5 class="mb-1">Start your prep!</h5>
+          </li>
+          <% if(!currentUser){ %>
+          <li class="list-inline-item">
+            <a href="/google" class="btn btn-primary btn-rounded">Sign up!</a>
+          </li>
+          <% } else { %>
+            <li class="list-inline-item">
+              <a href="/filter" class="btn btn-primary btn-rounded">Lets Go!</a>
+            </li>
+            <% } %>
+        </ul>
 
 <%- include ("./partials/footer") %>
