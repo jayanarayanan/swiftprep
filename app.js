@@ -14,7 +14,7 @@ const { PassThrough } = require("stream");
 
 const app = express();
 
-mongoose.connect("mongodb+srv://Admin:IVVSZH0TAz9jEaKG@swiftprep.ycpsp.gcp.mongodb.net/SwiftPrep?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
+mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
@@ -25,7 +25,7 @@ app.use(cookieSession({
 }))
 
 
-//MongoDB Schemasmongodb+srv://Admin:<password>@swiftprep.ycpsp.gcp.mongodb.net/<dbname>?retryWrites=true&w=majorit
+//MongoDB Schemas
 var userSchema = new mongoose.Schema({
     username: String,
     googleID: String,
@@ -248,10 +248,9 @@ app.get('/logout', function(req, res) {
 });
 
 //listener
-var server = app.listen(3000, "localhost", function(){
+app.listen(process.env.PORT, process.env.IP, function(){
     console.log("SERVER IS RUNNING!");
- });
-
+})
 
 
 
