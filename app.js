@@ -14,7 +14,7 @@ const { PassThrough } = require("stream");
 
 const app = express();
 
-mongoose.connect("mongodb://localhost:27017/swiftprep-videos", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
+mongoose.connect("mongodb+srv://Admin:IVVSZH0TAz9jEaKG@swiftprep.ycpsp.gcp.mongodb.net/SwiftPrep?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
@@ -25,8 +25,7 @@ app.use(cookieSession({
 }))
 
 
-//MongoDB Schemas
-
+//MongoDB Schemasmongodb+srv://Admin:<password>@swiftprep.ycpsp.gcp.mongodb.net/<dbname>?retryWrites=true&w=majorit
 var userSchema = new mongoose.Schema({
     username: String,
     googleID: String,
@@ -282,6 +281,6 @@ var server = app.listen(3000, "localhost", function(){
 //     });
 // });
 
-//Video.create({CBS: 'PES-CSE-5', Subject: 'Machine Intelligence', SubShort: 'MI', Chapter: 1, VName: 'PES-CSE-5-MI-1', Mentor: 'Aditya'});
+// Video.create({CBS: 'PES-CSE-5', Subject: 'Machine Intelligence', SubShort: 'MI', Chapter: 1, VName: 'PES-CSE-5-MI-1', Mentor: 'Aditya'});
 // Video.create({CBS: 'PES-CSE-5', Subject: 'Machine Intelligence', SubShort: 'MI', Chapter: 2, VName: 'PES-CSE-5-MI-2', Mentor: 'Aditya'});
 // Video.create({CBS: 'PES-ECE-5', Subject: 'Computer Organization', SubShort: 'CO', Chapter: 1, VName: 'PES-CSE-5-CO-1', Mentor: 'Aditya'});
