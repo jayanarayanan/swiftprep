@@ -19,7 +19,7 @@
 <body>
     <div style="width: 82%; margin-left: auto; margin-right: auto;">
     <nav class="navbar">
-        <a href="/" class="navbar-brand"><img class="logo" src="http://localhost:3000/images/logo.png"></a>
+        <a href="/" class="navbar-brand"><img class="logo" src="http://www.swiftprep.in/images/logo.png"></a>
             <% if(!currentUser){ %>
               <a class="nav-link" href="/google">Login</a>
             <% } else { %>
@@ -44,75 +44,6 @@
         Your browser does not support the video tag.
     </video>
 </div>
-
-<!-- <div id="pg4-c">
-<div class="ui comments">
-  <h3 class="ui dividing header">Comments</h3> <br>
-  <form action ='/view/<%= video._id %>/comment' method ='POST' class="ui reply form">
-    <div class="field">
-      <textarea name='comment' class="comment" tabindex="2"></textarea>
-    </div>
-    <button class="ui blue labeled submit icon button" type="submit">
-      <i class="icon edit"></i> Add Comment
-    </button>
-  </form>
-  <% if (typeof video.comments != 'undefined' && video.comments != null) { %>
-    <% video.comments.forEach(function(comment){ %>
-  <div class="comment">
-    <a class="avatar">
-      <img src="<%= comment.author.dp %>">
-    </a>
-    <div class="content">
-      <a class="author"><%= comment.author.username %></a>
-      <div class="metadata">
-        <span class="date"><%= comment.created.toUTCString() %></span>
-      </div>
-      <div class="text">
-        <%= comment.text %>
-      </div>
-      <div class="actions">
-        <button class="reply">Reply</button>
-      </div>
-    </div>
-  
-  <div class="comments">
-    <% if(comment.replies != null) { %>
-      <% comment.replies.forEach(function(reply){ %>
-    <div class="comment">
-      <a class="avatar">
-        <img src="<%= reply.author.dp %>">
-      </a>
-      <div class="content">
-        <a class="author"><%= reply.author.username %></a>
-        <div class="metadata">
-          <span class="date"><%= reply.created.toUTCString() %></span>
-        </div>
-        <div class="text">
-          <%= reply.text %>
-        </div>
-      </div>
-    </div>
-    <% })} %>
-  </div>
-</div>
-<form id="reply-form" action ='/view/<%= video._id %>/<%= comment._id %>/reply' method ='POST' class="ui reply form">
-  <div id="reply-form">
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
-  <button type="button" class="btn btn-info" type="submit">
-     Add Reply
-  </button>
-</div>
-</form>
-<hr>
-  <% })} %>
-  </div>
-</div> -->
-
-
-
 
 <div id="comment-o" class="container bootstrap snippets bootdey">
   <div class="row">

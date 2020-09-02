@@ -11,7 +11,7 @@ html, body {
 }
 
 .pg2-bg {
-  background-image: url('http://localhost:3000/images/page2-bg.jpeg');
+  background-image: url('http://www.swiftprep.in/images/page2-bg.jpeg');
   width:100%;
   height: 100%;
   background-size: cover;
@@ -29,7 +29,7 @@ html, body {
 }
 
 .pg3-bg {
-  background-image: url('http://localhost:3000/images/page3-bg.jpeg');
+  background-image: url('http://www.swiftprep.in/images/page3-bg.jpeg');
   width:100%;
   height: 100%;
   background-size: cover;
