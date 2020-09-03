@@ -15,6 +15,8 @@ const { PassThrough } = require("stream");
 const app = express();
 
 mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
+// mongoose.connect("mongodb://localhost:27017/swiftprep-videos", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
+
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
@@ -231,7 +233,7 @@ app.post('/view/:id/:commentid/reply', function(req, res) {
 
 //Login page
 app.get('/google', passport.authenticate('google', {
-    scope: ['profile'],
+    scope: ['https://www.googleapis.com/auth/userinfo.profile'],
     prompt: 'select_account'
 })
 );
@@ -251,6 +253,9 @@ app.get('/logout', function(req, res) {
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("SERVER IS RUNNING!");
 })
+// app.listen(3000, 'localhost', function(){
+//     console.log("SERVER IS RUNNING!");
+// })
 
 
 
