@@ -94,10 +94,10 @@
                           <button class="btn btn-primary btn-sm" type="button" id="<%= comment._id %>" onclick="toggleReplyBox(this.id)">
                             Reply
                           </button>
+                          <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
                           <button type="button" class="btn btn-sm btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="sr-only">Toggle Dropdown</span>
                           </button>
-                          <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
                           <div class="dropdown-menu">
                             <form id="delForm" action="/view/<%= video._id %>/<%= comment._id %>?_method=DELETE" method="POST">
                               <button class="dropdown-item" id="butn-dd" type="submit">Delete</button>
@@ -121,11 +121,11 @@
                               <a href="#"><big><%= reply.author.username %></big></a>
                               <%= reply.created.toUTCString() %>
                             <div style="float: right;">
+                              <% if(currentUser && reply.author.id.equals(currentUser._id)){ %>
                               <div class="btn-group">
                                 <button type="button" class="btn btn-sm btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <span class="sr-only">Toggle Dropdown</span>
                                 </button>
-                                <% if(currentUser && reply.author.id.equals(currentUser._id)){ %>
                                 <div class="dropdown-menu">
                               <form action="/view/<%= video._id %>/<%= comment._id %>/<%= reply._id %>?_method=DELETE" method="POST">
                                 <button type="submit" class="dropdown-item">Delete</button>
