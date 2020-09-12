@@ -2,6 +2,7 @@ const express = require("express");
 const ejs = require("ejs");
 const path = require("path");
 const bodyParser = require("body-parser");
+const methodOverride = require("method-override");
 const cookieSession = require("cookie-session");
 const passport = require('passport');
 const mongoose = require("mongoose");
@@ -14,13 +15,14 @@ const { PassThrough } = require("stream");
 
 const app = express();
 
-mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
-// mongoose.connect("mongodb://localhost:27017/swiftprep-videos", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
+// mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
+mongoose.connect("mongodb://localhost:27017/swiftprep-videos", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended : true }));
+app.use(methodOverride("_method"));
 app.use(cookieSession({
     maxAge: 6*60*60*1000,
     keys: [keys.session.cookieKey]
@@ -48,6 +50,7 @@ var commentSchema = new mongoose.Schema({
          dp: String,
          },
     replies: [{
+            id: mongoose.Schema.Types.ObjectId,
             text: String,
             created: {type: Date, default: Date.now},
             author: {
@@ -175,7 +178,7 @@ app.get('/view/:id', function(req, res) {
                 console.log(err);
             } else {
                 
-                res.render('results1', {link: keys.aws.urlCode, video: foundVideo});
+                res.render('results1', {bucket: keys.gcp.bucket, link: keys.gcp.link, video: foundVideo});
             }
         })
     } else {
@@ -207,13 +210,26 @@ app.post('/view/:id/comment', function(req, res) {
     })
 });
 
+//Delete a comment
+app.delete('/view/:id/:commentId', function(req, res) {
+    Comment.findByIdAndRemove(req.params.commentId, function(err){
+        if(err){
+            console.log(err);
+            res.redirect("/");
+        }
+        else{
+            res.redirect("/view/" + req.params.id);
+        }
+    })
+})
+
 //Add a reply
-app.post('/view/:id/:commentid/reply', function(req, res) {
+app.post('/view/:id/:commentId/reply', function(req, res) {
     Video.findById(req.params.id, function(err, foundVideo) {
         if(err) {
             console.log(err);
         } else {
-            Comment.findById(req.params.commentid, function(err, foundComment) {
+            Comment.findById(req.params.commentId, function(err, foundComment) {
                 if(err) {
                     console.log(err);
                 } else {
@@ -231,9 +247,22 @@ app.post('/view/:id/:commentid/reply', function(req, res) {
     })
 })
 
+//Delete a reply
+app.delete('/view/:id/:commentId/:replyId', function(req, res) {
+    Comment.updateOne({_id: req.params.commentId}, { "$pull": { replies: {_id: req.params.replyId} } }, function(err, foundComment){
+        if(err){
+            console.log(err);
+            res.redirect("/");
+        }
+        else{
+            res.redirect("/view/" + req.params.id);
+        }
+    })
+})
+
 //Login page
 app.get('/google', passport.authenticate('google', {
-    scope: ['https://www.googleapis.com/auth/userinfo.profile'],
+    scope: ['profile'],
     prompt: 'select_account'
 })
 );
@@ -250,12 +279,12 @@ app.get('/logout', function(req, res) {
 });
 
 //listener
-app.listen(process.env.PORT, process.env.IP, function(){
-    console.log("SERVER IS RUNNING!");
-})
-// app.listen(3000, 'localhost', function(){
+// app.listen(process.env.PORT, process.env.IP, function(){
 //     console.log("SERVER IS RUNNING!");
 // })
+app.listen(3000, 'localhost', function(){
+    console.log("SERVER IS RUNNING!");
+})
 
 
 
