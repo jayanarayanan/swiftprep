@@ -91,13 +91,12 @@
                     <p class="meta">
                       <a href="#"><big><%= comment.author.username %></big></a> 
                       <%= comment.created.toUTCString() %>
-                      <div style="float: right;">
                         <div class="btn-group">
-                          <button class="btn btn-primary btn-sm" type="button" id="<%= comment._id %>" onclick="toggleReplyBox(this.id)">
+                          <button style="float: right;" class="btn btn-primary btn-sm" type="button" id="<%= comment._id %>" onclick="toggleReplyBox(this.id)">
                             Reply
                           </button>
                           <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
-                          <button type="button" class="btn btn-sm btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <button style="float: right;" type="button" class="btn btn-sm btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="sr-only">Toggle Dropdown</span>
                           </button>
                           <div class="dropdown-menu">
@@ -107,9 +106,8 @@
                           </div>
                           <% } %>
                         </div>
-                      </div>  
                     </p>
-                    <p style="white-space: pre-wrap;">
+                    <p style="white-space: pre-line;">
                       <%= comment.text %>
                     </p>
                 </div>
@@ -139,7 +137,7 @@
                               <% } %>
                             </div>
                             </p>
-                            <p style="white-space: pre-wrap;">
+                            <p style="white-space: pre-line;">
                               <%= reply.text %>
                             </p>
                         </div>
