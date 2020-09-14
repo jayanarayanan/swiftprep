@@ -88,8 +88,7 @@
       <option value="Select Semester">Select Semester</option>
       <option value="5">5</option>
   </select><br></div>
-    <button value="Go!" id="gobtn" onclick="submitValidation()"></button>
-    <input type="submit" value="Go!" id="gobtn">
+    <button id="gobtn" onclick="submitValidation()">Go!</button>
 </form>
 </div>
 </div>
@@ -166,6 +165,9 @@
       var college = document.getElementById('college').value;
       var branch = document.getElementById('branch').value;
       var sem = document.getElementById('sem').value;
+      console.log(college);
+      console.log(branch);
+      console.log(sem);
       if(college != "Select College" && branch != "SS" && branch != "Select Stream" && sem != "Select Semester") {
         document.getElementById("filterForm").submit();
       }
