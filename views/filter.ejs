@@ -50,7 +50,7 @@
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                   <button class="dropdown-item" type="button"><%= currentUser.username %></button>
                   <div class="dropdown-divider"></div>
-                  <a href="/logout" class=" dropdown-item btn btn-primary">Logout</a>
+                  <a href="/logout" class=" dropdown-item btn">Logout</a>
                 </div>
               </div>
               <% } %>
@@ -62,7 +62,7 @@
 <div class="pg2-bg">
 <div class="pg2-dd">
 <h1 class="pg2-hd">What do you wanna study today?</h1>
-<form action="/filter" method="POST">
+<form action="/filter" id="filterForm" method="POST">
     <div class="input-group mb-3 ">
         <div class="input-group-prepend">
           <label class="input-group-text" for="inputGroupSelect01" id="collegeselector">College: </label>
@@ -80,6 +80,15 @@
     <select class="custom-select" name="branch" id="branch">
         <option value="Select Stream">Select Stream</option>
     </select><br></div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01" id="semselector">Semester: </label>
+      </div>
+  <select class="custom-select" name="sem" id="sem">
+      <option value="Select Semester">Select Semester</option>
+      <option value="5">5</option>
+  </select><br></div>
+    <button value="Go!" id="gobtn" onclick="submitValidation()"></button>
     <input type="submit" value="Go!" id="gobtn">
 </form>
 </div>
@@ -125,6 +134,9 @@
     </div>
   
   </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 <script>
     var info = {
@@ -148,6 +160,15 @@
             newvalue = v.match(/\(([^)]+)\)/)[1];
             $("#branch").append("<option value='" + newvalue + "'>" + v + "</option>");
         });
+    }
+
+    function submitValidation() {
+      var college = document.getElementById('college').value;
+      var branch = document.getElementById('branch').value;
+      var sem = document.getElementById('sem').value;
+      if(college != "Select College" && branch != "SS" && branch != "Select Stream" && sem != "Select Semester") {
+        document.getElementById("filterForm").submit();
+      }
     }
 </script>
 

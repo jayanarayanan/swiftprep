@@ -39,7 +39,7 @@
     </script> 
   </head>
 <body>
-    <div style="width: 82%; margin-left: auto; margin-right: auto;">
+  <div style=" margin-left: auto; margin-right: auto;width:100%;background-color: white;">
     <nav class="navbar">
         <a href="/" class="navbar-brand"><img class="logo" src="http://www.swiftprep.in/images/logo.png"></a>
             <% if(!currentUser){ %>
@@ -52,7 +52,7 @@
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                       <button class="dropdown-item" type="button"><%= currentUser.username %></button>
                       <div class="dropdown-divider"></div>
-                      <a href="/logout" class=" dropdown-item btn btn-primary">Logout</a>
+                      <a href="/logout" class=" dropdown-item btn">Logout</a>
                     </div>
                   </div>
             <% } %>
@@ -113,10 +113,10 @@
                       <%= comment.text %>
                     </p>
                 </div>
+                <% if(comment.replies != null) { %>
                 <a class="btn btn-info" style='position:relative;transition: .5s ease;left:9%;' data-toggle="collapse" href="#page_<%= comment._id %>" aria-expanded="false" aria-controls="page_<%= comment._id %>"><i class="fa fa-arrow-down"></i>  View <%=comment.replies.length%> Replies</a>
                 <div class='collapse' id= "page_<%= comment._id %>">
                 <ul class="comments">
-                  <% if(comment.replies != null) { %>
                     <% comment.replies.forEach(function(reply){ %>
                     <li class="clearfix">
                         <img src="<%= reply.author.dp %>" class="avatar" alt="">
@@ -144,9 +144,10 @@
                             </p>
                         </div>
                     </li> 
-                    <% })} %>
+                    <% }) %>
                 </ul>
                 </div>
+                <% } %>
                 <form action ='/view/<%= video._id %>/<%= comment._id %>/reply' method ='POST' class="<%= comment._id %>" style="display: none;">
                   <div class="form-group">
                     <label for="exampleFormControlTextarea1">Add Reply</label>
