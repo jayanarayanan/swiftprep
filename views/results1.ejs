@@ -109,11 +109,11 @@
                         </div>
                       </div>  
                     </p>
-                    <p>
+                    <p style="white-space: pre-wrap;">
                       <%= comment.text %>
                     </p>
                 </div>
-                <% if(comment.replies != null) { %>
+                <% if(comment.replies.length != 0) { %>
                 <a class="btn btn-info" style='position:relative;transition: .5s ease;left:9%;' data-toggle="collapse" href="#page_<%= comment._id %>" aria-expanded="false" aria-controls="page_<%= comment._id %>"><i class="fa fa-arrow-down"></i>  View <%=comment.replies.length%> Replies</a>
                 <div class='collapse' id= "page_<%= comment._id %>">
                 <ul class="comments">
@@ -139,7 +139,7 @@
                               <% } %>
                             </div>
                             </p>
-                            <p>
+                            <p style="white-space: pre-wrap;">
                               <%= reply.text %>
                             </p>
                         </div>

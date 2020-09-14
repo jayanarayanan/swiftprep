@@ -165,10 +165,7 @@
       var college = document.getElementById('college').value;
       var branch = document.getElementById('branch').value;
       var sem = document.getElementById('sem').value;
-      alert(college);
-      alert(branch);
-      alert(sem);
-      if(college != "Select College" && branch != "SS" && branch != "Select Stream" && sem != "Select Semester") {
+      if(college != "Select College" || branch != "SS" || branch != "Select Stream" || sem != "Select Semester") {
         document.getElementById("filterForm").submit();
       }
     }
