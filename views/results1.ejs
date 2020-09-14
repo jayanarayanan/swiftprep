@@ -76,7 +76,7 @@
               <form action ='/view/<%= video._id %>/comment' method ='POST'>
                 <div class="form-group">
                   <label for="exampleFormControlTextarea1">Add Comment</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" name="comment" rows="2"></textarea>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" name="comment" rows="3"></textarea>
                 </div>
                 <button class="btn btn-info" type="submit">
                   Add Comment
@@ -91,7 +91,7 @@
                     <p class="meta">
                       <a href="#"><big><%= comment.author.username %></big></a> 
                       <%= comment.created.toUTCString() %>
-                        <div style="float: right;" class="btn-group">
+                        <small><div style="float: right;" class="btn-group">
                           <button class="btn btn-primary btn-sm" type="button" id="<%= comment._id %>" onclick="toggleReplyBox(this.id)">
                             Reply
                           </button>
@@ -103,13 +103,11 @@
                             <form id="delForm" action="/view/<%= video._id %>/<%= comment._id %>?_method=DELETE" method="POST">
                               <button class="dropdown-item" id="butn-dd" type="submit">Delete</button>
                             </form>
-                          </div>
+                          </div></small>
                           <% } %>
                         </div>
                     </p>
-                    <p style="white-space: pre-line;">
-                      <%= comment.text %>
-                    </p>
+                    <p style="white-space: pre-line;"><%= comment.text %></p>
                 </div>
                 <% if(comment.replies.length != 0) { %>
                 <a class="btn btn-info" style='position:relative;transition: .5s ease;left:9%;' data-toggle="collapse" href="#page_<%= comment._id %>" aria-expanded="false" aria-controls="page_<%= comment._id %>"><i class="fa fa-arrow-down"></i>  View <%=comment.replies.length%> Replies</a>
@@ -122,9 +120,8 @@
                             <p class="meta"> 
                               <a href="#"><big><%= reply.author.username %></big></a>
                               <%= reply.created.toUTCString() %>
-                            <div style="float: right;">
                               <% if(currentUser && reply.author.id.equals(currentUser._id)){ %>
-                              <div class="btn-group">
+                              <small><div style="float: right;" class="btn-group">
                                 <button type="button" class="btn btn-sm btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <span class="sr-only">Toggle Dropdown</span>
                                 </button>
@@ -133,13 +130,10 @@
                                 <button type="submit" class="dropdown-item">Delete</button>
                               </form>
                                 </div>
-                              </div>
+                              </div></small>
                               <% } %>
-                            </div>
                             </p>
-                            <p style="white-space: pre-line;">
-                              <%= reply.text %>
-                            </p>
+                            <p style="white-space: pre-line;"><%= reply.text %></p>
                         </div>
                     </li> 
                     <% }) %>
@@ -149,7 +143,7 @@
                 <form action ='/view/<%= video._id %>/<%= comment._id %>/reply' method ='POST' class="<%= comment._id %>" style="display: none;">
                   <div class="form-group">
                     <label for="exampleFormControlTextarea1">Add Reply</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" name="reply" rows="1"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="reply" rows="3"></textarea>
                   </div>
                   <button class="btn btn-info" type="submit">
                      Add Reply
