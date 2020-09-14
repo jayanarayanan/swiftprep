@@ -91,7 +91,7 @@
                     <p class="meta">
                       <a href="#"><big><%= comment.author.username %></big></a> 
                       <%= comment.created.toUTCString() %>
-                        <div style="float: right; margin-top: -30px;" class="btn-group">
+                        <div style="float: right;" class="btn-group">
                           <button class="btn btn-primary btn-sm" type="button" id="<%= comment._id %>" onclick="toggleReplyBox(this.id)">
                             Reply
                           </button>
@@ -120,7 +120,7 @@
                               <a href="#"><big><%= reply.author.username %></big></a>
                               <%= reply.created.toUTCString() %>
                               <% if(currentUser && reply.author.id.equals(currentUser._id)){ %>
-                              <div style="float: right; margin-top: -30px;" class="btn-group">
+                              <div style="float: right;" class="btn-group">
                                 <button type="button" class="btn btn-sm btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <span class="sr-only">Toggle Dropdown</span>
                                 </button>
