@@ -7,28 +7,28 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="http://www.swiftprep.in/images/favicon/favicon.ico">
-	<link rel="icon" sizes="16x16 32x32 64x64" href="http://www.swiftprep.in/images/favicon/favicon.ico">
-	<link rel="icon" type="image/png" sizes="196x196" href="http://www.swiftprep.in/images/favicon/favicon-192.png">
-	<link rel="icon" type="image/png" sizes="160x160" href="http://www.swiftprep.in/images/favicon/favicon-160.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="http://www.swiftprep.in/images/favicon/favicon-96.png">
-	<link rel="icon" type="image/png" sizes="64x64" href="http://www.swiftprep.in/images/favicon/favicon-64.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="http://www.swiftprep.in/images/favicon/favicon-32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="http://www.swiftprep.in/images/favicon/favicon-16.png">
-	<link rel="apple-touch-icon" href="http://www.swiftprep.in/images/favicon/favicon-57.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="http://www.swiftprep.in/images/favicon/favicon-114.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="http://www.swiftprep.in/images/favicon/favicon-72.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="http://www.swiftprep.in/images/favicon/favicon-144.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="http://www.swiftprep.in/images/favicon/favicon-60.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="http://www.swiftprep.in/images/favicon/favicon-120.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="http://www.swiftprep.in/images/favicon/favicon-76.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="http://www.swiftprep.in/images/favicon/favicon-152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="http://www.swiftprep.in/images/favicon/favicon-180.png">
+    <link rel="shortcut icon" href="http://localhost:3000/images/favicon/favicon.ico">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="http://localhost:3000/images/favicon/favicon.ico">
+	<link rel="icon" type="image/png" sizes="196x196" href="http://localhost:3000/images/favicon/favicon-192.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="http://localhost:3000/images/favicon/favicon-160.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="http://localhost:3000/images/favicon/favicon-96.png">
+	<link rel="icon" type="image/png" sizes="64x64" href="http://localhost:3000/images/favicon/favicon-64.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:3000/images/favicon/favicon-32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:3000/images/favicon/favicon-16.png">
+	<link rel="apple-touch-icon" href="http://localhost:3000/images/favicon/favicon-57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="http://localhost:3000/images/favicon/favicon-114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="http://localhost:3000/images/favicon/favicon-72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="http://localhost:3000/images/favicon/favicon-144.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="http://localhost:3000/images/favicon/favicon-60.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="http://localhost:3000/images/favicon/favicon-120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="http://localhost:3000/images/favicon/favicon-76.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="http://localhost:3000/images/favicon/favicon-152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:3000/images/favicon/favicon-180.png">
 	<meta name="msapplication-TileColor" content="#FFFFFF">
-	<meta name="msapplication-TileImage" content="http://www.swiftprep.in/images/favicon/favicon-144.png">
-	<meta name="msapplication-config" content="http://www.swiftprep.in/images/favicon/browserconfig.xml">
+	<meta name="msapplication-TileImage" content="http://localhost:3000/images/favicon/favicon-144.png">
+	<meta name="msapplication-config" content="http://localhost:3000/images/favicon/browserconfig.xml">
     <title>SwiftPrep</title>
-    <link rel="stylesheet" type="text/css" href="http://www.swiftprep.in/stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost:3000/stylesheets/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">  
@@ -41,17 +41,11 @@
         border:1px solid rgb(0,0,0,0);
     }
    </style>
-
-    
-
-
-
     <div style=" margin-left: auto; margin-right: auto;width:100%;background-color: white;">
-    
 
     <nav class="navbar" style="width:82%;margin: auto;">
         
-        <a href="/" class="navbar-brand"><img class="logo" src="http://www.swiftprep.in/images/logo.png"></a>
+        <a href="/" class="navbar-brand"><img class="logo" src="http://localhost:3000/images/logo.png"></a>
         <% if(!currentUser){ %>
               <a class="nav-link" href="/google">Login</a>
               <% } else { %>
@@ -72,7 +66,7 @@
 
     </div>
     <div id="indexCard">
-        <img class=" indexImg img-fluid" src="http://www.swiftprep.in/images/dummy3.png">
+        <img class=" indexImg img-fluid" src="http://localhost:3000/images/dummy3.png">
         
             <h1 class="ic-1 anim-typewriter"><big><big><strong class="anim-typewriter">Learn</strong></big></big></h1>
             <h2 class="ic-2">only the most essential parts<br> of your courses</h2>
@@ -94,7 +88,7 @@
 
         <div class="feature-item look1" >
             <div class="" id="ftimg1">
-            <img class="img-fluid" src="http://www.swiftprep.in/images/index-1.png"></div>
+            <img class="img-fluid" src="http://localhost:3000/images/index-1.png"></div>
             <div class="" id="ftcnt1">
             <h4 class="content-text">A week left for your exams to begin, and you don't know anything. We've all been there, haven't we?</h4>
         </div>
@@ -111,7 +105,7 @@
             </div>
             
             <div class="" id="ftimg2">
-            <img class="img-fluid" src="http://www.swiftprep.in/images/index-2.png">
+            <img class="img-fluid" src="http://localhost:3000/images/index-2.png">
             </div>
 
         </div>
@@ -120,7 +114,7 @@
         
         <div class="feature-item look3" id="">
             <div class="" id="ftimg3">
-            <img class="img-fluid" src="http://www.swiftprep.in/images/index-3.png"></div>
+            <img class="img-fluid" src="http://localhost:3000/images/index-3.png"></div>
             <div class="" id="ftcnt3">
             <h4 class="content-text">Oh wait, I can ask my friends to teach me this, can't I? <br>Whoops, they're too busy studying for themselves. Now it's time to panic.</h4>
         </div>
@@ -133,11 +127,9 @@
                 <h4 class="content-text">That's where we come in. <br>Learn only the crux of a chapter in just about an hour, from a topper in your own institute.</h4>
             </div>
             <div class="" id="ftimg4">
-            <img class="img-fluid" src="http://www.swiftprep.in/images/index-4.png"></div>
+            <img class="img-fluid" src="http://localhost:3000/images/index-4.png"></div>
         </div>
     </div>
-
-   
 
     <footer id="footer" class="page-footer font-small stylish-color-dark pt-4">
   
@@ -178,7 +170,7 @@
     </ul>
   
     <div class="footer-copyright text-center py-3" style="box-sizing: border-box;padding-bottom: 10px;background-color: #555;">© 2020 Copyright:
-      <a href="https://www.swiftprep.in/"> SwiftPrep</a>
+      <a href="https://localhost:3000/"> SwiftPrep</a>
     </div>
   
   </footer>
@@ -248,9 +240,9 @@
     
         if(window.innerWidth<=1253)
         {
-            document.getElementById("interchange1").innerHTML="<div class=\"\" id=\"ftimg2\">            <img class=\"img-fluid\" src=\"http://www.swiftprep.in/images/index-2.png\">            </div><div class=\"\" id=\"ftcnt2\"><h4 class=\"content-text\">The textbook makes no sense! The lecture videos of the teacher are way too long and boring. I barely have any notes, and the online materials have too much irrelevant information. WHAT DO I DO!? </h4>            </div>";
+            document.getElementById("interchange1").innerHTML="<div class=\"\" id=\"ftimg2\">            <img class=\"img-fluid\" src=\"http://localhost:3000/images/index-2.png\">            </div><div class=\"\" id=\"ftcnt2\"><h4 class=\"content-text\">The textbook makes no sense! The lecture videos of the teacher are way too long and boring. I barely have any notes, and the online materials have too much irrelevant information. WHAT DO I DO!? </h4>            </div>";
             
-            document.getElementById("interchange2").innerHTML="<div class=\"\" id=\"ftimg4\">            <img class=\"img-fluid\" src=\"http://www.swiftprep.in/images/index-4.png\"></div><div class=\"\" id=\"ftcnt4\">                <h4 class=\"content-text\">That's where we come in. <br>Learn only the crux of a chapter in just about an hour, from a topper in your own institute.</h4>            </div> ";
+            document.getElementById("interchange2").innerHTML="<div class=\"\" id=\"ftimg4\">            <img class=\"img-fluid\" src=\"http://localhost:3000/images/index-4.png\"></div><div class=\"\" id=\"ftcnt4\">                <h4 class=\"content-text\">That's where we come in. <br>Learn only the crux of a chapter in just about an hour, from a topper in your own institute.</h4>            </div> ";
         }
 
 
