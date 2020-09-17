@@ -15,8 +15,8 @@ const { PassThrough } = require("stream");
 
 const app = express();
 
-// mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
-mongoose.connect("mongodb://localhost:27017/swiftprep-videos", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
+mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
+// mongoose.connect("mongodb://localhost:27017/swiftprep-videos", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 
 
 app.set('view engine', 'ejs');
@@ -81,6 +81,7 @@ var videoSchema = new mongoose.Schema({
     SubShort: String,
     Chapter: Number,
     VName: String,
+    Notes: String,
     Mentor: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Mentor"
@@ -190,13 +191,30 @@ app.get('/view/:id', function(req, res) {
             if(err) {
                 console.log(err);
             } else {
-                res.render('results1', {bucket: keys.gcp.bucket, link: keys.gcp.link, video: foundVideo});
+                res.render('view', {bucket: keys.gcp.bucket, link: keys.gcp.link, bucketNotes: keys.gcp.bucketNotes, video: foundVideo});
             }
         })
     } else {
         res.redirect('/google');
     }
     
+});
+
+//Display the comments in the view page
+app.get('/view/:id/comment', function(req, res) {
+    if(req.user) {
+        Video.findById(req.params.id).populate("comments").exec(function(err, foundVideo) {
+            if(err) {
+                console.log(err);
+            } else {
+
+                res.render('comments', {video: foundVideo});
+            }
+        })
+    } else {
+        res.redirect('/google');
+    }
+
 });
 
 //Add a comment
@@ -215,7 +233,7 @@ app.post('/view/:id/comment', function(req, res) {
                     newComment.save();
                     foundVideo.comments.push(newComment);
                     foundVideo.save();
-                    res.redirect('/view/' + foundVideo._id);
+                    res.redirect('/view/' + foundVideo._id + '/comment');
                 }
             })
         }
@@ -230,7 +248,7 @@ app.delete('/view/:id/:commentId', function(req, res) {
             res.redirect("/");
         }
         else{
-            res.redirect("/view/" + req.params.id);
+            res.redirect("/view/" + req.params.id + '/comment');
         }
     })
 })
@@ -252,7 +270,7 @@ app.post('/view/:id/:commentId/reply', function(req, res) {
                     foundComment.replies.push(Reply);
                     foundComment.save();
                     console.log(foundComment);
-                    res.redirect('/view/' + foundVideo._id);
+                    res.redirect('/view/' + foundVideo._id + '/comment');
                 }
             })
         }
@@ -267,7 +285,7 @@ app.delete('/view/:id/:commentId/:replyId', function(req, res) {
             res.redirect("/");
         }
         else{
-            res.redirect("/view/" + req.params.id);
+            res.redirect("/view/" + req.params.id + '/comment');
         }
     })
 })
@@ -291,12 +309,12 @@ app.get('/logout', function(req, res) {
 });
 
 //listener
-// app.listen(process.env.PORT, process.env.IP, function(){
-//     console.log("SERVER IS RUNNING!");
-// })
-app.listen(3000, 'localhost', function(){
+app.listen(process.env.PORT, process.env.IP, function(){
     console.log("SERVER IS RUNNING!");
 })
+// app.listen(3000, 'localhost', function(){
+//     console.log("SERVER IS RUNNING!");
+// })
 
 
 
@@ -326,6 +344,6 @@ app.listen(3000, 'localhost', function(){
 //     });
 // });
 
-// Video.create({CBS: 'PES-CSE-5', Subject: 'Machine Intelligence', SubShort: 'MI', Chapter: 1, VName: 'PES-CSE-5-MI-1', Mentor: ObjectId("5f61bd87045db8bf845d3c7d")});
+// Video.create({CBS: 'PES-CSE-5', Subject: 'Machine Intelligence', SubShort: 'MI', Chapter: 1, VName: 'PES-CSE-5-MI-1', Notes: PES-CSE-5-MI-1.docx Mentor: "5f61bd87045db8bf845d3c7d"});
 // Video.create({CBS: 'PES-CSE-5', Subject: 'Machine Intelligence', SubShort: 'MI', Chapter: 2, VName: 'PES-CSE-5-MI-2', Mentor: 'Aditya'});
 // Video.create({CBS: 'PES-ECE-5', Subject: 'Computer Organization', SubShort: 'CO', Chapter: 1, VName: 'PES-CSE-5-CO-1', Mentor: 'Aditya'});

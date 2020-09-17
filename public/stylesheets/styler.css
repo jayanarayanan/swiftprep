@@ -99,6 +99,7 @@
   @media (max-width: 768px) {
     #video1 {
         width: 85%; 
+        padding-top: 48.5%;
         margin-left: 7.5%;
         margin-right: 7.5%;
       }
@@ -109,6 +110,7 @@
         border-radius: 10px;
         width: 75%;
         margin-right: 12.5%;
+        margin-top: 30px;
         padding-bottom: 30px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
@@ -117,6 +119,7 @@
   @media (min-width: 768px) {
     #video1 {
         width: 85%; 
+        padding-top: 48.5%;
         margin-left: 7.5%;
         margin-right: 7.5%;
       }
@@ -127,6 +130,7 @@
         border-radius: 10px;
         width: 60%;
         margin-right: 20%;
+        margin-top: 30px;
         padding-bottom: 30px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
@@ -135,7 +139,8 @@
   @media (min-width: 1230px) {
 
     #video1 {
-        width: 70%; 
+        width: 70%;
+        padding-top: 40%;
         float: left;
         margin-left: 0;
         margin-right: 0;
@@ -147,6 +152,7 @@
         border-radius: 10px;
         width: 25%;
         margin-right: 2.5%;
+        margin-top: 30px;
         padding-bottom: 30px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
@@ -202,4 +208,15 @@
   .vid-ment {
     display: block;
     overflow: hidden;
+  }
+
+  #commentIframe {
+      border: none;
+      margin-top: 30px;
+  }
+
+  #downloadNotes {
+      display: block;
+      margin: 0 auto;
+      max-width: 150px;
   }
