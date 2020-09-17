@@ -43,7 +43,7 @@ html, body {
 body {
   
 
-  background-image: url("https://storage.googleapis.com/swiftprep-web-images//spbg.png");
+  background-image: url("https://storage.googleapis.com/swiftprep-web-images/spbg.png");
   
   
   animation: movingbg 15s ease infinite;
@@ -62,7 +62,7 @@ body {
 }
 
 .pg2-bg {
-  background-image: url('https://storage.googleapis.com/swiftprep-web-images//page2-bg.jpeg');
+  background-image: url('https://storage.googleapis.com/swiftprep-web-images/page2-bg.jpeg');
   width:100%;
   height: 100%;
   background-size: cover;
@@ -82,7 +82,7 @@ body {
 }
 
 .pg3-bg {
-  background-image: url('https://storage.googleapis.com/swiftprep-web-images//page3-bg.jpeg');
+  background-image: url('https://storage.googleapis.com/swiftprep-web-images/page3-bg.jpeg');
   width:100%;
   height: 100%;
   background-size: cover;
@@ -734,7 +734,7 @@ a {
 }
 .pg3-bg {
   background: radial-gradient(circle, rgba(66,203,201,1) 0%, rgba(14,63,145,1) 100%);
-  background-image: url('https://storage.googleapis.com/swiftprep-web-images//spbg.png');
+  background-image: url('https://storage.googleapis.com/swiftprep-web-images/spbg.png');
   height: auto;
   width: 100%;
   background-size: 100% 100% ;

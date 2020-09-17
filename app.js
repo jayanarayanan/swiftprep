@@ -154,7 +154,7 @@ app.use(function(req, res, next){
 
  //homepage
 app.get('/', function(req, res) {
-    Mentor.create({name: "Aditya Machani", dp: "https://image.cnbcfm.com/api/v1/image/100496736-steve-jobs-march-2011-getty.jpg?v=1513863842&w=1400&h=950", college: "PES University", sem: 5, subject: "Machine Intelligence", description: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."})
+    Video.create({CBS: 'PES-CSE-5', Subject: 'Machine Intelligence', SubShort: 'MI', Chapter: 1, VName: 'PES-CSE-5-MI-1', Notes: "PES-CSE-5-MI-1.docx", Mentor: "5f6365328e6dec0017e3830d"});
     res.render('index');
 });
 
