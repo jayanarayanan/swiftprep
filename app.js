@@ -154,7 +154,6 @@ app.use(function(req, res, next){
 
  //homepage
 app.get('/', function(req, res) {
-    Video.create({CBS: 'PES-CSE-5', Subject: 'Machine Intelligence', SubShort: 'MI', Chapter: 1, VName: 'PES-CSE-5-MI-1', Notes: "PES-CSE-5-MI-1.docx", Mentor: "5f6365328e6dec0017e3830d"});
     res.render('index');
 });
 

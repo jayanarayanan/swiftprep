@@ -1,4 +1,4 @@
-var socket = io.connect('www.swiftprep.in');
+var socket = io.connect('http://www.swiftprep.in');
 
 var video = document.getElementById('video1');
 
