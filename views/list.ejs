@@ -29,7 +29,7 @@
     <meta name="msapplication-config" content="http://www.swiftprep.in/favicon/browserconfig.xml">
     <title>SwiftPrep</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="http://www.swiftprep.in/stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="http://www.swiftprep.in/stylesheets/style2.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">  
@@ -40,7 +40,7 @@
 <script>
       window.onload=function(){
         AOS.init({
-          duration:1000,
+          duration:500,
         });
       }
       
@@ -51,7 +51,9 @@
     }
 </style>
 
+
   </head>
+
 
 <body >
    <style>
@@ -59,26 +61,25 @@
         border:1px solid rgb(0,0,0,0);
     }
    </style>
-    <div style=" margin-left: auto; margin-right: auto;width:100%;background-color: white;">
-    
 
+    <div style=" margin-left: auto; margin-right: auto;width:100%;background-color: white;">
     <nav class="navbar" style="width:82%;margin: auto;">
         
         <a href="/" class="navbar-brand"><img class="logo" src="https://storage.googleapis.com/swiftprep-web-images/logo.png"></a>
         <% if(!currentUser){ %>
-              <a class="nav-link" href="/google">Login</a>
-              <% } else { %>
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Profile
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                      <button class="dropdown-item" type="button"></button>
-                      <div class="dropdown-divider"></div>
-                      <a href="/logout" class=" dropdown-item btn">Logout</a>
-                    </div>
+            <a class="nav-link" href="/google">Login</a>
+            <% } else { %>
+              <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Profile
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <button class="dropdown-item" type="button"></button>
+                    <div class="dropdown-divider"></div>
+                    <a href="/logout" class=" dropdown-item btn">Logout</a>
                   </div>
-                  <% } %>
+                </div>
+                <% } %>
           </div>
       </nav>
 
@@ -89,55 +90,60 @@
 
     <div class="filterhead" style="text-align: center;margin:0px;"> 
         <div class="filin" style="text-align: center;margin:0px;">
-            <h2 id="mainheading" style="color: white;font-size:3.2vw;padding: 50px;margin:0px;"><b>LEARN EVERYTHING YOU NEED SWIFTLY</b></h2>
+            <h2 id="mainheading" ><b>LEARN EVERYTHING YOU NEED SWIFTLY</b></h2>
         </div>
         
     </div>
     <% subunique.forEach(function(subU) {%>
-    <div data-aos="fade-right" mdata-aos-offset="300" data-aos-easing="ease-in-sine">
-        <div class="filtercard">
-            <div >
-                <h1><%= subU._id %></h1>
-            </div>
-            <hr style="border:1px solid white;width:100%;margin-left: 20px;">
-            <div class="inside">
-                <% videos.forEach(function(video) {%>
-                    <% if(video.Subject == subU._id) {%>
-                <a href="/view/<%= video._id %>"><div id="card" class="cards" >
-                            <div style="padding: 5px 8px 0px 8px ;height: 80%;">
-                                <img src="https://www.aquatechtrade.com/-/media/websites/aquatech/aqd/images/news/aqd_machine-learning_1200x628.ashx" width="100%" height="100%">
-                            </div>      
-                            <div style="padding-left: 10px;"> 
-                                <h2><%= video.SubShort %> - <%= video.Chapter %></h2>
+        <div data-aos="fade-right" mdata-aos-offset="300" data-aos-easing="ease-in-sine">
+            <div class="filtercard">
+                <div >
+                    <h1><%= subU._id %></h1>
+                </div>
+                <hr style="border:1px solid white;width:100%;margin-left: 20px;">
+                <div class="inside">
+                    <% videos.forEach(function(video) {%>
+                        <% if(video.Subject == subU._id) {%>
+                        <a href="/view/<%= video._id %>">
+                            <div id="card" class="cards" >
+                                <div style="padding: 5px 8px 0px 8px ;height: 80%;">
+                                    <img src="https://www.aquatechtrade.com/-/media/websites/aquatech/aqd/images/news/aqd_machine-learning_1200x628.ashx" width="100%" height="100%">
+                                </div>      
+                                <div style="padding-left: 10px;"> 
+                                    <h2><%= video.SubShort %> - <%= video.Chapter %></h2>
+                                </div>
                             </div>
-                </div></a>
-                <% } %>
-            <% }) %>
+                        </a>
+                    <% } %>
+                <% }) %>
+                </div>
             </div>
         </div>
-    </div>
-    <br>
-<% }) %>
+        <br>
+    <% }) %>
 </div>
   
 
    <footer id="footer" class="page-footer font-small stylish-color-dark pt-4">
-
-    <ul class="list-unstyled list-inline text-center py-2">
-        <li class="list-inline-item">
-          <h5 class="mb-1">Start your prep!</h5>
-        </li>
-        <% if(!currentUser){ %>
-        <li class="list-inline-item">
-          <a href="/google" class="btn btn-primary btn-rounded" style="border-radius: 50px;">Sign up!</a>
-        </li>
-        <% } else { %>
+  
+        <ul class="list-unstyled list-inline text-center py-2">
           <li class="list-inline-item">
-            <a href="/filter" class="btn btn-primary btn-rounded" style="border-radius: 50px;">Lets Go!</a>
+            <h5 class="mb-1">Start your prep!</h5>
           </li>
-          <% } %>
-      </ul>
+          <% if(!currentUser){ %>
+            <li class="list-inline-item">
+              <a href="/google" class="btn btn-primary btn-rounded" style="border-radius: 50px;">Sign up!</a>
+            </li>
+            <% } else { %>
+              <li class="list-inline-item">
+                <a href="/filter" class="btn btn-primary btn-rounded" style="border-radius: 50px;">Lets Go!</a>
+              </li>
+              <% } %>
+        </ul>
 
+
+  
+    <hr style="width:70%;background-color:#888;">
     <ul class="list-unstyled list-inline text-center">
       <li class="list-inline-item">
         <a class="btn-floating btn-fb mx-1">
@@ -157,12 +163,10 @@
     </ul>
   
     <div class="footer-copyright text-center py-3" style="box-sizing: border-box;padding-bottom: 10px;background-color: #555;">© 2020 Copyright:
-      <a href="https://localhost:3000/"> SwiftPrep</a>
+      <a href="https://www.swiftprep.in/"> SwiftPrep</a>
     </div>
   
   </footer>
-  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
 </body>
     </html>

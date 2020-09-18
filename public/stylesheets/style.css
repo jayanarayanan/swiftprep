@@ -17,7 +17,16 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #00c8ff;
 }
+.invisible1{
+  opacity:0;
+}
+label{
+    width:90px;
 
+  }
+.visible1{
+  opacity:1;
+}
 #ftimg1,#ftimg2,#ftimg3,#ftimg4{
     transition: transform 0.2s;
 }
@@ -43,7 +52,7 @@ html, body {
 body {
   
 
-  background-image: url("https://storage.googleapis.com/swiftprep-web-images/spbg.png");
+  background-image: url(https://storage.googleapis.com/swiftprep-web-images/spbg.png);
   
   
   animation: movingbg 15s ease infinite;
@@ -82,19 +91,19 @@ body {
 }
 
 .pg3-bg {
-  background-image: url('https://storage.googleapis.com/swiftprep-web-images/page3-bg.jpeg');
+  background-image: url('http://localhost:3000/images/page3-bg.jpeg');
   width:100%;
   height: 100%;
   background-size: cover;
 }
-#branchselector,#collegeselector{
+#branchselector,#collegeselector,#semselector{
   color:white;
   background-color: #1d0076;
   border: 0px;
   transition: 0.2s all ease;
 
 }
-#branchselector:hover,#collegeselector:hover{
+#branchselector:hover,#collegeselector:hover,#semselector:hover{
   
  background-color:#1d0032;
   
@@ -170,7 +179,6 @@ option{
   top: 20%;
   left: 10%;
   font-size: 4.0vw;
-  font-family: 'Quicksand', sans-serif;
   animation-name: icanimationa;
   animation-duration: 1s;
 }
@@ -184,8 +192,8 @@ option{
   color: #fff;
   top: 34%;
   left: 10%;
+  color: white;
   font-size: 2.6vw;
-  font-family: 'Quicksand', sans-serif;
   animation-name: icanimationb;
   animation-duration: 1s;
 }
@@ -205,8 +213,8 @@ option{
   color: #fff;
   top: 49%;
   left: 10%;
+  color: #FFF;
   font-size: 3.0vw;
-  font-family: 'Quicksand', sans-serif;
 animation-name: icanimationc;
   animation-duration: 1s;
 }
@@ -228,8 +236,43 @@ animation-name: icanimationc;
   }
 
 
-@media (max-width: 650px) {
-   
+
+
+@media (max-width: 520px) {
+.pg2-hd{
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.pg2-dd{
+  max-width:100%;
+  margin:auto;
+  text-align: center; 
+  padding: 40px;
+  padding-top: 100px;
+}
+form{
+    width:100%;
+    margin:auto;
+  }
+  
+#college,#sem{
+  width:300px;  
+}
+
+body{
+  height: 700px;    
+}
+#branch{
+  width:300px;
+
+}
+#gobtn{
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+
+
 
 body{
   background-size: 700px 736.84px;
@@ -329,11 +372,156 @@ body{
       opacity: 1;
     }
   }
+
+}
+
+
+
+
+@media (min-width: 520px) {
+   
+.pg2-hd{
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.pg2-dd{
+  max-width:70%;
+  
+  padding-left: 100px;
+  
+}
+form{
+    width: 100%;
+    margin:auto;
+  }
+  
+
+#gobtn{
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+body{
+  background-size: 700px 736.84px;
+  animation: movingbg 35s ease infinite;
+
+}
+
+  #butn {
+    top: 65%;
+      left: 17.5%;
+      height:20px;
+      font-size: 1.4vw; 
+      padding: 3px 5px;
+      width: 70px;
+  }
+
+  .sections {
+ 
+    font-size: 4.2vw;
+   font-weight: bold;
+}
+    .features {
+            overflow: hidden;
+            padding-bottom: 60px;
+  }
+  .feature-item {
+    display: block; 
+    clear: both;
+    position: relative;
+  }
+  
+   .featureImg {
+      position: relative;
+      display: block; 
+      margin: 30px auto;
+      max-width: 50%;
+      min-width: 50%;
+      box-shadow: 6px 6px 20px #000;
+      animation-name: imagemovea;
+      animation-duration: 1.5s;
+
+  }
+
+
+  .content1 {
+      display: block; 
+      margin: 30px auto;
+      max-width: 50%;
+       animation-name: imagemoveb;
+      animation-duration: 2s;
+  }
+  
+   .featureImg2 {
+    position: relative;
+    display: block; 
+    margin: 30px auto;
+    max-width: 50%;
+    min-width: 50%;
+    box-shadow: 6px 6px 20px #000;
+    animation-name: imagemoveb;
+      animation-duration: 1.5s;
+  }
+  
+   .content2 {
+    margin: 30px auto;
+    display: block; 
+    max-width: 50%;
+    animation-name: imagemovea;
+      animation-duration: 2s;
+  }
+  .content-head{
+    font-size: 2.5vw;
+  }
+
+    .content-text {
+    font-size: 2.6vw;
+    font-family: 'Quicksand', sans-serif;
+   
+  }
+  @keyframes imagemovea{
+    from{
+      
+      opacity: 0;
+    }
+    to{
+    
+      opacity: 1;
+    }
+  }
+  @keyframes imagemoveb{
+    from{
+      
+      opacity: 0;
+    }
+    to{
+      
+      opacity: 1;
+    }
+  }
   }
 
 @media (min-width: 650px) {
 
+.pg2-hd{
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.pg2-dd{
+  max-width:70%;
+  
+  padding-left: 100px;
+  
+}
+form{
+    width: 100%;
+    margin:auto;
+  }
 
+#gobtn{
+  margin-top: 30px;
+  font-size: 20px;
+}
 body{
   background-size: 800px 842.1px;
   animation: movingbg 20s ease infinite;
@@ -435,7 +623,26 @@ body{
   
   @media (min-width: 768px) {
 
+.pg2-hd{
+  width:400px;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.pg2-dd{
+  max-width:70%;
+  
+  padding-left: 200px;
+  
+}
+form{
+    width: 400px;
+    margin:0px;
+  }
 
+#gobtn{
+  margin-top: 30px;
+  font-size: 20px;
+}
     #butn {
       top: 65%;
       left: 20%;
@@ -530,6 +737,30 @@ body{
   
   @media (min-width: 1230px) {
 
+.pg2-hd{
+  width:400px;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.pg2-dd{
+  max-width:70%;
+  
+  padding-left: 200px;
+  
+}
+form{
+    width: 500px;
+    margin:0px;
+  }
+  #collegeselector,#branchselector,#semselector{
+    width:100px;
+
+  }
+
+#gobtn{
+  margin-top: 30px;
+  font-size: 20px;
+}
     body{
   background-size: 1500px 1578.94px;
   animation: movingbg 20s ease infinite;
@@ -636,9 +867,10 @@ body{
       opacity: 1;
     }
   }
+
   }
 
-  @media (min-width: 1921px) {
+  @media (min-width: 1950px) {
     body{
       background-size: cover; 
     }
@@ -649,6 +881,7 @@ body{
     border-radius: 50%;
     max-width: 60px;
   }
+
 
 hr {
     margin-top: 20px;
@@ -760,30 +993,6 @@ img{
   max-height: 25px;
 }
 
-
-
 .thumbnail {
   max-width: 100%;
-}
-
-#videodiv{
-  width: 60%;
-  
-  background-color: black;
-  float:left;
-  
-  box-sizing: border-box;
-  margin-left:5%; 
-}
-#aspect{
-
- position:  absolute;
- top: 0;
- left: 0;
- bottom: 0;
- right: 0;
- text-align: center;
- font-size: 20px;
- color: white;
-
 }

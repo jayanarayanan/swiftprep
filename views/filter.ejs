@@ -6,27 +6,28 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="http://www.swiftprep.in/favicon/favicon.ico">
-    <link rel="icon" sizes="16x16 32x32 64x64" href="http://www.swiftprep.in/favicon/favicon.ico">
-    <link rel="icon" type="image/png" sizes="196x196" href="http://www.swiftprep.in/favicon/favicon-192.png">
-    <link rel="icon" type="image/png" sizes="160x160" href="http://www.swiftprep.in/favicon/favicon-160.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="http://www.swiftprep.in/favicon/favicon-96.png">
-    <link rel="icon" type="image/png" sizes="64x64" href="http://www.swiftprep.in/favicon/favicon-64.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="http://www.swiftprep.in/favicon/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="http://www.swiftprep.in/favicon/favicon-16.png">
-    <link rel="apple-touch-icon" href="http://www.swiftprep.in/favicon/favicon-57.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="http://www.swiftprep.in/favicon/favicon-114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="http://www.swiftprep.in/favicon/favicon-72.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="http://www.swiftprep.in/favicon/favicon-144.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="http://www.swiftprep.in/favicon/favicon-60.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="http://www.swiftprep.in/favicon/favicon-120.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="http://www.swiftprep.in/favicon/favicon-76.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="http://www.swiftprep.in/favicon/favicon-152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="http://www.swiftprep.in/favicon/favicon-180.png">
-    <meta name="msapplication-TileColor" content="#FFFFFF">
-    <meta name="msapplication-TileImage" content="http://www.swiftprep.in/favicon/favicon-144.png">
-    <meta name="msapplication-config" content="http://www.swiftprep.in/favicon/browserconfig.xml">
+    <link rel="shortcut icon" href="http://www.swiftprep.in/images/favicon/favicon.ico">
+  <link rel="icon" sizes="16x16 32x32 64x64" href="http://www.swiftprep.in/images/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="196x196" href="http://www.swiftprep.in/images/favicon/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="160x160" href="http://www.swiftprep.in/images/favicon/favicon-160.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="http://www.swiftprep.in/images/favicon/favicon-96.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="http://www.swiftprep.in/images/favicon/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="http://www.swiftprep.in/images/favicon/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://www.swiftprep.in/images/favicon/favicon-16.png">
+  <link rel="apple-touch-icon" href="http://www.swiftprep.in/images/favicon/favicon-57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="http://www.swiftprep.in/images/favicon/favicon-114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="http://www.swiftprep.in/images/favicon/favicon-72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="http://www.swiftprep.in/images/favicon/favicon-144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="http://www.swiftprep.in/images/favicon/favicon-60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="http://www.swiftprep.in/images/favicon/favicon-120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="http://www.swiftprep.in/images/favicon/favicon-76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="http://www.swiftprep.in/images/favicon/favicon-152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="http://www.swiftprep.in/images/favicon/favicon-180.png">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="msapplication-TileImage" content="http://www.swiftprep.in/images/favicon/favicon-144.png">
+  <meta name="msapplication-config" content="http://www.swiftprep.in/images/favicon/browserconfig.xml">
     <title>SwiftPrep</title>
+    <!--change the link of the stylesheet-->
     <link rel="stylesheet" type="text/css" href="http://www.swiftprep.in/stylesheets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -35,36 +36,33 @@
   </head>
 <body>
   <div style="width: 100%; margin-left: auto; margin-right: auto;background-color: white;">
-    
-
-    <nav class="navbar" style="width: 82%; margin-left: auto; margin-right: auto;">
-        
-        <a href="/" class="navbar-brand"><img class="logo" src="https://storage.googleapis.com/swiftprep-web-images/logo.png"></a>
-        <% if(!currentUser){ %>
-          <a class="nav-link" href="/google">Login</a>
-          <% } else { %>
-            <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Profile
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                  <button class="dropdown-item" type="button"><%= currentUser.username %></button>
-                  <div class="dropdown-divider"></div>
-                  <a href="/logout" class=" dropdown-item btn">Logout</a>
-                </div>
+    <nav class="navbar" style="width: 82%; margin-left: auto; margin-right: auto;"> 
+      <a href="/" class="navbar-brand"><img class="logo" src="https://storage.googleapis.com/swiftprep-web-images/logo.png"></a>
+      <% if(!currentUser){ %>
+        <a class="nav-link" href="/google">Login</a>
+        <% } else { %>
+          <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Profile
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <button class="dropdown-item" type="button"><%= currentUser.username %></button>
+                <div class="dropdown-divider"></div>
+                <a href="/logout" class=" dropdown-item btn">Logout</a>
               </div>
-              <% } %>
-          </div>
-      </nav>
+            </div>
+            <% } %>
+        </div>
+    </nav>
 
 
     </div>
 <div class="pg2-bg">
 <div class="pg2-dd">
 <h1 class="pg2-hd">What do you wanna study today?</h1>
-<form action="/filter" id="filterForm" method="POST">
+<form action="/filter" method="POST" id="filterform">
     <div class="input-group mb-3 ">
-        <div class="input-group-prepend">
+        <div class="input-group-prepend texthead">
           <label class="input-group-text" for="inputGroupSelect01" id="collegeselector">College: </label>
         </div>
     <select class="custom-select" name="college" id="college" onchange="collChoice(this)">
@@ -74,41 +72,46 @@
         <option value="VIT">VIT</option>
     </select><br></div>
     <div class="input-group mb-3">
-        <div class="input-group-prepend">
+        <div class="input-group-prepend texthead">
           <label class="input-group-text" for="inputGroupSelect01" id="branchselector">Branch: </label>
         </div>
     <select class="custom-select" name="branch" id="branch">
         <option value="Select Stream">Select Stream</option>
     </select><br></div>
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
+
+    <div class="input-group mb-3 ">
+     
+     <div class="input-group-prepend texthead" >
+        
         <label class="input-group-text" for="inputGroupSelect01" id="semselector">Semester: </label>
       </div>
-  <select class="custom-select" name="sem" id="sem">
+    <select class="custom-select" name="sem" id="sem">
       <option value="Select Semester">Select Semester</option>
       <option value="5">5</option>
   </select><br></div>
-    <button type="button" id="gobtn" onclick="submitValidation()">Go!</button>
+  <button type="button" id="gobtn" onclick="submitValidation()">Go!</button>
 </form>
 </div>
 </div>
  <footer id="footer" class="page-footer font-small stylish-color-dark pt-4">
-
-    <ul class="list-unstyled list-inline text-center py-2">
-        <li class="list-inline-item">
-          <h5 class="mb-1">Start your prep!</h5>
-        </li>
-        <% if(!currentUser){ %>
-        <li class="list-inline-item">
-          <a href="/google" class="btn btn-primary btn-rounded" style="border-radius: 50px;">Sign up!</a>
-        </li>
-        <% } else { %>
+  
+        <ul class="list-unstyled list-inline text-center py-2">
           <li class="list-inline-item">
-            <a href="/filter" class="btn btn-primary btn-rounded" style="border-radius: 50px;">Lets Go!</a>
+            <h5 class="mb-1">Start your prep!</h5>
           </li>
-          <% } %>
-      </ul>
+          <% if(!currentUser){ %>
+            <li class="list-inline-item">
+              <a href="/google" class="btn btn-primary btn-rounded" style="border-radius: 50px;">Sign up!</a>
+            </li>
+            <% } else { %>
+              <li class="list-inline-item">
+                <a href="/filter" class="btn btn-primary btn-rounded" style="border-radius: 50px;">Lets Go!</a>
+              </li>
+              <% } %>
+        </ul>
 
+
+  
     <hr style="width:70%;background-color:#888;">
     <ul class="list-unstyled list-inline text-center">
       <li class="list-inline-item">
@@ -129,13 +132,10 @@
     </ul>
   
     <div class="footer-copyright text-center py-3" style="box-sizing: border-box;padding-bottom: 10px;background-color: #555;">© 2020 Copyright:
-      <a href="https://localhost:3000/"> SwiftPrep</a>
+      <a href="https://www.swiftprep.in/"> SwiftPrep</a>
     </div>
   
   </footer>
-  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 <script>
     var info = {

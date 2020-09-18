@@ -41,9 +41,9 @@
         border:1px solid rgb(0,0,0,0);
     }
    </style>
-    <div style=" margin-left: auto; margin-right: auto;width:100%;background-color: white;">
 
-    <nav class="navbar" style="width:82%;margin: auto;">
+    <div style=" margin-left: auto; margin-right: auto;width:100%;background-color: white;">
+      <nav class="navbar" style="width:82%;margin: auto;">
         
         <a href="/" class="navbar-brand"><img class="logo" src="https://storage.googleapis.com/swiftprep-web-images/logo.png"></a>
         <% if(!currentUser){ %>
@@ -62,8 +62,6 @@
                   <% } %>
           </div>
       </nav>
-
-
     </div>
     <div id="indexCard">
         <img class=" indexImg img-fluid" src="https://storage.googleapis.com/swiftprep-web-images/dummy3.png">
@@ -71,8 +69,7 @@
             <h1 class="ic-1 anim-typewriter"><big><big><strong class="anim-typewriter">Learn</strong></big></big></h1>
             <h2 class="ic-2">only the most essential parts<br> of your courses</h2>
             <h1 class="ic-3"><strong>in just a few hours.</strong></h1>
-        
-            <% if(!currentUser){ %>
+          <% if(!currentUser){ %>
         <form action="/google" method="GET">
             <input id="butn" class="btn btn-primary" type="submit" value="Lets Go!">
         </form>
@@ -87,9 +84,9 @@
         
 
         <div class="feature-item look1" >
-            <div class="" id="ftimg1">
+            <div class="invisible1" id="ftimg1">
             <img class="img-fluid" src="https://storage.googleapis.com/swiftprep-web-images/index-1.png"></div>
-            <div class="" id="ftcnt1">
+            <div class="invisible1" id="ftcnt1">
             <h4 class="content-text">A week left for your exams to begin, and you don't know anything. We've all been there, haven't we?</h4>
         </div>
 
@@ -100,11 +97,11 @@
 
         <div class="feature-item look2" id="interchange1">
             
-            <div class="" id="ftcnt2">
-                <h4 class="content-text">The textbook makes no sense! The lecture videos of the teacher are way too long and boring. I barely have any notes, and the online materials have too much irrelevant information. WHAT DO I DO!? </h4>
+            <div class="invisible1" id="ftcnt2">
+                <h4 class="content-text">The textbook makes no sense! The lecture video of the teacher are way too long and boring. I barely have any notes, and the online materials have too much irrelevant information. WHAT DO I DO!? </h4>
             </div>
             
-            <div class="" id="ftimg2">
+            <div class="invisible1" id="ftimg2">
             <img class="img-fluid" src="https://storage.googleapis.com/swiftprep-web-images/index-2.png">
             </div>
 
@@ -113,9 +110,9 @@
         <hr style="clear: both;" />
         
         <div class="feature-item look3" id="">
-            <div class="" id="ftimg3">
+            <div class="invisible1" id="ftimg3">
             <img class="img-fluid" src="https://storage.googleapis.com/swiftprep-web-images/index-3.png"></div>
-            <div class="" id="ftcnt3">
+            <div class="invisible1" id="ftcnt3">
             <h4 class="content-text">Oh wait, I can ask my friends to teach me this, can't I? <br>Whoops, they're too busy studying for themselves. Now it's time to panic.</h4>
         </div>
         </div>
@@ -123,13 +120,15 @@
         <hr style="clear: both;" />
         
         <div class="feature-item look4" id="interchange2">
-            <div class="" id="ftcnt4">
+            <div class="invisible1" id="ftcnt4">
                 <h4 class="content-text">That's where we come in. <br>Learn only the crux of a chapter in just about an hour, from a topper in your own institute.</h4>
             </div>
-            <div class="" id="ftimg4">
+            <div class="invisible1" id="ftimg4">
             <img class="img-fluid" src="https://storage.googleapis.com/swiftprep-web-images/index-4.png"></div>
         </div>
     </div>
+
+   
 
     <footer id="footer" class="page-footer font-small stylish-color-dark pt-4">
   
@@ -138,14 +137,14 @@
             <h5 class="mb-1">Start your prep!</h5>
           </li>
           <% if(!currentUser){ %>
-          <li class="list-inline-item">
-            <a href="/google" class="btn btn-primary btn-rounded" style="border-radius: 50px;">Sign up!</a>
-          </li>
-          <% } else { %>
             <li class="list-inline-item">
-              <a href="/filter" class="btn btn-primary btn-rounded" style="border-radius: 50px;">Lets Go!</a>
+              <a href="/google" class="btn btn-primary btn-rounded" style="border-radius: 50px;">Sign up!</a>
             </li>
-            <% } %>
+            <% } else { %>
+              <li class="list-inline-item">
+                <a href="/filter" class="btn btn-primary btn-rounded" style="border-radius: 50px;">Lets Go!</a>
+              </li>
+              <% } %>
         </ul>
 
 
@@ -170,7 +169,7 @@
     </ul>
   
     <div class="footer-copyright text-center py-3" style="box-sizing: border-box;padding-bottom: 10px;background-color: #555;">© 2020 Copyright:
-      <a href="https://localhost:3000/"> SwiftPrep</a>
+      <a href="https://www.swiftprep.in/"> SwiftPrep</a>
     </div>
   
   </footer>
@@ -182,7 +181,7 @@
 <script>
     
     $.fn.isInViewport = function() {
-  var elementTop = $(this).offset().top-60;
+  var elementTop = $(this).offset().top;
   
   var elementBottom = elementTop + $(this).outerHeight();
 
@@ -194,45 +193,45 @@
 
     $(window).on('scroll', function() {
     if ($('#ftimg1').isInViewport()) {
-        document.getElementById("ftimg1").className="featureImg" 
-        document.getElementById("ftcnt1").className="content1" 
+        document.getElementById("ftimg1").className="featureImg visible1" 
+        document.getElementById("ftcnt1").className="content1 visible1" 
         
     } 
     if ($('#ftimg2').isInViewport()) {
-        document.getElementById("ftimg2").className="featureImg2" 
-        document.getElementById("ftcnt2").className="content2" 
+        document.getElementById("ftimg2").className="featureImg2 visible1" 
+        document.getElementById("ftcnt2").className="content2 visible1" 
         
     } 
     if ($('#ftimg3').isInViewport()) {
-        document.getElementById("ftimg3").className="featureImg" 
-        document.getElementById("ftcnt3").className="content1" 
+        document.getElementById("ftimg3").className="featureImg visible1" 
+        document.getElementById("ftcnt3").className="content1 visible1" 
         
     } 
     if ($('#ftimg4').isInViewport()) {
-        document.getElementById("ftimg4").className="featureImg2" 
-        document.getElementById("ftcnt4").className="content2" 
+        document.getElementById("ftimg4").className="featureImg2 visible1" 
+        document.getElementById("ftcnt4").className="content2 visible1" 
         
     } 
 });
 
     if ($('#ftimg1').isInViewport()) {
-        document.getElementById("ftimg1").className="featureImg" 
-        document.getElementById("ftcnt1").className="content1" 
+        document.getElementById("ftimg1").className="featureImg visible1" 
+        document.getElementById("ftcnt1").className="content1 visible1" 
         
     } 
     if ($('#ftimg2').isInViewport()) {
-        document.getElementById("ftimg2").className="featureImg2" 
-        document.getElementById("ftcnt2").className="content2" 
+        document.getElementById("ftimg2").className="featureImg2 visible1" 
+        document.getElementById("ftcnt2").className="content2 visible1" 
         
     } 
     if ($('#ftimg3').isInViewport()) {
-        document.getElementById("ftimg3").className="featureImg" 
-        document.getElementById("ftcnt3").className="content1" 
+        document.getElementById("ftimg3").className="featureImg visible1" 
+        document.getElementById("ftcnt3").className="content1 visible1" 
         
     } 
     if ($('#ftimg4').isInViewport()) {
-        document.getElementById("ftimg4").className="featureImg2" 
-        document.getElementById("ftcnt4").className="content2" 
+        document.getElementById("ftimg4").className="featureImg2 visible1" 
+        document.getElementById("ftcnt4").className="content2 visible1" 
         
     } 
 
@@ -240,9 +239,9 @@
     
         if(window.innerWidth<=1253)
         {
-            document.getElementById("interchange1").innerHTML="<div class=\"\" id=\"ftimg2\">            <img class=\"img-fluid\" src=\"https://storage.googleapis.com/swiftprep-web-images/index-2.png\">            </div><div class=\"\" id=\"ftcnt2\"><h4 class=\"content-text\">The textbook makes no sense! The lecture videos of the teacher are way too long and boring. I barely have any notes, and the online materials have too much irrelevant information. WHAT DO I DO!? </h4>            </div>";
+            document.getElementById("interchange1").innerHTML="<div class=\"\" id=\"ftimg2\">            <img class=\"img-fluid\" src=\"https://storage.googleapis.com/swiftprep-web-images/index-2.png\">            </div><div class=\"\" id=\"ftcnt2\"><h4 class=\"content-text\">The textbook makes no sense! The lecture deo of the teacher are way too long and boring. I barely have any notes, and the online materials have too much irrelevant information. WHAT DO I DO!? </h4>            </div>";
             
-            document.getElementById("interchange2").innerHTML="<div class=\"\" id=\"ftimg4\">            <img class=\"img-fluid\" src=\"https://storage.googleapis.com/swiftprep-web-images/index-4.png\"></div><div class=\"\" id=\"ftcnt4\">                <h4 class=\"content-text\">That's where we come in. <br>Learn only the crux of a chapter in just about an hour, from a topper in your own institute.</h4>            </div> ";
+            document.getElementById("interchange2").innerHTML="<div class=\"\" id=\"ftimg4\">            <img class=\"img-fluid\" src=\"https://storage.googleapis.com/swiftprep-web-images/index-4.png\"></div><div class=\"\" id=\"ftcnt4\">                <h4 class=\"content-text\">That's where we come in. <br>earn only the crux of a chapter in just about an hour, from a topper in your own institute.</h4>            </div> ";
         }
 
 
