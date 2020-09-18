@@ -24,11 +24,6 @@ body, html {
     text-align: center;
 }
 
-.content1 {
-    font-size: 400%;
-    font-weight: 800;
-}
-
 #footr {
     padding-top: 15px;;
     background-color: #444444;
@@ -43,6 +38,10 @@ body, html {
         max-width: 20%;
         padding-top: 30px;
     }
+    .content1 {
+        font-size: 400%;
+        font-weight: 800;
+    }
 }
 
 @media (max-width: 768px) {
@@ -54,6 +53,10 @@ body, html {
         max-width: 40%;
         padding-top: 30px;
     }
+    .content1 {
+        font-size: 400%;
+        font-weight: 800;
+    }
 }
 
 @media (max-width: 450px) {
@@ -64,5 +67,9 @@ body, html {
         margin: 0 auto;
         max-width: 60%;
         padding-top: 30px;
+    }
+    .content1 {
+        font-size: 300%;
+        font-weight: 800;
     }
 }
