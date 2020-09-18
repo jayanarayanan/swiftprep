@@ -775,7 +775,7 @@ form{
       left: 17.5%;
       width:200px;
       height:40px;
-      font-size: 1.4vw; 
+      font-size: 150%; 
       padding: 4px 6px;
       border-radius: 6px;
     }
