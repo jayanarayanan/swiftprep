@@ -154,7 +154,7 @@ app.use(function(req, res, next){
 
  //homepage
 app.get('/', function(req, res) {
-    res.render('index');
+    res.render('launchingsoon.html');
 });
 
 // filter page
