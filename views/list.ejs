@@ -107,10 +107,10 @@
                         <a href="/view/<%= video._id %>">
                             <div id="card" class="cards" >
                                 <div style="padding: 5px 8px 0px 8px ;height: 80%;">
-                                    <img src="https://www.aquatechtrade.com/-/media/websites/aquatech/aqd/images/news/aqd_machine-learning_1200x628.ashx" width="100%" height="100%">
+                                    <img src="<%= video.Thumbnail %>" width="100%" height="100%">
                                 </div>      
                                 <div style="padding-left: 10px;"> 
-                                    <h2><%= video.SubShort %> - <%= video.Chapter %></h2>
+                                    <h2><%= video.Subject %> - <%= video.Chapter %></h2>
                                 </div>
                             </div>
                         </a>

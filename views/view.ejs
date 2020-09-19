@@ -67,7 +67,7 @@
     </div>
 <div class="vid-ment">
   <div class="videoo" oncontextmenu="return false">
-      <video id="video1" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls data-setup='{"playbackRates": [1, 1.25, 1.5, 1.75, 2]}'>
+      <video id="video1" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls data-setup='{"playbackRates": [1, 1.25, 1.5, 1.75, 2], "poster": "<%= video.Thumbnail %>"}'>
           <source src="https://<%= link %>/<%= bucket %>/<%= video.VName %>.mp4" type="video/mp4">
           Your browser does not support the video tag.
       </video>
@@ -82,7 +82,7 @@
     <div class="mentorcard-desc">
       <span><i class="fas fa-quote-left"></i> <%= video.Mentor.description %> <i class="fas fa-quote-right"></i></span>
     </div><hr>
-    <a id="downloadNotes" class="btn btn-info" href="https://<%= link %>/<%= bucketNotes %>/<%= video.Notes %>"><i class="fas fa-file"></i> Download Notes!</a>
+    <a id="downloadNotes" class="btn btn-info" href="<%= video.Notes %>"><i class="fas fa-file"></i> Download Notes!</a>
   </div>
 </div>
 

@@ -173,9 +173,6 @@ app.get("/temp", function(req, res) {
 })
 
 app.get("/database", function(req, res) {
-    Video.create({CBS: 'PES-CSE-5', Subject: 'Machine Intelligence', SubShort: 'MI', Chapter: 1, VName: 'PES-CSE-5-MI-1',Thumbnail: "https://storage.googleapis.com/swiftprep-web-images/unit-1.png", Notes: "https://storage.googleapis.com/swiftprep-notes/PES-CSE-5-MI-1.pdf", Mentor: "5f661f84e1e9c70017fc2753"});
-    Video.create({CBS: 'PES-CSE-5', Subject: 'Operating System', SubShort: 'OS', Chapter: 1, VName: 'PES-CSE-5-OS-1',Thumbnail: "https://storage.googleapis.com/swiftprep-web-images/unit-1.png", Notes: "https://storage.googleapis.com/swiftprep-notes/PES-CSE-5-OS-1.pdf", Mentor: "5f661f84e1e9c70017fc2752"});
-    Video.create({CBS: 'PES-CSE-5', Subject: 'Computer Networks', SubShort: 'CN', Chapter: 1, VName: 'PES-CSE-5-CN-1',Thumbnail: "https://storage.googleapis.com/swiftprep-web-images/unit-1.png", Notes: "https://storage.googleapis.com/swiftprep-notes/PES-CSE-5-CN-1.pdf", Mentor: "5f661f84e1e9c70017fc2751"});
     res.render("index");
 })
 
