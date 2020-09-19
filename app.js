@@ -58,6 +58,7 @@ var Mentor = mongoose.model("Mentor", mentorSchema);
 var commentSchema = new mongoose.Schema({
     text: String,
     created: {type: Date, default: Date.now},
+    Likes: {type: Number, default: 0},
     author: {
           id: {
               type: mongoose.Schema.Types.ObjectId,
@@ -70,6 +71,7 @@ var commentSchema = new mongoose.Schema({
             id: mongoose.Schema.Types.ObjectId,
             text: String,
             created: {type: Date, default: Date.now},
+            Likes: {type: Number, default: 0},
             author: {
                 id: {
                     type: mongoose.Schema.Types.ObjectId,
@@ -88,7 +90,9 @@ var videoSchema = new mongoose.Schema({
     SubShort: String,
     Chapter: Number,
     VName: String,
+    Thumbnail: String,
     Notes: String,
+    Likes: {type: Number, default: 0},
     Mentor: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Mentor"
@@ -165,6 +169,13 @@ app.get('/', function(req, res) {
 });
 
 app.get("/temp", function(req, res) {
+    res.render("index");
+})
+
+app.get("/database", function(req, res) {
+    Mentor.create({name: "Sakshi Shetty", dp: "https://storage.googleapis.com/swiftprep-mentor-images/SakshiS.jpeg", college: "PES University", sem: 5, subject: "Computer Networks", description: "I aim to use my knowledge of technology & marketing to build products for a better tomorrow. I take an avid interest in both business & computer science, because I believe it's crucial to integrate the two for creating successful products."});
+    Mentor.create({name: "Ananya Veeraraghavan", dp: "https://storage.googleapis.com/swiftprep-mentor-images/AnanyaV.jpeg", college: "PES University", sem: 5, subject: "Operating System", description: "I've provided education to underprivileged children for about 2 years, and I'm very passionate about making education relatable and easy to understand."});
+    Mentor.create({name: "Drishti Hoskote", dp: "https://storage.googleapis.com/swiftprep-mentor-images/DrishtiH.jpeg", college: "PES University", sem: 5, subject: "Machine Intelligence", description: " In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. "});
     res.render("index");
 })
 
