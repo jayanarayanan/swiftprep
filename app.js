@@ -12,6 +12,7 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const keys = require("./rootaccess.js");
 const middleware = require("./middleware");
 const { PassThrough } = require("stream");
+import sslRedirect from 'heroku-ssl-redirect';
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.use(cookieSession({
     maxAge: 6*60*60*1000,
     keys: [keys.session.cookieKey]
 }))
+app.use(sslRedirect());
 
 
 //MongoDB Schemas
