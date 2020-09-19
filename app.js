@@ -1,3 +1,4 @@
+const sslRedirect = require('heroku-ssl-redirect');
 const express = require("express");
 const ejs = require("ejs");
 const path = require("path");
@@ -12,7 +13,6 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const keys = require("./rootaccess.js");
 const middleware = require("./middleware");
 const { PassThrough } = require("stream");
-var secure = require('heroku-ssl-redirect');
 
 const app = express();
 
@@ -21,6 +21,7 @@ mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true, useUnifiedTopo
 
 
 app.set('view engine', 'ejs');
+app.use(sslRedirect());
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended : true }));
 app.use(methodOverride("_method"));
@@ -28,7 +29,6 @@ app.use(cookieSession({
     maxAge: 6*60*60*1000,
     keys: [keys.session.cookieKey]
 }))
-app.use(secure());
 
 
 //MongoDB Schemas
