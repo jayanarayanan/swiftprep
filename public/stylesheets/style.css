@@ -91,7 +91,7 @@ body {
 }
 
 .pg3-bg {
-  background-image: url('http://localhost:3000/images/page3-bg.jpeg');
+  background-image: url('https://localhost:3000/images/page3-bg.jpeg');
   width:100%;
   height: 100%;
   background-size: cover;
