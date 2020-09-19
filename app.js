@@ -164,6 +164,10 @@ app.get('/', function(req, res) {
     res.render('launchingsoon');
 });
 
+app.get("/temp", function(req, res) {
+    res.render("index");
+})
+
 // filter page
 app.get('/filter', function(req, res) {
     res.render('filter');

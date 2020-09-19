@@ -1,5 +1,5 @@
 *{
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #footer {
@@ -80,7 +80,7 @@ html, body {
   font-weight: 600;
 }
 .pg3-bg {
-  background-image: url('https://storage.googleapis.com/swiftprep-web-images/spbg.png');
+  background-image: url('https://storage.googleapis.com/swiftprep-web-images/page3-bg.jpg');
   background-size: cover;
   height: auto;
   width: 100%;
@@ -156,7 +156,7 @@ img{
     width: auto;
     display: grid;
     column-count:2;
-    grid-template-columns: repeat(2, minmax(300px, 4fr));;
+    grid-template-columns: repeat(2, minmax(300px, 4fr));
         grid-gap: 0.2rem;
   }  
 
@@ -172,7 +172,7 @@ img{
     width: auto;
     display: grid;
     column-count:3;
-    grid-template-columns: repeat(3, minmax(300px, 3fr));;
+    grid-template-columns: repeat(3, minmax(300px, 3fr));
     
     grid-gap: 0.2rem;
   }
@@ -186,7 +186,7 @@ hr {
 }
 a {
     color: #0C82DA;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
  
 

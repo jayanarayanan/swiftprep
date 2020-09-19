@@ -71,7 +71,7 @@ body {
 }
 
 .pg2-bg {
-  background-image: url('https://storage.googleapis.com/swiftprep-web-images/page2-bg.jpeg');
+  background-image: url('https://storage.googleapis.com/swiftprep-web-images/page2-bg.png');
   width:100%;
   height: 100%;
   background-size: cover;
@@ -84,18 +84,12 @@ body {
   padding-top: 15%;
 }
 .pg2-hd {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 3.0vw;
   padding-bottom: 10px;
   color:white;
 }
 
-.pg3-bg {
-  background-image: url('https://localhost:3000/images/page3-bg.jpeg');
-  width:100%;
-  height: 100%;
-  background-size: cover;
-}
 #branchselector,#collegeselector,#semselector{
   color:white;
   background-color: #1d0076;
@@ -117,9 +111,6 @@ body {
   max-height: 25px;
 }
 
-#pg4-c {
-  margin-left: 30px;
-}
 option{
   background:#1d3776;
   color:white;
@@ -150,6 +141,7 @@ option{
   
   padding:40px 0px ;
   font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
   color: white;
   transition: 0.4s ease;
 
@@ -170,7 +162,7 @@ option{
   position: absolute;
   top: 20%;
   left: 10%;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .ic-1 {
@@ -179,6 +171,7 @@ option{
   top: 20%;
   left: 10%;
   font-size: 4.0vw;
+  font-family: 'Montserrat', sans-serif;
   animation-name: icanimationa;
   animation-duration: 1s;
 }
@@ -194,6 +187,7 @@ option{
   left: 10%;
   color: white;
   font-size: 2.6vw;
+  font-family: 'Montserrat', sans-serif;
   animation-name: icanimationb;
   animation-duration: 1s;
 }
@@ -215,6 +209,7 @@ option{
   left: 10%;
   color: #FFF;
   font-size: 3.0vw;
+  font-family: 'Montserrat', sans-serif;
 animation-name: icanimationc;
   animation-duration: 1s;
 }
@@ -294,6 +289,7 @@ body{
  
     font-size: 4.2vw;
    font-weight: bold;
+   font-family: 'Montserrat', sans-serif;
 }
     .features {
             overflow: hidden;
@@ -350,7 +346,7 @@ body{
 
     .content-text {
     font-size: 2.6vw;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Montserrat', sans-serif;
    
   }
   @keyframes imagemovea{
@@ -422,6 +418,7 @@ body{
  
     font-size: 4.2vw;
    font-weight: bold;
+   font-family: 'Montserrat', sans-serif;
 }
     .features {
             overflow: hidden;
@@ -478,7 +475,7 @@ body{
 
     .content-text {
     font-size: 2.6vw;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Montserrat', sans-serif;
    
   }
   @keyframes imagemovea{
@@ -533,6 +530,7 @@ body{
  
     font-size: 4.2vw;
    font-weight: bold;
+   font-family: 'Montserrat', sans-serif;
 }
   #butn {
     top: 65%;
@@ -597,7 +595,7 @@ body{
 
     .content-text {
     font-size: 3.5vw;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     
   }
 
@@ -714,7 +712,7 @@ form{
 
     .content-text {
     font-size: 3vw;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     
   }
   @keyframes imagemovea{
@@ -847,7 +845,7 @@ form{
       animation-duration: 1s;
   }
   .content-text {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     
     font-size: 2vw;
   }
@@ -896,7 +894,7 @@ hr {
 }
 a {
     color: #0C82DA;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -922,7 +920,7 @@ a {
   width: auto;
   display: grid;
   column-count:3;
-  grid-template-columns: repeat(3, minmax(380px, 3fr));;
+  grid-template-columns: repeat(3, minmax(380px, 3fr));
   
   grid-gap: 0.2rem;
 }

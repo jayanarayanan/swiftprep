@@ -12,7 +12,7 @@
   }
 #viewallbtn {
     margin-bottom: 20px;
-    margin-top: -10px;;
+    margin-top: -10px;
 }
 
 .blog-comment::before,
@@ -221,6 +221,17 @@
         margin: 0 40px;
       }
   }
+
+  @media (max-width: 1230px) {
+    .titletext {
+        font-size: 200%;
+        position: relative;
+        width: 85%;
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 30px;
+        margin-left: 7.5%;
+    }
+  }
   
   @media (min-width: 1230px) {
 
@@ -232,6 +243,16 @@
         margin-right: 0;
       }
       
+      .titletext {
+        font-size: 200%;
+        width: 25%;
+        position: relative;
+        display: block;
+        float: right;
+        font-family: 'Montserrat', sans-serif;
+        margin-right: 2.5%;
+        margin-bottom: 20px;
+    }
       .mentorcard {
         float: right;
         border: 2px solid black;
