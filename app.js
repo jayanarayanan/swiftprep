@@ -168,11 +168,8 @@ app.get('/', function(req, res) {
     res.render('launchingsoon');
 });
 
+//temporary index page
 app.get("/temp", function(req, res) {
-    res.render("index");
-})
-
-app.get("/database", function(req, res) {
     res.render("index");
 })
 
