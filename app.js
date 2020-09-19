@@ -1,4 +1,3 @@
-const sslRedirect = require('heroku-ssl-redirect');
 const express = require("express");
 const ejs = require("ejs");
 const path = require("path");
@@ -21,7 +20,13 @@ mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true, useUnifiedTopo
 
 
 app.set('view engine', 'ejs');
-app.use(sslRedirect());
+app.use((req, res, next) => {
+    if (req.header('x-forwarded-proto') !== 'https') {
+      res.redirect(`https://${req.header('host')}${req.url}`)
+    } else {
+      next();
+    }
+  });
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended : true }));
 app.use(methodOverride("_method"));
