@@ -173,9 +173,9 @@ app.get("/temp", function(req, res) {
 })
 
 app.get("/database", function(req, res) {
-    Mentor.create({name: "Sakshi Shetty", dp: "https://storage.googleapis.com/swiftprep-mentor-images/SakshiS.jpeg", college: "PES University", sem: 5, subject: "Computer Networks", description: "I aim to use my knowledge of technology & marketing to build products for a better tomorrow. I take an avid interest in both business & computer science, because I believe it's crucial to integrate the two for creating successful products."});
-    Mentor.create({name: "Ananya Veeraraghavan", dp: "https://storage.googleapis.com/swiftprep-mentor-images/AnanyaV.jpeg", college: "PES University", sem: 5, subject: "Operating System", description: "I've provided education to underprivileged children for about 2 years, and I'm very passionate about making education relatable and easy to understand."});
-    Mentor.create({name: "Drishti Hoskote", dp: "https://storage.googleapis.com/swiftprep-mentor-images/DrishtiH.jpeg", college: "PES University", sem: 5, subject: "Machine Intelligence", description: " In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. "});
+    Video.create({CBS: 'PES-CSE-5', Subject: 'Machine Intelligence', SubShort: 'MI', Chapter: 1, VName: 'PES-CSE-5-MI-1',Thumbnail: "https://storage.googleapis.com/swiftprep-web-images/unit-1.png", Notes: "https://storage.googleapis.com/swiftprep-notes/PES-CSE-5-MI-1.pdf", Mentor: "5f661f84e1e9c70017fc2753"});
+    Video.create({CBS: 'PES-CSE-5', Subject: 'Operating System', SubShort: 'OS', Chapter: 1, VName: 'PES-CSE-5-OS-1',Thumbnail: "https://storage.googleapis.com/swiftprep-web-images/unit-1.png", Notes: "https://storage.googleapis.com/swiftprep-notes/PES-CSE-5-OS-1.pdf", Mentor: "5f661f84e1e9c70017fc2752"});
+    Video.create({CBS: 'PES-CSE-5', Subject: 'Computer Networks', SubShort: 'CN', Chapter: 1, VName: 'PES-CSE-5-CN-1',Thumbnail: "https://storage.googleapis.com/swiftprep-web-images/unit-1.png", Notes: "https://storage.googleapis.com/swiftprep-notes/PES-CSE-5-CN-1.pdf", Mentor: "5f661f84e1e9c70017fc2751"});
     res.render("index");
 })
 
