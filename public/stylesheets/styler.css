@@ -244,14 +244,14 @@
       }
       
       .titletext {
-        font-size: 200%;
+        font-size: 150%;
         width: 25%;
         position: relative;
         display: block;
         float: right;
         font-family: 'Montserrat', sans-serif;
         margin-right: 2.5%;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
       .mentorcard {
         float: right;
