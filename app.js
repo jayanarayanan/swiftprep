@@ -180,7 +180,7 @@ app.get("/download/:id", function(req, res) {
             console.log(err);
         } else {
             var url = foundVideo.Notes;
-            download(url, {}, function(err) {
+            download(url, {directory: "./Downloads/"}, function(err) {
                 if(err) {
                     console.log(err);
                 }
