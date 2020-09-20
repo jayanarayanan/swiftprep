@@ -24,10 +24,10 @@
         <div class="blog-comment">
         <h3 style="margin-top: 60px;" class="text-success">Comments</h3>
                 <hr/>
-                <form action ='/view/<%= video._id %>/comment' method ='POST'>
+                <form action ='/view/<%= video._id %>/comment' class="commentform" method ='POST'>
                   <div class="form-group">
                     <label for="exampleFormControlTextarea1">Add Comment</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" name="comment" rows="3"></textarea>
+                    <textarea class="form-control" id="commentText" name="comment" rows="3" required></textarea>
                   </div>
                   <button class="btn btn-info" type="submit">
                     Add Comment
@@ -94,7 +94,7 @@
                   <form action ='/view/<%= video._id %>/<%= comment._id %>/reply' method ='POST' class="<%= comment._id %>" style="display: none;">
                     <div class="form-group">
                       <label for="exampleFormControlTextarea1">Add Reply</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" name="reply" rows="3"></textarea>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" name="reply" rows="3" required></textarea>
                     </div>
                     <button class="btn btn-info" type="submit">
                        Add Reply
@@ -114,5 +114,10 @@
     function my_function(){
         $('#commentmore').load(location.href + ' #commentmore');
     }
+
+    // function validateComment() {
+    //     var textval = document.getElementById("commentText").value;
+    //     if(textval != )
+    // }
   </script>
   </body>
