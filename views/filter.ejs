@@ -35,7 +35,7 @@
      
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
   </head>
-<body>
+<body onload="filload()">
   <div style="width: 100%; margin-left: auto; margin-right: auto;background-color: white;">
     <nav class="navbar" style="width: 82%; margin-left: auto; margin-right: auto;"> 
       <a href="/" class="navbar-brand"><img class="logo" src="https://storage.googleapis.com/swiftprep-web-images/logo.png"></a>
@@ -149,6 +149,11 @@
                       "Electronics and Communication Engineering (ECE)"],
               "BITS": ["Sorry, we're coming soon to this college (SS)"]
             }
+    
+    function filload() {
+      var college = document.getElementById("college");
+      collChoice(college);
+    }
 
     function collChoice(id) {
         var val = id.value;
