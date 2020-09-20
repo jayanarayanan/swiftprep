@@ -168,6 +168,17 @@ app.get('/', function(req, res) {
     res.render('launchingsoon');
 });
 
+//adding records to database 
+app.get("/database", function(req, res) {
+    Mentor.create({name: "Sindu Nagaraj Gokulapati", dp: "https://storage.googleapis.com/swiftprep-mentor-images/SinduNG.jpeg", college: "PES University", sem: 5, subject: "Communications Engineering", description: "Sindu believes that communication is the essence of connecting individuals. She aims to maximize it by making space communication efficient."});
+    Mentor.create({name: "Sharadi GR", dp: "https://storage.googleapis.com/swiftprep-mentor-images/SharadiGR.jpeg", college: "PES University", sem: 5, subject: "Computer Organization", description: "Sharadi is really passionate to learn electronics and it's applications."});
+    Mentor.create({name: "Rishal Melita Pereira", dp: "https://storage.googleapis.com/swiftprep-mentor-images/RishalMP.jpeg", college: "PES University", sem: 5, subject: "Microwave Engineering", description: "Rishal is passionate to explore the areas of embedded sytem and VLSI design. She strives to continuously learn and innovate in the ever growing world of technology using the best of her skills and ability."});
+    Mentor.create({name: "Haritha GB", dp: "https://storage.googleapis.com/swiftprep-mentor-images/HarithaGB.jpeg", college: "PES University", sem: 5, subject: "Digital Image Processing", description: "Haritha is passionate about image processing and computer vision. She believes in using deep learning and CV to accelerate change for good and aims to bring about change in her own way."});
+    Mentor.create({name: "Manav Somani", dp: "https://storage.googleapis.com/swiftprep-mentor-images/ManavS.jpeg", college: "PES University", sem: 5, subject: "Design of Machine Elements", description: "Manav is extroverted, goal oriented and a smart worker with a flare for automobiles and technology.  He always strives to get better with a 'never give up' attitude."});
+    Mentor.create({name: "Rishab Nand", dp: "https://storage.googleapis.com/swiftprep-mentor-images/RishabN.jpeg", college: "PES University", sem: 5, subject: "Principles of Energy Conservation", description: "Rishab is a tech enthusiast with keen observation skills. He is always trying to take inspiration from nature and incorporate them to make more efficient, effective products."});
+    res.render("index");
+})
+
 //temporary index page
 app.get("/temp", function(req, res) {
     res.render("index");
