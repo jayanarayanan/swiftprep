@@ -82,9 +82,11 @@
     <div class="mentorcard-desc">
       <span><i class="fas fa-quote-left"></i> <%= video.Mentor.description %> <i class="fas fa-quote-right"></i></span>
     </div><hr>
-    <a id="downloadNotes" class="btn btn-info" href="/download/<%= video._id %>" target="_blank"><i class="fas fa-file"></i> Download Notes!</a>
+    <a id="downloadNotes" class="btn btn-info" href="<%= video.Notes %>" download><i class="fas fa-file"></i> Download Notes!</a>
   </div>
 </div>
+
+<!-- target="_blank" -->
 
 <iframe id="commentIframe" src='/view/<%= video._id %>/comment' width="100%" onload="resizeIframe()" onclick="resizeIframe(this)"></iframe>
 <script>

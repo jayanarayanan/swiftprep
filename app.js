@@ -12,7 +12,7 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const keys = require("./rootaccess.js");
 const middleware = require("./middleware");
 const { PassThrough } = require("stream");
-const download = require("download-file");
+// const download = require("download-file");
 
 const app = express();
 
@@ -174,21 +174,21 @@ app.get("/temp", function(req, res) {
     res.render("index");
 })
 
-app.get("/download/:id", function(req, res) {
-    Video.findById(req.params.id, function(err, foundVideo) {
-        if(err) {
-            console.log(err);
-        } else {
-            var url = foundVideo.Notes;
-            download(url, {directory: "./Downloads/"}, function(err) {
-                if(err) {
-                    console.log(err);
-                }
-            });
-        }
-    });
-    res.render('close');
-});
+// app.get("/download/:id", function(req, res) {
+//     Video.findById(req.params.id, function(err, foundVideo) {
+//         if(err) {
+//             console.log(err);
+//         } else {
+//             var url = foundVideo.Notes;
+//             download(url, {directory: "./Downloads/"}, function(err) {
+//                 if(err) {
+//                     console.log(err);
+//                 }
+//             });
+//         }
+//     });
+//     res.render('close');
+// });
 
 // filter page
 app.get('/filter', function(req, res) {
