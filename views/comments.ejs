@@ -117,14 +117,20 @@
     function commentValidate() {
         var textval = document.getElementById("commentText").value;
         if(textval.trim().length != 0) {
-            document.querySelector(".commentform").submit();
+            return true;
+            // document.querySelector(".commentform").submit();
+        } else {
+            return false;
         }
     }
 
     function replyValidate(commentId) {
         var textval = document.getElementById("replyText").value;
-        if(textval.trim().length != 0) {
-            document.getElementById(commentId).submit();
+        if(textval.trim().length == 0) {
+            return false;
+            // document.getElementById(commentId).submit();
+        } else {
+            return true;
         }
     }
   </script>
