@@ -26,10 +26,10 @@
                 <hr/>
                 <form action ='/view/<%= video._id %>/comment' class="commentform" method ='POST'>
                   <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Add Comment</label>
+                    <label for="commentText">Add Comment</label>
                     <textarea class="form-control" id="commentText" name="comment" rows="3" required></textarea>
                   </div>
-                  <button class="btn btn-info" type="submit">
+                  <button class="btn btn-info" type="button" onclick="commentValidate()">
                     Add Comment
                  </button>
                 </form><br>
@@ -91,12 +91,12 @@
                   </ul>
                   </div>
                   <% } %>
-                  <form action ='/view/<%= video._id %>/<%= comment._id %>/reply' method ='POST' class="<%= comment._id %>" style="display: none;">
+                  <form action ='/view/<%= video._id %>/<%= comment._id %>/reply' method ='POST' id="<%= comment._id %>" class="<%= comment._id %>" style="display: none;">
                     <div class="form-group">
-                      <label for="exampleFormControlTextarea1">Add Reply</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" name="reply" rows="3" required></textarea>
+                      <label for="replyText">Add Reply</label>
+                      <textarea class="form-control" id="replyText" name="reply" rows="3" required></textarea>
                     </div>
-                    <button class="btn btn-info" type="submit">
+                    <button class="btn btn-info" type="button" id="<%= comment._id %>" onclick="replyValidate(this.id)">
                        Add Reply
                     </button>
                   </form> <br>
@@ -106,7 +106,6 @@
             </div>
           </div>
           </div>
-  
   <script>
     function toggleReplyBox(CommentID) {
         $('.'+CommentID).fadeToggle(500); 
@@ -115,9 +114,18 @@
         $('#commentmore').load(location.href + ' #commentmore');
     }
 
-    // function validateComment() {
-    //     var textval = document.getElementById("commentText").value;
-    //     if(textval != )
-    // }
+    function commentValidate() {
+        var textval = document.getElementById("commentText").value;
+        if(textval.trim().length != 0) {
+            document.querySelector(".commentform").submit();
+        }
+    }
+
+    function replyValidate(commentId) {
+        var textval = document.getElementById("replyText").value;
+        if(textval.trim().length != 0) {
+            document.getElementById(commentId).submit();
+        }
+    }
   </script>
   </body>
