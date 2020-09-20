@@ -29,7 +29,7 @@
                     <label for="commentText">Add Comment</label>
                     <textarea class="form-control" id="commentText" name="comment" rows="3" required></textarea>
                   </div>
-                  <button class="btn btn-info" type="button" onclick="commentValidate()">
+                  <button class="btn btn-info" type="submit" onclick="return commentValidate()">
                     Add Comment
                  </button>
                 </form><br>
@@ -96,7 +96,7 @@
                       <label for="replyText">Add Reply</label>
                       <textarea class="form-control" id="replyText" name="reply" rows="3" required></textarea>
                     </div>
-                    <button class="btn btn-info" type="button" id="<%= comment._id %>" onclick="replyValidate(this.id)">
+                    <button class="btn btn-info" type="submit" id="<%= comment._id %>" onclick=" return replyValidate(this.id)">
                        Add Reply
                     </button>
                   </form> <br>
