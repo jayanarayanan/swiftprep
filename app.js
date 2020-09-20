@@ -165,13 +165,8 @@ app.use(function(req, res, next){
 
  //homepage
 app.get('/', function(req, res) {
-    res.render('launchingsoon');
-});
-
-//temporary index page
-app.get("/temp", function(req, res) {
     res.render("index");
-})
+});
 
 // filter page
 app.get('/filter', function(req, res) {
