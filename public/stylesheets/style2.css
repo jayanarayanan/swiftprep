@@ -1,118 +1,107 @@
-*{
-  font-family: 'Montserrat', sans-serif;
+* {
+    font-family: "Montserrat", sans-serif;
 }
 
 #footer {
-clear: both;
+    clear: both;
 
-height: 200px;
+    height: 200px;
 
-background-color: #444;
-color:white;
-}
-
-
-.filterhead{
-  padding-bottom: 5px;
+    background-color: #444;
+    color: white;
 }
 
-.filtercard  h1{
-   color: white;
-}
-.cards div h2{
-   color: white;
+.filterhead {
+    padding-bottom: 5px;
 }
 
-.filtercard{
-  margin-left: 60px;
-  padding-top: 20px;
-  padding-right: 17.3%;
-  
+.filtercard h1 {
+    color: white;
 }
-.filterhead .filin{
-  margin-left: 100px;
+.cards div h2 {
+    color: white;
 }
 
-.filtercard h1{
-  margin-left: 20px;
-  font-weight: 600;
+.filtercard {
+    margin-left: 60px;
+    padding-top: 20px;
+    padding-right: 17.3%;
 }
-html, body {
-  margin-right:0px;
-  height:100%;
-  width: 100%;
-}
-.filterhead .filin h1{
-  font-size: 60px;
+.filterhead .filin {
+    margin-left: 100px;
 }
 
-
-.cards{
-  width: 80%;
-  margin-right: 20px;
-  border: 1px solid rgb(138, 137, 137);
-  border-radius: 10px;
-  box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.5);
-  padding-bottom: 10px;
-  margin-bottom:15px;
-  
+.filtercard h1 {
+    margin-left: 20px;
+    font-weight: 600;
+}
+html,
+body {
+    margin-right: 0px;
+    height: 100%;
+    width: 100%;
+}
+.filterhead .filin h1 {
+    font-size: 60px;
 }
 
+.cards {
+    width: 80%;
+    margin-right: 20px;
+    border: 1px solid rgb(138, 137, 137);
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.5);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
 
-
-#card > div:nth-child(2) > h2{
-  text-align: center;
-  padding-top: 5px;
+#card > div:nth-child(2) > h2 {
+    text-align: center;
+    padding-top: 5px;
 }
-.cards:hover{
-  transition: all 0.3s ease;
-  background-color: rgb(43, 41, 41);
-  color: #007bff;
-  transform: scale(1.1);
-  
+.cards:hover {
+    transition: all 0.3s ease;
+    background-color: rgb(43, 41, 41);
+    color: #007bff;
+    transform: scale(1.1);
 }
-.cards:hover .card-inner .card-front .img{
-  transition: all 0.3s ease;
-  width: 104%;
-  height: 104%;
+.cards:hover .card-inner .card-front .img {
+    transition: all 0.3s ease;
+    width: 104%;
+    height: 104%;
 }
-.cards:hover h2{
-  font-weight: 600;
+.cards:hover h2 {
+    font-weight: 600;
 }
 .pg3-bg {
-  background-image: url('https://storage.googleapis.com/swiftprep-web-images/page3-bg.jpg');
-  background-size: cover;
-  height: auto;
-  width: 100%;
-  background-size: 100% 100% ;
-  border-top: 2px solid rgb(85, 82, 82);
-  border-bottom: 2px solid rgb(85, 82, 82);
-
+    background-image: url("https://storage.googleapis.com/swiftprep-web-images/page3-bg.jpg");
+    background-size: cover;
+    height: auto;
+    width: 100%;
+    background-size: 100% 100%;
+    border-top: 2px solid rgb(85, 82, 82);
+    border-bottom: 2px solid rgb(85, 82, 82);
 }
-#dropdownMenu2{
-  width: 130px;
+#dropdownMenu2 {
+    width: 130px;
 }
 
-img{
-  border-radius: 5px;
-  border: 1px solid black;
+img {
+    border-radius: 5px;
+    border: 1px solid black;
 }
 
 #cards {
-  display:inline-block;
+    display: inline-block;
 }
 
 .logo {
-  max-height: 25px;
+    max-height: 25px;
 }
-
-
 
 .thumbnail {
-  max-width: 100%;
+    max-width: 100%;
 }
-
-
 
 #indexCard {
     position: relative;
@@ -120,163 +109,133 @@ img{
     min-width: 100%;
 }
 
+@media screen and (max-width: 767px) {
+    #mainheading {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: white;
 
-@media screen and (max-width: 767px){
-  #mainheading   
-     {
-      padding-top: 50px;
-      padding-bottom: 50px;
-      padding-left: 20px;
-      padding-right: 20px;
-      color:white;
-
-      font-size: 40px;
+        font-size: 40px;
     }
-    .filtercard div h1{
-      font-size: 30px;
+    .filtercard div h1 {
+        font-size: 30px;
     }
 }
 
 @media (min-width: 770px) {
-    #mainheading{
-      padding-top: 50px;
-      padding-left: 20px;
-      padding-right: 20px;
-      padding-bottom: 50px;
-      color:white;
+    #mainheading {
+        padding-top: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 50px;
+        color: white;
 
-      font-size: 40px;
+        font-size: 40px;
     }
-    b{
-  text-shadow: 2px 2px black;
-}  
+    b {
+        text-shadow: 2px 2px black;
+    }
 
-  .filtercard .inside{
-    padding: 20px 0px 20px 20px;
-    width: auto;
-    display: grid;
-    column-count:2;
-    grid-template-columns: repeat(2, minmax(300px, 4fr));
+    .filtercard .inside {
+        padding: 20px 0px 20px 20px;
+        width: auto;
+        display: grid;
+        column-count: 2;
+        grid-template-columns: repeat(2, minmax(300px, 4fr));
         grid-gap: 0.2rem;
-  }  
-
-  }
+    }
+}
 
 @media screen and (min-width: 1280px) {
+    .filtercard .inside {
+        padding: 20px 0px 20px 20px;
+        width: auto;
+        display: grid;
+        column-count: 3;
+        grid-template-columns: repeat(3, minmax(300px, 3fr));
 
-    
-    
-    
-  .filtercard .inside{
-    padding: 20px 0px 20px 20px;
-    width: auto;
-    display: grid;
-    column-count:3;
-    grid-template-columns: repeat(3, minmax(300px, 3fr));
-    
-    grid-gap: 0.2rem;
-  }
-  
+        grid-gap: 0.2rem;
+    }
 
-hr {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 0;
-    border-top: 1px solid #FFFFFF;
+    hr {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: 0;
+        border-top: 1px solid #ffffff;
+    }
+    a {
+        color: #0c82da;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    @media (max-width: 768px) {
+        .pg3-bg {
+            background-image: url("https://storage.googleapis.com/swiftprep-web-images/spbg.png");
+            height: auto;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #dropdownMenu2 {
+            width: 105px;
+        }
+
+        .filterhead .filin {
+            margin-left: 15px;
+            font-size: large;
+        }
+        .filterhead .filin h1 {
+            font-size: 50px;
+        }
+        .filtercard .inside {
+            padding: 20px 0px 20px 20px;
+
+            width: auto;
+            display: grid;
+            column-count: 1;
+            grid-template-columns: repeat(1, minmax(340px, 3fr));
+            grid-gap: 0.2rem;
+        }
+        .cards {
+            width: 90%;
+            margin-right: 50px;
+            border: 1px solid rgb(138, 137, 137);
+            border-radius: 10px;
+            box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+        }
+        .cards:hover {
+            transition: all 0.3s ease;
+            background-color: rgb(54, 52, 52);
+            color: white;
+            transform: scale(1.1);
+        }
+        .cards:hover .img {
+            transition: all 0.3s ease;
+            width: 102%;
+            height: 102%;
+        }
+        .filtercard {
+            margin-left: 10px;
+            padding-right: 10%;
+        }
+        .filtercard div h1 {
+            margin: 0px 0px 4px 15px;
+            font-size: 35px;
+        }
+        #card > div:nth-child(2) > h2 {
+            font-size: 25px;
+            color: white;
+        }
+    }
+    .fa {
+        padding: 10px;
+        padding-right: 15px;
+        font-size: 20px;
+        width: 30px;
+        text-align: center;
+        text-decoration: none;
+    }
 }
-a {
-    color: #0C82DA;
-    font-family: 'Montserrat', sans-serif;
-}
- 
-
-
-
-  
-  @media (max-width: 768px) {
-    
-
-
-
-    .pg3-bg {
-      background-image: url('https://storage.googleapis.com/swiftprep-web-images/spbg.png');
-      height: auto;
-      width: 100%;
-      background-repeat: no-repeat;
-      background-size: cover;
-    
-    }
-    #dropdownMenu2{
-      width: 105px;
-    }
-    
-    .filterhead .filin{
-      margin-left: 15px;
-      font-size: large;
-    }
-    .filterhead .filin h1{
-      font-size: 50px;
-    }
-    .filtercard .inside{
-      padding: 20px 0px 20px 20px;
-      
-      width: auto;
-      display: grid;
-      column-count:1;
-      grid-template-columns: repeat(1, minmax(340px, 3fr));
-      grid-gap: 0.2rem;
-    }
-    .cards{
-      width: 90%;
-      margin-right: 50px;
-      border: 1px solid rgb(138, 137, 137);
-      border-radius: 10px;
-      box-shadow: 1px 2px 1px 1px rgba(0,0,0,0.2);
-      margin-bottom: 10px;
-      
-    }
-    .cards:hover{
-      transition: all 0.3s ease;
-      background-color: rgb(54, 52, 52);
-      color: white;
-      transform: scale(1.1);
-      
-    }
-    .cards:hover .img{
-      transition: all 0.3s ease;
-      width: 102%;
-      height: 102%;
-    }
-    .filtercard{
-      margin-left: 10px;
-      padding-right: 10%;
-      
-    }
-    .filtercard div h1{
-      margin:0px 0px 4px 15px;
-      font-size: 35px;
-     
-    }
-    #card > div:nth-child(2) > h2{
-      font-size: 25px;
-      color:white;
-    }
-  
-
-  }
-  .fa {
-    padding: 10px;
-    padding-right: 15px;
-    font-size: 20px;
-    width: 30px;
-    text-align: center;
-    text-decoration: none;
-    
-  }
-
- 
-  
-  }
-  
-  
-  

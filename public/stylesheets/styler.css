@@ -1,15 +1,14 @@
-
 .body {
-    background-color: #EEEEEE;
+    background-color: #eeeeee;
 }
 
 .logo {
     max-height: 25px;
-  }
+}
 
-  #comment-o {
+#comment-o {
     margin-left: 0;
-  }
+}
 #viewallbtn {
     margin-bottom: 20px;
     margin-top: -10px;
@@ -18,97 +17,97 @@
 .blog-comment::before,
 .blog-comment::after,
 .blog-comment-form::before,
-.blog-comment-form::after{
+.blog-comment-form::after {
     content: "";
-	display: table;
-	clear: both;
+    display: table;
+    clear: both;
 }
 
-.blog-comment{
+.blog-comment {
     /* padding-left: 15%; */
-	padding-right: 15%;
+    padding-right: 15%;
 }
 
-.blog-comment ul{
-	list-style-type: none;
-	padding: 0;
+.blog-comment ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.blog-comment img{
-	opacity: 1;
-	filter: Alpha(opacity=100);
-	-webkit-border-radius: 4px;
-	   -moz-border-radius: 4px;
-	  	 -o-border-radius: 4px;
-			border-radius: 4px;
+.blog-comment img {
+    opacity: 1;
+    filter: Alpha(opacity=100);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
 }
 
 .blog-comment img.avatar {
-	position: relative;
-	float: left;
-	margin-left: 0;
-	margin-top: 0;
-	width: 65px;
-	height: 65px;
+    position: relative;
+    float: left;
+    margin-left: 0;
+    margin-top: 0;
+    width: 65px;
+    height: 65px;
 }
 
-.blog-comment .post-comments{
-	border: 1px solid #eee;
+.blog-comment .post-comments {
+    border: 1px solid #eee;
     margin-bottom: 20px;
     margin-left: 85px;
-	margin-right: 0px;
+    margin-right: 0px;
     padding: 10px 20px;
     position: relative;
     -webkit-border-radius: 4px;
-       -moz-border-radius: 4px;
-       	 -o-border-radius: 4px;
-    		border-radius: 4px;
-	background: #fff;
-	color: #6b6e80;
-	position: relative;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    background: #fff;
+    color: #6b6e80;
+    position: relative;
 }
 
 .blog-comment .meta {
-	font-size: 13px;
-	color: #aaaaaa;
-	padding-bottom: 8px;
-	margin-bottom: 10px !important;
-	border-bottom: 1px solid #eee;
+    font-size: 13px;
+    color: #aaaaaa;
+    padding-bottom: 8px;
+    margin-bottom: 10px !important;
+    border-bottom: 1px solid #eee;
 }
 
-.blog-comment ul.comments ul{
-	list-style-type: none;
-	padding: 0;
-	margin-left: 85px;
+.blog-comment ul.comments ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 85px;
 }
 
-.blog-comment-form{
-	padding-left: 15%;
-	padding-right: 15%;
-	padding-top: 40px;
+.blog-comment-form {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 40px;
 }
 
 .blog-comment h3,
-.blog-comment-form h3{
-	margin-bottom: 40px;
-	font-size: 26px;
-	line-height: 30px;
-	font-weight: 800;
+.blog-comment-form h3 {
+    margin-bottom: 40px;
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 800;
 }
 
 #pg4-c {
     margin-left: 30px;
-  }
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     #video1 {
-        width: 85%; 
+        width: 85%;
         padding-top: 48.5%;
         margin-left: 7.5%;
         margin-right: 7.5%;
-      }
-    
-      .mentorcard {
+    }
+
+    .mentorcard {
         float: right;
         border: 2px solid black;
         border-radius: 10px;
@@ -116,18 +115,24 @@
         margin-right: 12.5%;
         margin-top: 30px;
         padding-bottom: 15px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      }
-      .mentorcard-bg {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .mentorcard-bg {
         height: 100px;
-        background: #2D81F7;
+        background: #2d81f7;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
-        background: -webkit-linear-gradient(to right, #2D81F7, #14C3D8, #68E0CF);
-        background: linear-gradient(to right, #2D81F7, #14C3D8, #68E0CF);
-      }
-      
-      .mentorcard-dp {
+        background: -webkit-linear-gradient(
+            to right,
+            #2d81f7,
+            #14c3d8,
+            #68e0cf
+        );
+        background: linear-gradient(to right, #2d81f7, #14c3d8, #68e0cf);
+    }
+
+    .mentorcard-dp {
         border-radius: 50%;
         max-width: 120px;
         display: block;
@@ -135,41 +140,41 @@
         margin-bottom: 15px;
         margin-left: auto;
         margin-right: auto;
-      }
-      
-      .mentorcard-name {
+    }
+
+    .mentorcard-name {
         text-align: center;
         font-size: 150%;
         margin-bottom: 10px;
-      }
-      
-      .mentorcard-coll {
+    }
+
+    .mentorcard-coll {
         text-align: center;
         font-size: 125%;
-      }
-      
-      .mentorcard-sub {
+    }
+
+    .mentorcard-sub {
         text-align: center;
         font-size: 125%;
         margin-bottom: 10px;
-      }
-      
-      .mentorcard-desc {
+    }
+
+    .mentorcard-desc {
         text-align: center;
         font-size: 100%;
         margin: 0 40px;
-      }
-  }
+    }
+}
 
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
     #video1 {
-        width: 85%; 
+        width: 85%;
         padding-top: 48.5%;
         margin-left: 7.5%;
         margin-right: 7.5%;
-      }
-    
-      .mentorcard {
+    }
+
+    .mentorcard {
         float: right;
         border: 2px solid black;
         border-radius: 10px;
@@ -177,18 +182,24 @@
         margin-right: 20%;
         margin-top: 30px;
         padding-bottom: 30px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      }
-      .mentorcard-bg {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .mentorcard-bg {
         height: 150px;
-        background: #2D81F7;
+        background: #2d81f7;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
-        background: -webkit-linear-gradient(to right, #2D81F7, #14C3D8, #68E0CF);
-        background: linear-gradient(to right, #2D81F7, #14C3D8, #68E0CF);
-      }
-      
-      .mentorcard-dp {
+        background: -webkit-linear-gradient(
+            to right,
+            #2d81f7,
+            #14c3d8,
+            #68e0cf
+        );
+        background: linear-gradient(to right, #2d81f7, #14c3d8, #68e0cf);
+    }
+
+    .mentorcard-dp {
         border-radius: 50%;
         max-width: 150px;
         display: block;
@@ -196,64 +207,63 @@
         margin-bottom: 20px;
         margin-left: auto;
         margin-right: auto;
-      }
-      
-      .mentorcard-name {
+    }
+
+    .mentorcard-name {
         text-align: center;
         font-size: 180%;
         margin-bottom: 10px;
-      }
-      
-      .mentorcard-coll {
+    }
+
+    .mentorcard-coll {
         text-align: center;
         font-size: 150%;
-      }
-      
-      .mentorcard-sub {
+    }
+
+    .mentorcard-sub {
         text-align: center;
         font-size: 150%;
         margin-bottom: 10px;
-      }
-      
-      .mentorcard-desc {
+    }
+
+    .mentorcard-desc {
         text-align: center;
         font-size: 120%;
         margin: 0 40px;
-      }
-  }
+    }
+}
 
-  @media (max-width: 1230px) {
+@media (max-width: 1230px) {
     .titletext {
         font-size: 200%;
         position: relative;
         width: 85%;
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
         margin-top: 30px;
         margin-left: 7.5%;
     }
-  }
-  
-  @media (min-width: 1230px) {
+}
 
+@media (min-width: 1230px) {
     #video1 {
         width: 70%;
         padding-top: 40%;
         float: left;
         margin-left: 0;
         margin-right: 0;
-      }
-      
-      .titletext {
+    }
+
+    .titletext {
         font-size: 170%;
         width: 25%;
         position: relative;
         display: block;
         float: right;
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
         margin-right: 2.5%;
         margin-bottom: 10px;
     }
-      .mentorcard {
+    .mentorcard {
         float: right;
         border: 2px solid black;
         border-radius: 10px;
@@ -261,29 +271,28 @@
         margin-right: 2.5%;
         margin-top: 0;
         padding-bottom: 30px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      }
-  }
-  
-  .mentorcard hr {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+}
+
+.mentorcard hr {
     max-width: 90%;
     height: 2px;
-  }
+}
 
-  .vid-ment {
+.vid-ment {
     display: block;
     overflow: hidden;
-  }
+}
 
-  #commentIframe {
-      border: none;
-      margin-top: 30px;
-  }
+#commentIframe {
+    border: none;
+    margin-top: 30px;
+}
 
-  #downloadNotes {
-      display: block;
-      margin: 0 auto;
-      max-width: 170px;
-  }
-
-
+#downloadNotes {
+    display: block;
+    margin: 0 auto;
+    max-width: 170px;
+}

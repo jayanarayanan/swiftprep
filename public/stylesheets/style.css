@@ -1,155 +1,150 @@
-
 ::-webkit-scrollbar {
-  width: 10px;
+    width: 10px;
 }
-
 
 ::-webkit-scrollbar-track {
-  background: #fff;
+    background: #fff;
 }
-
 
 ::-webkit-scrollbar-thumb {
-  background: #03fcad;
+    background: #03fcad;
 }
-
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00c8ff;
+    background: #00c8ff;
 }
-.invisible1{
-  opacity:0;
+.invisible1 {
+    opacity: 0;
 }
-label{
-    width:90px;
-
-  }
-.visible1{
-  opacity:1;
+label {
+    width: 90px;
 }
-#ftimg1,#ftimg2,#ftimg3,#ftimg4{
+.visible1 {
+    opacity: 1;
+}
+#ftimg1,
+#ftimg2,
+#ftimg3,
+#ftimg4 {
     transition: transform 0.2s;
 }
-#ftimg1:hover,#ftimg2:hover,#ftimg3:hover,#ftimg4:hover{
-transform: rotate(6deg) scale(1.1);
-  
-
+#ftimg1:hover,
+#ftimg2:hover,
+#ftimg3:hover,
+#ftimg4:hover {
+    transform: rotate(6deg) scale(1.1);
 }
 #footer {
-clear: both;
+    clear: both;
 
-height: 200px;
+    height: 200px;
 
-background-color: #444;
-color:white;
+    background-color: #444;
+    color: white;
 }
 
-
-html, body {
-  margin:0px;
-  height:100%;
+html,
+body {
+    margin: 0px;
+    height: 100%;
 }
 body {
-  
+    background-image: url(https://storage.googleapis.com/swiftprep-web-images/spbg.png);
 
-  background-image: url(https://storage.googleapis.com/swiftprep-web-images/spbg.png);
-  
-  
-  animation: movingbg 15s ease infinite;
+    animation: movingbg 15s ease infinite;
 }
 
 @keyframes movingbg {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .pg2-bg {
-  background-image: url('https://storage.googleapis.com/swiftprep-web-images/page2-bg.png');
-  width:100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
+    background-image: url("https://storage.googleapis.com/swiftprep-web-images/page2-bg.png");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
 .pg2-dd {
-  max-width: 60%;
-  padding-left: 20%;
-  padding-top: 15%;
+    max-width: 60%;
+    padding-left: 20%;
+    padding-top: 15%;
 }
 .pg2-hd {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3.0vw;
-  padding-bottom: 10px;
-  color:white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 3vw;
+    padding-bottom: 10px;
+    color: white;
 }
 
-#branchselector,#collegeselector,#semselector{
-  color:white;
-  background-color: #1d0076;
-  border: 0px;
-  transition: 0.2s all ease;
-
+#branchselector,
+#collegeselector,
+#semselector {
+    color: white;
+    background-color: #1d0076;
+    border: 0px;
+    transition: 0.2s all ease;
 }
-#branchselector:hover,#collegeselector:hover,#semselector:hover{
-  
- background-color:#1d0032;
-  
+#branchselector:hover,
+#collegeselector:hover,
+#semselector:hover {
+    background-color: #1d0032;
 }
 
 #cards {
-  display:inline-block;
+    display: inline-block;
 }
 
 .logo {
-  max-height: 25px;
+    max-height: 25px;
 }
 
-option{
-  background:#1d3776;
-  color:white;
-  border: 0px;
-  font-size: 1.5vw;
+option {
+    background: #1d3776;
+    color: white;
+    border: 0px;
+    font-size: 1.5vw;
 }
-#gobtn{
-  width:150px;
-  background-color: #1d0076;
-  border: 0px;
-  height: 40px;
-  font-size: 1.5vw;
-  color:white;
-  font-weight: bold;
-  transition:0.2s all ease;
+#gobtn {
+    width: 150px;
+    background-color: #1d0076;
+    border: 0px;
+    height: 40px;
+    font-size: 1.5vw;
+    color: white;
+    font-weight: bold;
+    transition: 0.2s all ease;
 }
-#gobtn:hover{
-  background-color:#1d0032;
-
+#gobtn:hover {
+    background-color: #1d0032;
 }
 .thumbnail {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 .sections {
-  margin: 0px;
-  text-align: center;
-  
-  padding:40px 0px ;
-  font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-  transition: 0.4s ease;
+    margin: 0px;
+    text-align: center;
 
+    padding: 40px 0px;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    transition: 0.4s ease;
 }
 
-.sections:hover{
-  text-shadow:3px 3px 3px #000;
-  font-size: 4.5vw;
+.sections:hover {
+    text-shadow: 3px 3px 3px #000;
+    font-size: 4.5vw;
 }
 
 #indexCard {
@@ -159,843 +154,795 @@ option{
 }
 
 #indexCard #centered {
-  position: absolute;
-  top: 20%;
-  left: 10%;
-  font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    font-family: "Montserrat", sans-serif;
 }
 
 .ic-1 {
-  position: absolute;
-  color: #fff;
-  top: 20%;
-  left: 10%;
-  font-size: 4.0vw;
-  font-family: 'Montserrat', sans-serif;
-  animation-name: icanimationa;
-  animation-duration: 1s;
+    position: absolute;
+    color: #fff;
+    top: 20%;
+    left: 10%;
+    font-size: 4vw;
+    font-family: "Montserrat", sans-serif;
+    animation-name: icanimationa;
+    animation-duration: 1s;
 }
-@keyframes  icanimationa{
-  from {left:-5%;opacity:0;}
-  to {left:10%;opacity: 1;}
+@keyframes icanimationa {
+    from {
+        left: -5%;
+        opacity: 0;
+    }
+    to {
+        left: 10%;
+        opacity: 1;
+    }
 }
 
 .ic-2 {
-  position: absolute;
-  color: #fff;
-  top: 34%;
-  left: 10%;
-  color: white;
-  font-size: 2.6vw;
-  font-family: 'Montserrat', sans-serif;
-  animation-name: icanimationb;
-  animation-duration: 1s;
+    position: absolute;
+    color: #fff;
+    top: 34%;
+    left: 10%;
+    color: white;
+    font-size: 2.6vw;
+    font-family: "Montserrat", sans-serif;
+    animation-name: icanimationb;
+    animation-duration: 1s;
 }
-@keyframes  icanimationb{
-  from {left:-15%;opacity:0;}
-  to {left:10%;opacity: 1;}
+@keyframes icanimationb {
+    from {
+        left: -15%;
+        opacity: 0;
+    }
+    to {
+        left: 10%;
+        opacity: 1;
+    }
 }
-.content-text{
-   color: white;
-   transition: 0.2s ease;
+.content-text {
+    color: white;
+    transition: 0.2s ease;
 }
-.content-text:hover{
-  transform:scale(1.1);
+.content-text:hover {
+    transform: scale(1.1);
 }
 .ic-3 {
-  position: absolute;
-  color: #fff;
-  top: 49%;
-  left: 10%;
-  color: #FFF;
-  font-size: 3.0vw;
-  font-family: 'Montserrat', sans-serif;
-animation-name: icanimationc;
-  animation-duration: 1s;
+    position: absolute;
+    color: #fff;
+    top: 49%;
+    left: 10%;
+    color: #fff;
+    font-size: 3vw;
+    font-family: "Montserrat", sans-serif;
+    animation-name: icanimationc;
+    animation-duration: 1s;
 }
-@keyframes  icanimationc{
-  from {left:-25%;opacity:0;}
-  to {left:10%;opacity: 1;}
+@keyframes icanimationc {
+    from {
+        left: -25%;
+        opacity: 0;
+    }
+    to {
+        left: 10%;
+        opacity: 1;
+    }
 }
 
 .indexImg {
-  min-width: 100%;
-  max-width: 100%;
+    min-width: 100%;
+    max-width: 100%;
 }
 
 #indexCard #butn {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: #072c70;
-  }
-
-
-
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #072c70;
+}
 
 @media (max-width: 520px) {
-.pg2-hd{
-  font-size: 20px;
-  margin-bottom: 30px;
-}
-.pg2-dd{
-  max-width:100%;
-  margin:auto;
-  text-align: center; 
-  padding: 40px;
-  padding-top: 100px;
-}
-form{
-    width:100%;
-    margin:auto;
-  }
-  
-#college,#sem{
-  width:300px;  
-}
+    .pg2-hd {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .pg2-dd {
+        max-width: 100%;
+        margin: auto;
+        text-align: center;
+        padding: 40px;
+        padding-top: 100px;
+    }
+    form {
+        width: 100%;
+        margin: auto;
+    }
 
-body{
-  height: 700px;    
-}
-#branch{
-  width:300px;
+    #college,
+    #sem {
+        width: 300px;
+    }
 
-}
-#gobtn{
-  margin-top: 30px;
-  font-size: 20px;
-}
+    body {
+        height: 700px;
+    }
+    #branch {
+        width: 300px;
+    }
+    #gobtn {
+        margin-top: 30px;
+        font-size: 20px;
+    }
 
+    body {
+        background-size: 700px 736.84px;
+        animation: movingbg 35s ease infinite;
+    }
 
+    #butn {
+        top: 65%;
+        left: 17.5%;
+        height: 20px;
+        font-size: 1.4vw;
+        padding: 3px 5px;
+        width: 70px;
+        border-radius: 3px;
+    }
 
-
-body{
-  background-size: 700px 736.84px;
-  animation: movingbg 35s ease infinite;
-
-}
-
-  #butn {
-    top: 65%;
-      left: 17.5%;
-      height:20px;
-      font-size: 1.4vw; 
-      padding: 3px 5px;
-      width: 70px;
-      border-radius: 3px;
-  }
-
-  .sections {
- 
-    font-size: 4.2vw;
-   font-weight: bold;
-   font-family: 'Montserrat', sans-serif;
-}
+    .sections {
+        font-size: 4.2vw;
+        font-weight: bold;
+        font-family: "Montserrat", sans-serif;
+    }
     .features {
-            overflow: hidden;
-            padding-bottom: 60px;
-  }
-  .feature-item {
-    display: block; 
-    clear: both;
-    position: relative;
-  }
-  
-   .featureImg {
-      position: relative;
-      display: block; 
-      margin: 30px auto;
-      max-width: 50%;
-      min-width: 50%;
-      box-shadow: 6px 6px 20px #000;
-      animation-name: imagemovea;
-      animation-duration: 1.5s;
+        overflow: hidden;
+        padding-bottom: 60px;
+    }
+    .feature-item {
+        display: block;
+        clear: both;
+        position: relative;
+    }
 
-  }
+    .featureImg {
+        position: relative;
+        display: block;
+        margin: 30px auto;
+        max-width: 50%;
+        min-width: 50%;
+        box-shadow: 6px 6px 20px #000;
+        animation-name: imagemovea;
+        animation-duration: 1.5s;
+    }
 
-  
-  .content1 {
-      display: block; 
-      margin: 30px auto;
-      max-width: 50%;
-       animation-name: imagemoveb;
-      animation-duration: 2s;
-  }
-  
-   .featureImg2 {
-    position: relative;
-    display: block; 
-    margin: 30px auto;
-    max-width: 50%;
-    min-width: 50%;
-    box-shadow: 6px 6px 20px #000;
-    animation-name: imagemoveb;
-      animation-duration: 1.5s;
-  }
-  
-   .content2 {
-    margin: 30px auto;
-    display: block; 
-    max-width: 50%;
-    animation-name: imagemovea;
-      animation-duration: 2s;
-  }
-  .content-head{
-    font-size: 2.5vw;
-  }
+    .content1 {
+        display: block;
+        margin: 30px auto;
+        max-width: 50%;
+        animation-name: imagemoveb;
+        animation-duration: 2s;
+    }
+
+    .featureImg2 {
+        position: relative;
+        display: block;
+        margin: 30px auto;
+        max-width: 50%;
+        min-width: 50%;
+        box-shadow: 6px 6px 20px #000;
+        animation-name: imagemoveb;
+        animation-duration: 1.5s;
+    }
+
+    .content2 {
+        margin: 30px auto;
+        display: block;
+        max-width: 50%;
+        animation-name: imagemovea;
+        animation-duration: 2s;
+    }
+    .content-head {
+        font-size: 2.5vw;
+    }
 
     .content-text {
-    font-size: 2.6vw;
-    font-family: 'Montserrat', sans-serif;
-   
-  }
-  @keyframes imagemovea{
-    from{
-      
-      opacity: 0;
+        font-size: 2.6vw;
+        font-family: "Montserrat", sans-serif;
     }
-    to{
-    
-      opacity: 1;
+    @keyframes imagemovea {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
     }
-  }
-  @keyframes imagemoveb{
-    from{
-      
-      opacity: 0;
+    @keyframes imagemoveb {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
     }
-    to{
-      
-      opacity: 1;
-    }
-  }
-
 }
-
-
-
 
 @media (min-width: 520px) {
-   
-.pg2-hd{
-  font-size: 20px;
-  margin-bottom: 30px;
-}
-.pg2-dd{
-  max-width:70%;
-  
-  padding-left: 100px;
-  
-}
-form{
-    width: 100%;
-    margin:auto;
-  }
-  
+    .pg2-hd {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .pg2-dd {
+        max-width: 70%;
 
-#gobtn{
-  margin-top: 30px;
-  font-size: 20px;
-}
+        padding-left: 100px;
+    }
+    form {
+        width: 100%;
+        margin: auto;
+    }
 
-body{
-  background-size: 700px 736.84px;
-  animation: movingbg 35s ease infinite;
+    #gobtn {
+        margin-top: 30px;
+        font-size: 20px;
+    }
 
-}
+    body {
+        background-size: 700px 736.84px;
+        animation: movingbg 35s ease infinite;
+    }
 
-  #butn {
-    top: 65%;
-      left: 17.5%;
-      height:20px;
-      font-size: 1.4vw; 
-      padding: 3px 5px;
-      width: 70px;
-      border-radius: 4px;
-  }
+    #butn {
+        top: 65%;
+        left: 17.5%;
+        height: 20px;
+        font-size: 1.4vw;
+        padding: 3px 5px;
+        width: 70px;
+        border-radius: 4px;
+    }
 
-  .sections {
- 
-    font-size: 4.2vw;
-   font-weight: bold;
-   font-family: 'Montserrat', sans-serif;
-}
+    .sections {
+        font-size: 4.2vw;
+        font-weight: bold;
+        font-family: "Montserrat", sans-serif;
+    }
     .features {
-            overflow: hidden;
-            padding-bottom: 60px;
-  }
-  .feature-item {
-    display: block; 
-    clear: both;
-    position: relative;
-  }
-  
-   .featureImg {
-      position: relative;
-      display: block; 
-      margin: 30px auto;
-      max-width: 50%;
-      min-width: 50%;
-      box-shadow: 6px 6px 20px #000;
-      animation-name: imagemovea;
-      animation-duration: 1.5s;
+        overflow: hidden;
+        padding-bottom: 60px;
+    }
+    .feature-item {
+        display: block;
+        clear: both;
+        position: relative;
+    }
 
-  }
+    .featureImg {
+        position: relative;
+        display: block;
+        margin: 30px auto;
+        max-width: 50%;
+        min-width: 50%;
+        box-shadow: 6px 6px 20px #000;
+        animation-name: imagemovea;
+        animation-duration: 1.5s;
+    }
 
+    .content1 {
+        display: block;
+        margin: 30px auto;
+        max-width: 50%;
+        animation-name: imagemoveb;
+        animation-duration: 2s;
+    }
 
-  .content1 {
-      display: block; 
-      margin: 30px auto;
-      max-width: 50%;
-       animation-name: imagemoveb;
-      animation-duration: 2s;
-  }
-  
-   .featureImg2 {
-    position: relative;
-    display: block; 
-    margin: 30px auto;
-    max-width: 50%;
-    min-width: 50%;
-    box-shadow: 6px 6px 20px #000;
-    animation-name: imagemoveb;
-      animation-duration: 1.5s;
-  }
-  
-   .content2 {
-    margin: 30px auto;
-    display: block; 
-    max-width: 50%;
-    animation-name: imagemovea;
-      animation-duration: 2s;
-  }
-  .content-head{
-    font-size: 2.5vw;
-  }
+    .featureImg2 {
+        position: relative;
+        display: block;
+        margin: 30px auto;
+        max-width: 50%;
+        min-width: 50%;
+        box-shadow: 6px 6px 20px #000;
+        animation-name: imagemoveb;
+        animation-duration: 1.5s;
+    }
+
+    .content2 {
+        margin: 30px auto;
+        display: block;
+        max-width: 50%;
+        animation-name: imagemovea;
+        animation-duration: 2s;
+    }
+    .content-head {
+        font-size: 2.5vw;
+    }
 
     .content-text {
-    font-size: 2.6vw;
-    font-family: 'Montserrat', sans-serif;
-   
-  }
-  @keyframes imagemovea{
-    from{
-      
-      opacity: 0;
+        font-size: 2.6vw;
+        font-family: "Montserrat", sans-serif;
     }
-    to{
-    
-      opacity: 1;
+    @keyframes imagemovea {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
     }
-  }
-  @keyframes imagemoveb{
-    from{
-      
-      opacity: 0;
+    @keyframes imagemoveb {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
     }
-    to{
-      
-      opacity: 1;
-    }
-  }
-  }
+}
 
 @media (min-width: 650px) {
-
-.pg2-hd{
-  font-size: 20px;
-  margin-bottom: 30px;
-}
-.pg2-dd{
-  max-width:70%;
-  
-  padding-left: 100px;
-  
-}
-form{
-    width: 100%;
-    margin:auto;
-  }
-
-#gobtn{
-  margin-top: 30px;
-  font-size: 20px;
-}
-body{
-  background-size: 800px 842.1px;
-  animation: movingbg 20s ease infinite;
-
-}
-  .sections {
- 
-    font-size: 4.2vw;
-   font-weight: bold;
-   font-family: 'Montserrat', sans-serif;
-}
-  #butn {
-    top: 65%;
-      left: 20%;
-      height:30px;
-      font-size: 1.5vw; 
-      padding: 3px 5px;
-      width: 150px;
-      border-radius: 5px;
-  }
-    .features {
-      padding-bottom: 50px;
-      overflow: hidden;
-  }
-  .feature-item {
-    display: block; 
-    clear: both;
-  }
-
-
-  
-   .featureImg {
-      position: relative;
-      display: block; 
-      margin: 40px auto ;
-      max-width: 65%;
-      min-width: 65%;
-      box-shadow: 6px 6px 20px #000;
-      animation-name: imagemovea;
-      animation-duration: 1.5s;
-  }
-  
-   .content1 {
-      display: block; 
-      margin: 100px auto ;
-      max-width: 65%;
-      animation-name: imagemoveb;
-      animation-duration: 2s;
-  }
-  
-   .featureImg2 {
-    position: relative;
-    display: block; 
-    margin:  40px auto;
-    max-width: 65%;
-    min-width: 65%;
-    box-shadow: 6px 6px 20px #000;
-    animation-name: imagemoveb;
-      animation-duration: 1.5s;
-  }
-  
-   .content2 {
-    margin: 100px auto ;
-    display: block; 
-    max-width: 65%;
-      animation-name: imagemovea;
-      animation-duration: 2s;
-  }
-  .content-head{
-    font-size: 2.3vw;
-  }
-
-    .content-text {
-    font-size: 3.5vw;
-    font-family: 'Montserrat', sans-serif;
-    
-  }
-
-  @keyframes imagemovea{
-    from{
-      
-      opacity: 0;
+    .pg2-hd {
+        font-size: 20px;
+        margin-bottom: 30px;
     }
-    to{
-    
-      opacity: 1;
-    }
-  }
-  @keyframes imagemoveb{
-    from{
-      
-      opacity: 0;
-    }
-    to{
-      
-      opacity: 1;
-    }
-  }
-  
-  }
-  
-  @media (min-width: 768px) {
+    .pg2-dd {
+        max-width: 70%;
 
-.pg2-hd{
-  width:400px;
-  font-size: 30px;
-  margin-bottom: 30px;
-}
-.pg2-dd{
-  max-width:70%;
-  
-  padding-left: 200px;
-  
-}
-form{
-    width: 400px;
-    margin:0px;
-  }
+        padding-left: 100px;
+    }
+    form {
+        width: 100%;
+        margin: auto;
+    }
 
-#gobtn{
-  margin-top: 30px;
-  font-size: 20px;
-}
+    #gobtn {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    body {
+        background-size: 800px 842.1px;
+        animation: movingbg 20s ease infinite;
+    }
+    .sections {
+        font-size: 4.2vw;
+        font-weight: bold;
+        font-family: "Montserrat", sans-serif;
+    }
     #butn {
-      top: 65%;
-      left: 20%;
-      height:30px;
-      font-size: 1.5vw; 
-      padding: 3px 5px;
-      width: 150px;
-      border-radius: 5px;
+        top: 65%;
+        left: 20%;
+        height: 30px;
+        font-size: 1.5vw;
+        padding: 3px 5px;
+        width: 150px;
+        border-radius: 5px;
     }
     .features {
-      padding-bottom: 50px;
-      overflow: hidden;
-      min-width: 768px;
-  }
-  .feature-item {
-    display: block; 
-    clear: both;
-  }
-  
-   .featureImg {
-      position: relative;
-      display: block; 
-      margin: 80px auto;
-      max-width: 50%;
-      min-width: 50%;
-      box-shadow: 6px 6px 20px #000;
-      animation-name: imagemovea;
-      animation-duration: 1.5s;
-  }
-  
-   .content1 {
-      display: block; 
-      margin: 35px auto;
-      max-width: 50%;
-
-      text-align: justify;
-      animation-name: imagemoveb;
-      animation-duration: 2s;
-  }
-  
-   .featureImg2 {
-    position: relative;
-    display: block; 
-    margin: 80px auto;
-    max-width: 50%;
-    min-width: 50%;
-    box-shadow: 6px 6px 20px #000;
-    animation-name: imagemoveb;
-      animation-duration: 1.5s;
-
-  }
-  
-   .content2 {
-    margin: auto auto;
-    display: block; 
-    margin:35px auto;
-      
-    max-width: 50%;
-    text-align: justify;
-     animation-name: imagemovea;
-      animation-duration: 2s;
-  }
-  .content-head{
-    font-size: 2.3vw;
-  }
-
-    .content-text {
-    font-size: 3vw;
-    font-family: 'Montserrat', sans-serif;
-    
-  }
-  @keyframes imagemovea{
-    from{
-      
-      opacity: 0;
+        padding-bottom: 50px;
+        overflow: hidden;
     }
-    to{
-    
-      opacity: 1;
+    .feature-item {
+        display: block;
+        clear: both;
     }
-  }
-  @keyframes imagemoveb{
-    from{
-      
-      opacity: 0;
-    }
-    to{
-      
-      opacity: 1;
-    }
-  }
-  }
-  
-  @media (min-width: 1230px) {
 
-.pg2-hd{
-  width:400px;
-  font-size: 30px;
-  margin-bottom: 30px;
-}
-.pg2-dd{
-  max-width:70%;
-  
-  padding-left: 200px;
-  
-}
-form{
-    width: 500px;
-    margin:0px;
-  }
-  #collegeselector,#branchselector,#semselector{
-    width:100px;
-
-  }
-
-#gobtn{
-  margin-top: 30px;
-  font-size: 20px;
-}
-    body{
-  background-size: 1500px 1578.94px;
-  animation: movingbg 20s ease infinite;
-
-}
-    #butn {
-      top: 65%;
-      left: 17.5%;
-      width:200px;
-      height:40px;
-      font-size: 130%; 
-      padding: 4px 6px;
-      border-radius: 6px;
-    }
-    .features {
-      margin:  auto;
-      padding-bottom: 50px;
-      overflow: hidden;
-      min-width: 1230px;
-  }
-  .feature-item {
-    position: relative;
-    display: block; 
-    clear: both;
-    padding: 100px 50px;
-    height:400px;
-
-  }
-  
     .featureImg {
-      position: absolute;
-      left: 4%;
-      min-width: 30%;
-      max-width: 30%;
-      margin: 0 80px;
-      float: left;
-      animation-name: imagemovea;
-      animation-duration: 1s;
-      box-shadow: 6px 6px 20px #000;
-  }
-  
-  
- .content1 {
-
-  position: absolute;
-      right: 4%;
-      min-width: 30%;
-      max-width: 40%;
-      margin: 80px 80px;
-      float: right;
-      text-align: justify;
-      animation-name: imagemoveb;
-      animation-duration: 1s;
-      
-  }
-  
-  .featureImg2 {
-    position: absolute;
-    right:4%;
-      min-width: 30%;
-      max-width: 30%;
-      margin: 0 80px;
-      float: right;
-       animation-name: imagemoveb;
-      animation-duration: 1s;
-      box-shadow: 6px 6px 20px #000;
-  }
-
-  
-  
-   .content2 {
-    position: absolute;
-    left: 4%;
-      min-width: 30%;
-      max-width: 40%;
-      margin: 80px 80px;
-      float: left;
-
-      animation-name: imagemovea;
-      animation-duration: 1s;
-  }
-  .content-text {
-    font-family: 'Montserrat', sans-serif;
-    
-    font-size: 2vw;
-  }
-
-  @keyframes imagemovea{
-    from{
-      left:-5%;
-      opacity: 0;
+        position: relative;
+        display: block;
+        margin: 40px auto;
+        max-width: 65%;
+        min-width: 65%;
+        box-shadow: 6px 6px 20px #000;
+        animation-name: imagemovea;
+        animation-duration: 1.5s;
     }
-    to{
-      left:4%;
-      opacity: 1;
-    }
-  }
-  @keyframes imagemoveb{
-    from{
-      right:-5%;
-      opacity: 0;
-    }
-    to{
-      right:4%;
-      opacity: 1;
-    }
-  }
 
-  }
-
-  @media (min-width: 1950px) {
-    body{
-      background-size: cover; 
+    .content1 {
+        display: block;
+        margin: 100px auto;
+        max-width: 65%;
+        animation-name: imagemoveb;
+        animation-duration: 2s;
     }
-  }
 
+    .featureImg2 {
+        position: relative;
+        display: block;
+        margin: 40px auto;
+        max-width: 65%;
+        min-width: 65%;
+        box-shadow: 6px 6px 20px #000;
+        animation-name: imagemoveb;
+        animation-duration: 1.5s;
+    }
 
-  .dp {
+    .content2 {
+        margin: 100px auto;
+        display: block;
+        max-width: 65%;
+        animation-name: imagemovea;
+        animation-duration: 2s;
+    }
+    .content-head {
+        font-size: 2.3vw;
+    }
+
+    .content-text {
+        font-size: 3.5vw;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    @keyframes imagemovea {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    @keyframes imagemoveb {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .pg2-hd {
+        width: 400px;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    .pg2-dd {
+        max-width: 70%;
+
+        padding-left: 200px;
+    }
+    form {
+        width: 400px;
+        margin: 0px;
+    }
+
+    #gobtn {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    #butn {
+        top: 65%;
+        left: 20%;
+        height: 30px;
+        font-size: 1.5vw;
+        padding: 3px 5px;
+        width: 150px;
+        border-radius: 5px;
+    }
+    .features {
+        padding-bottom: 50px;
+        overflow: hidden;
+        min-width: 768px;
+    }
+    .feature-item {
+        display: block;
+        clear: both;
+    }
+
+    .featureImg {
+        position: relative;
+        display: block;
+        margin: 80px auto;
+        max-width: 50%;
+        min-width: 50%;
+        box-shadow: 6px 6px 20px #000;
+        animation-name: imagemovea;
+        animation-duration: 1.5s;
+    }
+
+    .content1 {
+        display: block;
+        margin: 35px auto;
+        max-width: 50%;
+
+        text-align: justify;
+        animation-name: imagemoveb;
+        animation-duration: 2s;
+    }
+
+    .featureImg2 {
+        position: relative;
+        display: block;
+        margin: 80px auto;
+        max-width: 50%;
+        min-width: 50%;
+        box-shadow: 6px 6px 20px #000;
+        animation-name: imagemoveb;
+        animation-duration: 1.5s;
+    }
+
+    .content2 {
+        margin: auto auto;
+        display: block;
+        margin: 35px auto;
+
+        max-width: 50%;
+        text-align: justify;
+        animation-name: imagemovea;
+        animation-duration: 2s;
+    }
+    .content-head {
+        font-size: 2.3vw;
+    }
+
+    .content-text {
+        font-size: 3vw;
+        font-family: "Montserrat", sans-serif;
+    }
+    @keyframes imagemovea {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    @keyframes imagemoveb {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+@media (min-width: 1230px) {
+    .pg2-hd {
+        width: 400px;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    .pg2-dd {
+        max-width: 70%;
+
+        padding-left: 200px;
+    }
+    form {
+        width: 500px;
+        margin: 0px;
+    }
+    #collegeselector,
+    #branchselector,
+    #semselector {
+        width: 100px;
+    }
+
+    #gobtn {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    body {
+        background-size: 1500px 1578.94px;
+        animation: movingbg 20s ease infinite;
+    }
+    #butn {
+        top: 65%;
+        left: 17.5%;
+        width: 200px;
+        height: 40px;
+        font-size: 130%;
+        padding: 4px 6px;
+        border-radius: 6px;
+    }
+    .features {
+        margin: auto;
+        padding-bottom: 50px;
+        overflow: hidden;
+        min-width: 1230px;
+    }
+    .feature-item {
+        position: relative;
+        display: block;
+        clear: both;
+        padding: 100px 50px;
+        height: 400px;
+    }
+
+    .featureImg {
+        position: absolute;
+        left: 4%;
+        min-width: 30%;
+        max-width: 30%;
+        margin: 0 80px;
+        float: left;
+        animation-name: imagemovea;
+        animation-duration: 1s;
+        box-shadow: 6px 6px 20px #000;
+    }
+
+    .content1 {
+        position: absolute;
+        right: 4%;
+        min-width: 30%;
+        max-width: 40%;
+        margin: 80px 80px;
+        float: right;
+        text-align: justify;
+        animation-name: imagemoveb;
+        animation-duration: 1s;
+    }
+
+    .featureImg2 {
+        position: absolute;
+        right: 4%;
+        min-width: 30%;
+        max-width: 30%;
+        margin: 0 80px;
+        float: right;
+        animation-name: imagemoveb;
+        animation-duration: 1s;
+        box-shadow: 6px 6px 20px #000;
+    }
+
+    .content2 {
+        position: absolute;
+        left: 4%;
+        min-width: 30%;
+        max-width: 40%;
+        margin: 80px 80px;
+        float: left;
+
+        animation-name: imagemovea;
+        animation-duration: 1s;
+    }
+    .content-text {
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 2vw;
+    }
+
+    @keyframes imagemovea {
+        from {
+            left: -5%;
+            opacity: 0;
+        }
+        to {
+            left: 4%;
+            opacity: 1;
+        }
+    }
+    @keyframes imagemoveb {
+        from {
+            right: -5%;
+            opacity: 0;
+        }
+        to {
+            right: 4%;
+            opacity: 1;
+        }
+    }
+}
+
+@media (min-width: 1950px) {
+    body {
+        background-size: cover;
+    }
+}
+
+.dp {
     border-radius: 50%;
     max-width: 60px;
-  }
-
+}
 
 hr {
     margin-top: 20px;
     margin-bottom: 20px;
     border: 0;
-    border-top: 2px solid #FFFFFF;
+    border-top: 2px solid #ffffff;
 }
 a {
-    color: #0C82DA;
-    font-family: 'Montserrat', sans-serif;
+    color: #0c82da;
+    font-family: "Montserrat", sans-serif;
 }
 
-
-#mainheading{
-  text-shadow: 3px 3px 6px #333;
+#mainheading {
+    text-shadow: 3px 3px 6px #333;
 }
-.filterhead{
-  
-  margin:auto;
-  padding-bottom: 5px;
-  text-align: center;
-  
+.filterhead {
+    margin: auto;
+    padding-bottom: 5px;
+    text-align: center;
 }
-.filtercard{
-  margin-left: 60px;
-  padding-top: 20px;
-  padding-right: 17.3%;
-  
+.filtercard {
+    margin-left: 60px;
+    padding-top: 20px;
+    padding-right: 17.3%;
 }
 
-.filtercard .inside{
-  padding: 20px 0px 20px 20px;
-  width: auto;
-  display: grid;
-  column-count:3;
-  grid-template-columns: repeat(3, minmax(380px, 3fr));
-  
-  grid-gap: 0.2rem;
-}
-.filtercard h1{
-  margin-left: 20px;
-  font-weight: 600;
-  color: white;
-  font-size: 35px;
+.filtercard .inside {
+    padding: 20px 0px 20px 20px;
+    width: auto;
+    display: grid;
+    column-count: 3;
+    grid-template-columns: repeat(3, minmax(380px, 3fr));
 
+    grid-gap: 0.2rem;
 }
-
-.filterhead .filin h1{
-  font-size: 60px;
+.filtercard h1 {
+    margin-left: 20px;
+    font-weight: 600;
+    color: white;
+    font-size: 35px;
 }
 
-.cards{
-
-  width: 80%;
-  margin-right: 20px;
-  border: 1px solid rgb(138, 137, 137);
-  border-radius: 10px;
-  box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.5);
-  padding-bottom: 10px;
-  margin-bottom:15px;
-  background-color: #FFFFFF;
-  color:black;
+.filterhead .filin h1 {
+    font-size: 60px;
 }
 
-#card > div:nth-child(2) > h2{
-  text-align: center;
-  padding-top: 5px;
+.cards {
+    width: 80%;
+    margin-right: 20px;
+    border: 1px solid rgb(138, 137, 137);
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.5);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    color: black;
 }
-.cards:hover{
-  transition: all 0.3s ease;
-  background-color: rgb(43, 41, 41);
-  color: #007bff;
-  transform: scale(1.1);
-  
+
+#card > div:nth-child(2) > h2 {
+    text-align: center;
+    padding-top: 5px;
 }
-.cards:hover .card-inner .card-front .img{
-  transition: all 0.3s ease;
-  width: 104%;
-  height: 104%;
+.cards:hover {
+    transition: all 0.3s ease;
+    background-color: rgb(43, 41, 41);
+    color: #007bff;
+    transform: scale(1.1);
 }
-.cards:hover h2{
-  font-weight: 600;
+.cards:hover .card-inner .card-front .img {
+    transition: all 0.3s ease;
+    width: 104%;
+    height: 104%;
+}
+.cards:hover h2 {
+    font-weight: 600;
 }
 .pg3-bg {
-  background: radial-gradient(circle, rgba(66,203,201,1) 0%, rgba(14,63,145,1) 100%);
-  background-image: url('https://storage.googleapis.com/swiftprep-web-images/spbg.png');
-  height: auto;
-  width: 100%;
-  background-size: 100% 100% ;
-  border-top: 2px solid rgb(85, 82, 82);
-  border-bottom: 2px solid rgb(85, 82, 82);
-  padding-bottom: 50px;
-
+    background: radial-gradient(
+        circle,
+        rgba(66, 203, 201, 1) 0%,
+        rgba(14, 63, 145, 1) 100%
+    );
+    background-image: url("https://storage.googleapis.com/swiftprep-web-images/spbg.png");
+    height: auto;
+    width: 100%;
+    background-size: 100% 100%;
+    border-top: 2px solid rgb(85, 82, 82);
+    border-bottom: 2px solid rgb(85, 82, 82);
+    padding-bottom: 50px;
 }
-#dropdownMenu2{
-  width: 130px;
+#dropdownMenu2 {
+    width: 130px;
 }
 
-img{
-  border-radius: 5px;
-  border: 1px solid black;
+img {
+    border-radius: 5px;
+    border: 1px solid black;
 }
 
 #cards {
-  display:inline-block;
+    display: inline-block;
 }
 
 .logo {
-  max-height: 25px;
+    max-height: 25px;
 }
 
 .thumbnail {
-  max-width: 100%;
+    max-width: 100%;
 }
