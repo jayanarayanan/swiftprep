@@ -185,15 +185,29 @@ app.get("/filter", function (req, res) {
 
 //add recors to database
 app.get("/database", function (req, res) {
-    Mentor.create({
-        name: "Ananya Angadi",
-        dp:
-            "https://storage.googleapis.com/swiftprep-mentor-images/AnanyaA.jpeg",
-        college: "PES University",
-        sem: 5,
-        subject: "Operating System",
-        description:
-            "Ananya is a third year CSE student who strongly believes that computer science cannot be studied in parts, but is best appreciated as a whole, with all its quirks and idiosyncrasies. She also likes to read in her free time, and prefers fictional worlds to the real.",
+    Video.create({
+        CBS: "PES-CSE-5",
+        Subject: "Computer Networks",
+        SubShort: "CN",
+        Chapter: 2,
+        VName: "PES-CSE-5-CN-2",
+        Thumbnail:
+            "https://storage.googleapis.com/swiftprep-web-images/unit-2.png",
+        Notes:
+            "https://storage.googleapis.com/swiftprep-notes/PES-CSE-5-CN-2.zip",
+        Mentor: "5f661f84e1e9c70017fc2751",
+    });
+    Video.create({
+        CBS: "PES-CSE-5",
+        Subject: "Operating System",
+        SubShort: "OS",
+        Chapter: 2,
+        VName: "PES-CSE-5-OS-2",
+        Thumbnail:
+            "https://storage.googleapis.com/swiftprep-web-images/unit-2.png",
+        Notes:
+            "https://storage.googleapis.com/swiftprep-notes/PES-CSE-5-OS-2.pdf",
+        Mentor: "5f770a3e1172870017b13b75",
     });
     res.render("index");
 });
