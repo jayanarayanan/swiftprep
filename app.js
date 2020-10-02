@@ -185,18 +185,6 @@ app.get("/filter", function (req, res) {
 
 //add recors to database
 app.get("/database", function (req, res) {
-    Video.create({
-        CBS: "PES-CSE-5",
-        Subject: "Machine Intelligence",
-        SubShort: "MI",
-        Chapter: 2,
-        VName: "PES-CSE-5-MI-2",
-        Thumbnail:
-            "https://storage.googleapis.com/swiftprep-web-images/unit-2.png",
-        Notes:
-            "https://storage.googleapis.com/swiftprep-notes/PES-CSE-5-MI-2.pdf",
-        Mentor: "5f7715fe9368d100172e52ca",
-    });
     res.render("index");
 });
 
