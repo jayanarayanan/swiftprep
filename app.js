@@ -185,15 +185,17 @@ app.get("/filter", function (req, res) {
 
 //add recors to database
 app.get("/database", function (req, res) {
-    Mentor.create({
-        name: "Rishith Bhowmick",
-        dp:
-            "https://storage.googleapis.com/swiftprep-mentor-images/RishithB.jpeg",
-        college: "PES University",
-        sem: 5,
-        subject: "Machine Intelligence",
-        description:
-            "Rishith is a 3rd year student. According to him, the ability to pass on his intelligence to all things living and non-living has got him interested in Machine Learning. He looks to make an impact on people’s lives in ways never thought of.",
+    Video.create({
+        CBS: "PES-CSE-5",
+        Subject: "Machine Intelligence",
+        SubShort: "MI",
+        Chapter: 2,
+        VName: "PES-CSE-5-MI-2",
+        Thumbnail:
+            "https://storage.googleapis.com/swiftprep-web-images/unit-2.png",
+        Notes:
+            "https://storage.googleapis.com/swiftprep-notes/PES-CSE-5-MI-2.pdf",
+        Mentor: "5f7715fe9368d100172e52ca",
     });
     res.render("index");
 });
