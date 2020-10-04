@@ -185,41 +185,6 @@ app.get("/filter", function (req, res) {
 
 //add recors to database
 app.get("/database", function (req, res) {
-    Video.create({
-        CBS: "PES-ECE-5",
-        Subject: "Digital Image Processing",
-        SubShort: "DIP",
-        Chapter: 2,
-        VName: "PES-ECE-5-DIP-2",
-        Thumbnail:
-            "https://storage.googleapis.com/swiftprep-web-images/unit-2.png",
-        Notes:
-            "https://storage.googleapis.com/swiftprep-notes/PES-ECE-5-DIP-2.zip",
-        Mentor: "5f6733def90fa90017e93d6b",
-    });
-    Video.create({
-        CBS: "PES-ECE-5",
-        Subject: "Microwave Engineering",
-        SubShort: "ME",
-        Chapter: 2,
-        VName: "PES-ECE-5-ME-2",
-        Thumbnail:
-            "https://storage.googleapis.com/swiftprep-web-images/unit-2.png",
-        Notes:
-            "https://storage.googleapis.com/swiftprep-notes/PES-ECE-5-ME-2.zip",
-        Mentor: "5f6733def90fa90017e93d6a",
-    });
-    Video.create({
-        CBS: "PES-ME-5",
-        Subject: "Design of Machine Elements",
-        SubShort: "DME",
-        Chapter: 2,
-        VName: "PES-ME-5-DME-2",
-        Thumbnail:
-            "https://storage.googleapis.com/swiftprep-web-images/unit-2.png",
-        Notes: "#",
-        Mentor: "5f6733def90fa90017e93d6c",
-    });
     res.render("index");
 });
 
@@ -431,3 +396,14 @@ app.listen(process.env.PORT, process.env.IP, function () {
 
 // Mentor.create({name: "Haritha GB", dp: "https://storage.googleapis.com/swiftprep-mentor-images/HarithaGB.jpeg", college: "PES University", sem: 5, subject: "Digital Image Processing", description: "Haritha is passionate about image processing and computer vision. She believes in using deep learning and CV to accelerate change for good and aims to bring about change in her own way."});
 // Video.create({CBS: 'PES-ECE-5', Subject: 'Digital Image Processing', SubShort: 'DIP', Chapter: 1, VName: 'PES-ECE-5-DIP-1', Thumbnail: "https://storage.googleapis.com/swiftprep-web-images/unit-1.png", Notes: "https://storage.googleapis.com/swiftprep-notes/PES-ECE-5-DIP-1.pdf", Mentor: "5f6733def90fa90017e93d6b"});
+// Video.create({
+//     CBS: "PES-ME-5",
+//     Subject: "Design of Machine Elements",
+//     SubShort: "DME",
+//     Chapter: 2,
+//     VName: "PES-ME-5-DME-2",
+//     Thumbnail:
+//         "https://storage.googleapis.com/swiftprep-web-images/unit-2.png",
+//     Notes: "#",
+//     Mentor: "5f6733def90fa90017e93d6c",
+// });
