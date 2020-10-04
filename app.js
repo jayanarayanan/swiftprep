@@ -185,6 +185,17 @@ app.get("/filter", function (req, res) {
 
 //add recors to database
 app.get("/database", function (req, res) {
+    Video.create({
+        CBS: "PES-ME-5",
+        Subject: "Principles of Energy Conservation",
+        SubShort: "PEC",
+        Chapter: 2,
+        VName: "PES-ME-5-PEC-2",
+        Thumbnail:
+            "https://storage.googleapis.com/swiftprep-web-images/unit-2.png",
+        Notes: "#",
+        Mentor: "5f6733def90fa90017e93d6d",
+    });
     res.render("index");
 });
 
