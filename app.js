@@ -185,30 +185,6 @@ app.get("/filter", function (req, res) {
 
 //add recors to database
 app.get("/database", function (req, res) {
-    Video.create({
-        CBS: "PES-ECE-5",
-        Subject: "Communications Engineering",
-        SubShort: "CE",
-        Chapter: 2,
-        VName: "PES-ECE-5-CE-2",
-        Thumbnail:
-            "https://storage.googleapis.com/swiftprep-web-images/unit-2.png",
-        Notes:
-            "https://storage.googleapis.com/swiftprep-notes/PES-ECE-5-CE-2.pdf",
-        Mentor: "5f8170ac4e6cd50017210277",
-    });
-    Video.create({
-        CBS: "PES-CSE-5",
-        Subject: "Operating System",
-        SubShort: "OS",
-        Chapter: 3,
-        VName: "PES-CSE-5-OS-3",
-        Thumbnail:
-            "https://storage.googleapis.com/swiftprep-web-images/unit-3.png",
-        Notes:
-            "https://storage.googleapis.com/swiftprep-notes/PES-CSE-5-OS-3.pdf",
-        Mentor: "5f770a3e1172870017b13b75",
-    });
     res.render("index");
 });
 
