@@ -185,6 +185,16 @@ app.get("/filter", function (req, res) {
 
 //add recors to database
 app.get("/database", function (req, res) {
+    Mentor.create({
+        name: "Chetan",
+        dp:
+            "https://storage.googleapis.com/swiftprep-mentor-images/Chetan.jpeg",
+        college: "PES University",
+        sem: 5,
+        subject: "Communications Engineering",
+        description:
+            "Chetan likes things that are interesting, and communication is one of them.",
+    });
     res.render("index");
 });
 
