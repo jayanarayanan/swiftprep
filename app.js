@@ -185,7 +185,7 @@ app.get("/filter", function (req, res) {
 
 //add recors to database
 app.get("/database", function (req, res) {
-    User.findByIdAndDelete({}, function (err) {
+    User.deleteMany({}, function (err) {
         if (err) {
             console.log(err);
             res.redirect("/filter");
