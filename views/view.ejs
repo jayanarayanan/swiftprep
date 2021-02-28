@@ -161,7 +161,7 @@
                 <a href="/" class="navbar-brand"
                     ><img
                         class="logo"
-                        src="https://storage.googleapis.com/swiftprep-web-images/logo.png"
+                        src="https://swiftprep-web-images.s3.ap-south-1.amazonaws.com/logo.png"
                 /></a>
                 <% if(!currentUser){ %>
                 <a class="nav-link" href="/google">Login</a>
@@ -197,7 +197,7 @@
                     data-setup='{"playbackRates": [1, 1.25, 1.5, 1.75, 2], "poster": "<%= video.Thumbnail %>"}'
                 >
                     <source
-                        src="https://<%= link %>/<%= bucket %>/<%= video.VName %>.mp4"
+                        src="https://<%= bucket %>.<%= link %>/<%= video.VName %>.mp4"
                         type="video/mp4"
                     />
                     Your browser does not support the video tag.

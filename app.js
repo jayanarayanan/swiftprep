@@ -185,7 +185,14 @@ app.get("/filter", function (req, res) {
 
 //add recors to database
 app.get("/database", function (req, res) {
-    res.render("index");
+    User.findByIdAndDelete({}, function (err) {
+        if (err) {
+            console.log(err);
+            res.redirect("/filter");
+        } else {
+            res.redirect("/");
+        }
+    });
 });
 
 //listing subjects
@@ -232,9 +239,9 @@ app.get("/view/:id", function (req, res) {
                     console.log(err);
                 } else {
                     res.render("view", {
-                        bucket: keys.gcp.bucket,
-                        link: keys.gcp.link,
-                        bucketNotes: keys.gcp.bucketNotes,
+                        bucket: keys.aws.bucket,
+                        link: keys.aws.link,
+                        bucketNotes: keys.aws.bucketNotes,
                         video: foundVideo,
                     });
                 }
@@ -267,22 +274,22 @@ app.post("/view/:id/comment", function (req, res) {
         if (err) {
             console.log(err);
         } else {
-            Comment.create({ text: req.body.comment }, function (
-                err,
-                newComment
-            ) {
-                if (err) {
-                    console.log(err);
-                } else {
-                    newComment.author.username = req.user.username;
-                    newComment.author.id = req.user._id;
-                    newComment.author.dp = req.user.dp;
-                    newComment.save();
-                    foundVideo.comments.push(newComment);
-                    foundVideo.save();
-                    res.redirect("/view/" + foundVideo._id + "/comment");
+            Comment.create(
+                { text: req.body.comment },
+                function (err, newComment) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        newComment.author.username = req.user.username;
+                        newComment.author.id = req.user._id;
+                        newComment.author.dp = req.user.dp;
+                        newComment.save();
+                        foundVideo.comments.push(newComment);
+                        foundVideo.save();
+                        res.redirect("/view/" + foundVideo._id + "/comment");
+                    }
                 }
-            });
+            );
         }
     });
 });
@@ -305,23 +312,23 @@ app.post("/view/:id/:commentId/reply", function (req, res) {
         if (err) {
             console.log(err);
         } else {
-            Comment.findById(req.params.commentId, function (
-                err,
-                foundComment
-            ) {
-                if (err) {
-                    console.log(err);
-                } else {
-                    Reply.text = req.body.reply;
-                    Reply.author.username = req.user.username;
-                    Reply.author.id = req.user._id;
-                    Reply.author.dp = req.user.dp;
-                    foundComment.replies.push(Reply);
-                    foundComment.save();
-                    console.log(foundComment);
-                    res.redirect("/view/" + foundVideo._id + "/comment");
+            Comment.findById(
+                req.params.commentId,
+                function (err, foundComment) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        Reply.text = req.body.reply;
+                        Reply.author.username = req.user.username;
+                        Reply.author.id = req.user._id;
+                        Reply.author.dp = req.user.dp;
+                        foundComment.replies.push(Reply);
+                        foundComment.save();
+                        console.log(foundComment);
+                        res.redirect("/view/" + foundVideo._id + "/comment");
+                    }
                 }
-            });
+            );
         }
     });
 });
@@ -352,12 +359,13 @@ app.get(
 );
 
 //Passport auth
-app.get("/google/redirect", passport.authenticate("google"), function (
-    req,
-    res
-) {
-    res.redirect("/filter");
-});
+app.get(
+    "/google/redirect",
+    passport.authenticate("google"),
+    function (req, res) {
+        res.redirect("/filter");
+    }
+);
 
 //logout page
 app.get("/logout", function (req, res) {
@@ -395,7 +403,7 @@ app.listen(process.env.PORT, process.env.IP, function () {
 // });
 
 // Mentor.create({name: "Haritha GB", dp: "https://storage.googleapis.com/swiftprep-mentor-images/HarithaGB.jpeg", college: "PES University", sem: 5, subject: "Digital Image Processing", description: "Haritha is passionate about image processing and computer vision. She believes in using deep learning and CV to accelerate change for good and aims to bring about change in her own way."});
-// Video.create({CBS: 'PES-ECE-5', Subject: 'Digital Image Processing', SubShort: 'DIP', Chapter: 1, VName: 'PES-ECE-5-DIP-1', Thumbnail: "https://storage.googleapis.com/swiftprep-web-images/unit-1.png", Notes: "https://storage.googleapis.com/swiftprep-notes/PES-ECE-5-DIP-1.pdf", Mentor: "5f6733def90fa90017e93d6b"});
+// Video.create({CBS: 'PES-ECE-5', Subject: 'Digital Image Processing', SubShort: 'DIP', Chapter: 1, VName: 'PES-ECE-5-DIP-1', Thumbnail: "https://swiftprep-web-images.s3.ap-south-1.amazonaws.com/unit-1.png", Notes: "https://storage.googleapis.com/swiftprep-notes/PES-ECE-5-DIP-1.pdf", Mentor: "5f6733def90fa90017e93d6b"});
 // Video.create({
 //     CBS: "PES-ME-5",
 //     Subject: "Design of Machine Elements",
@@ -403,7 +411,7 @@ app.listen(process.env.PORT, process.env.IP, function () {
 //     Chapter: 2,
 //     VName: "PES-ME-5-DME-2",
 //     Thumbnail:
-//         "https://storage.googleapis.com/swiftprep-web-images/unit-2.png",
+//         "https://swiftprep-web-images.s3.ap-south-1.amazonaws.com/unit-2.png",
 //     Notes: "#",
 //     Mentor: "5f6733def90fa90017e93d6c",
 // });

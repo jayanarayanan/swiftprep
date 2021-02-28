@@ -74,7 +74,7 @@ body {
     font-weight: 600;
 }
 .pg3-bg {
-    background-image: url("https://storage.googleapis.com/swiftprep-web-images/page3-bg.jpg");
+    background-image: url("https://swiftprep-web-images.s3.ap-south-1.amazonaws.com/page3-bg.jpg");
     background-size: cover;
     height: auto;
     width: 100%;
@@ -172,7 +172,7 @@ img {
 
     @media (max-width: 768px) {
         .pg3-bg {
-            background-image: url("https://storage.googleapis.com/swiftprep-web-images/spbg.png");
+            background-image: url("https://swiftprep-web-images.s3.ap-south-1.amazonaws.com/spbg.png");
             height: auto;
             width: 100%;
             background-repeat: no-repeat;
