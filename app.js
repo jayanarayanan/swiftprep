@@ -213,9 +213,10 @@ app.get("/database", function (req, res) {
         sem: 6,
         subject: "Computer Architecture and Organization",
         description:
-            "Samarth is always keen to learn new stuffs about technology. With a great interest in MERN stack web development and Competitive Coding, he tries to give his best in all the fields he enters into!
-            -"Hardwork is a vector quantity, it's direction is as important as it's magnitude"",
+            "Samarth is always keen to learn new stuffs about technology. With a great interest in MERN stack web development and Competitive Coding, he tries to give his best in all the fields he enters into!" -
+            "Hardwork is a vector quantity, it's direction is as important as it's magnitude",
     });
+    res.redirect("/");
 });
 
 //listing subjects
