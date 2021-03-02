@@ -185,42 +185,6 @@ app.get("/filter", function (req, res) {
 
 //add recors to database
 app.get("/database", function (req, res) {
-    Video.create({
-        CBS: "VIT-CSE-5",
-        Subject: "Data Structures and Algorithms",
-        SubShort: "DSA",
-        Chapter: 1,
-        VName: "VIT-CSE-5-DSA-1.mp4",
-        Thumbnail:
-            "https://swiftprep-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
-        Notes:
-            "https://swiftprep-notes.s3.ap-south-1.amazonaws.com/VIT-CSE-5-DSA-1.pptx",
-        Mentor: "603d9ce12513240017f8ac95",
-    });
-    Video.create({
-        CBS: "VIT-CSE-5",
-        Subject: "Data Structures and Algorithms",
-        SubShort: "DSA",
-        Chapter: 2,
-        VName: "VIT-CSE-5-DSA-2.wmv",
-        Thumbnail:
-            "https://swiftprep-web-images.s3.ap-south-1.amazonaws.com/unit-2.png",
-        Notes:
-            "https://swiftprep-notes.s3.ap-south-1.amazonaws.com/VIT-CSE-5-DSA-2.pdf",
-        Mentor: "603d9ce12513240017f8ac94",
-    });
-    Video.create({
-        CBS: "VIT-CSE-5",
-        Subject: "Computer Architecture and Organization",
-        SubShort: "CAO",
-        Chapter: 1,
-        VName: "VIT-CSE-5-CAO-1.mp4",
-        Thumbnail:
-            "https://swiftprep-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
-        Notes:
-            "https://swiftprep-notes.s3.ap-south-1.amazonaws.com/VIT-CSE-5-COA-1.zip",
-        Mentor: "603d9ce12513240017f8ac96",
-    });
     res.redirect("/");
 });
 
@@ -443,4 +407,41 @@ app.listen(process.env.PORT, process.env.IP, function () {
 //         "https://swiftprep-web-images.s3.ap-south-1.amazonaws.com/unit-2.png",
 //     Notes: "#",
 //     Mentor: "5f6733def90fa90017e93d6c",
+// });
+
+// Video.create({
+//     CBS: "VIT-CSE-5",
+//     Subject: "Data Structures and Algorithms",
+//     SubShort: "DSA",
+//     Chapter: 1,
+//     VName: "VIT-CSE-5-DSA-1.mp4",
+//     Thumbnail:
+//         "https://swiftprep-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
+//     Notes:
+//         "https://swiftprep-notes.s3.ap-south-1.amazonaws.com/VIT-CSE-5-DSA-1.pptx",
+//     Mentor: "603d9ce12513240017f8ac95",
+// });
+// Video.create({
+//     CBS: "VIT-CSE-5",
+//     Subject: "Data Structures and Algorithms",
+//     SubShort: "DSA",
+//     Chapter: 2,
+//     VName: "VIT-CSE-5-DSA-2.wmv",
+//     Thumbnail:
+//         "https://swiftprep-web-images.s3.ap-south-1.amazonaws.com/unit-2.png",
+//     Notes:
+//         "https://swiftprep-notes.s3.ap-south-1.amazonaws.com/VIT-CSE-5-DSA-2.pdf",
+//     Mentor: "603d9ce12513240017f8ac94",
+// });
+// Video.create({
+//     CBS: "VIT-CSE-5",
+//     Subject: "Computer Architecture and Organization",
+//     SubShort: "CAO",
+//     Chapter: 1,
+//     VName: "VIT-CSE-5-CAO-1.mp4",
+//     Thumbnail:
+//         "https://swiftprep-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
+//     Notes:
+//         "https://swiftprep-notes.s3.ap-south-1.amazonaws.com/VIT-CSE-5-COA-1.zip",
+//     Mentor: "603d9ce12513240017f8ac96",
 // });
