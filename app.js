@@ -185,36 +185,41 @@ app.get("/filter", function (req, res) {
 
 //add recors to database
 app.get("/database", function (req, res) {
-    Mentor.create({
-        name: "Deepanshu Dhingra",
-        dp:
-            "https://swiftprep-mentor-images.s3.ap-south-1.amazonaws.com/DeepanshuD.jpg",
-        college: "VIT Vellore",
-        sem: 6,
-        subject: "Data Structures and Algorithms",
-        description:
-            "Deepanshu is driven by new technology. Being a web developer himself, he wishes to create the web a better place but no he can’t fix your laptop. He has a keen sense of humor and he cracks lame jokes.",
+    Video.create({
+        CBS: "VIT-CSE-5",
+        Subject: "Data Structures and Algorithms",
+        SubShort: "DSA",
+        Chapter: 1,
+        VName: "VIT-CSE-5-DSA-1.mp4",
+        Thumbnail:
+            "https://swiftprep-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
+        Notes:
+            "https://swiftprep-notes.s3.ap-south-1.amazonaws.com/VIT-CSE-5-DSA-1.pptx",
+        Mentor: "603d9ce12513240017f8ac95",
     });
-    Mentor.create({
-        name: "Saransh Mehta",
-        dp:
-            "https://swiftprep-mentor-images.s3.ap-south-1.amazonaws.com/SaranshM.jpeg",
-        college: "VIT Vellore",
-        sem: 6,
-        subject: "Data Structures and Algorithms",
-        description:
-            "Saransh is a divergent thinker and believes more in implementation rather than theory. Mainly being a MERN stack developer, with a side of blockchain development and sprinkled with competitive coding, he gives his best go at every new venture.",
+    Video.create({
+        CBS: "VIT-CSE-5",
+        Subject: "Data Structures and Algorithms",
+        SubShort: "DSA",
+        Chapter: 2,
+        VName: "VIT-CSE-5-DSA-2.wmv",
+        Thumbnail:
+            "https://swiftprep-web-images.s3.ap-south-1.amazonaws.com/unit-2.png",
+        Notes:
+            "https://swiftprep-notes.s3.ap-south-1.amazonaws.com/VIT-CSE-5-DSA-2.pdf",
+        Mentor: "603d9ce12513240017f8ac94",
     });
-    Mentor.create({
-        name: "Samarth Nehe",
-        dp:
-            "https://swiftprep-mentor-images.s3.ap-south-1.amazonaws.com/SamarthN.jpeg",
-        college: "VIT Vellore",
-        sem: 6,
-        subject: "Computer Architecture and Organization",
-        description:
-            "Samarth is always keen to learn new stuffs about technology. With a great interest in MERN stack web development and Competitive Coding, he tries to give his best in all the fields he enters into!" -
-            "Hardwork is a vector quantity, it's direction is as important as it's magnitude",
+    Video.create({
+        CBS: "VIT-CSE-5",
+        Subject: "Computer Architecture and Organization",
+        SubShort: "CAO",
+        Chapter: 1,
+        VName: "VIT-CSE-5-CAO-1.mp4",
+        Thumbnail:
+            "https://swiftprep-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
+        Notes:
+            "https://swiftprep-notes.s3.ap-south-1.amazonaws.com/VIT-CSE-5-COA-1.zip",
+        Mentor: "603d9ce12513240017f8ac96",
     });
     res.redirect("/");
 });
