@@ -185,6 +185,114 @@ app.get("/filter", function (req, res) {
 
 //add recors to database
 app.get("/database", function (req, res) {
+    Mentor.create({
+        name: "Haritha GB",
+        dp: "https://swiftprep-main-mentor-images.s3.ap-south-1.amazonaws.com/HarithaGB.jpeg",
+        college: "PES University",
+        sem: 5,
+        subject: "Digital Image Processing",
+        description:
+            "Haritha is a third-year ECE student who is passionate about image processing and computer vision. She believes in using deep learning and CV to accelerate change for good and aims to bring about change in her own way.",
+    });
+    Mentor.create({
+        name: "Ananya Veeraraghavan",
+        dp: "https://swiftprep-main-mentor-images.s3.ap-south-1.amazonaws.com/AnanyaV.jpeg",
+        college: "PES University",
+        sem: 5,
+        subject: "Operating System",
+        description:
+            "Ananya has provided education to underprivileged children for more than 2 years, and she is very passionate about making education relatable and more easy to understand.",
+    });
+    Mentor.create({
+        name: "Sakshi Shetty",
+        dp: "https://swiftprep-main-mentor-images.s3.ap-south-1.amazonaws.com/SakshiS.jpeg",
+        college: "PES University",
+        sem: 5,
+        subject: "Computer Networks",
+        description:
+            "Sakshi aims to use her knowledge of technology & marketing to build products for a better tomorrow. She takes an avid interest in both Business and Computer Science, because she believes it's crucial to integrate the two for creating successful products.",
+    });
+    Mentor.create({
+        name: "Drishti Hoskote",
+        dp: "https://swiftprep-main-mentor-images.s3.ap-south-1.amazonaws.com/DrishtiH.jpeg",
+        college: "PES University",
+        sem: 5,
+        subject: "Machine Intelligence",
+        description:
+            "Drishti is a computer enthusiast who loves teaching and working towards a better society. She believes that technology can help build a better world.",
+    });
+    Mentor.create({
+        name: "Rishal MP",
+        dp: "https://swiftprep-main-mentor-images.s3.ap-south-1.amazonaws.com/RishalMP.jpeg",
+        college: "PES University",
+        sem: 5,
+        subject: "Microwave Engineering",
+        description:
+            "Rishal is passionate to explore the areas of Embedded Systems and VLSI design. She strives to continuously learn and innovate in the ever-growing world of technology using the best of her skills and ability.",
+    });
+    Mentor.create({
+        name: "Sharadi GR",
+        dp: "https://swiftprep-main-mentor-images.s3.ap-south-1.amazonaws.com/SharadiGR.jpeg",
+        college: "PES University",
+        sem: 5,
+        subject: "Computer Organisation",
+        description:
+            "Sharadi is a third-year ECE student who is really passionate to learn electronics and it's applications",
+    });
+    Mentor.create({
+        name: "Sindu NG",
+        dp: "https://swiftprep-main-mentor-images.s3.ap-south-1.amazonaws.com/SinduNG.jpeg",
+        college: "PES University",
+        sem: 5,
+        subject: "Communication Engineering",
+        description:
+            "Sindu believes that communication is the essence of connecting individuals. She aims to maximise it by making space communication efficient.",
+    });
+    Mentor.create({
+        name: "Sakshi Shetty",
+        dp: "https://swiftprep-main-mentor-images.s3.ap-south-1.amazonaws.com/SakshiS.jpeg",
+        college: "PES University",
+        sem: 5,
+        subject: "Computer Networks",
+        description:
+            "Sakshi aims to use her knowledge of technology & marketing to build products for a better tomorrow. She takes an avid interest in both Business and Computer Science, because she believes it's crucial to integrate the two for creating successful products.",
+    });
+    Mentor.create({
+        name: "Manav Somani",
+        dp: "https://swiftprep-main-mentor-images.s3.ap-south-1.amazonaws.com/ManavS.jpeg",
+        college: "PES University",
+        sem: 5,
+        subject: "Design of Machine Elements",
+        description:
+            "Manav is extroverted, goal-oriented and a smart worker with a flare for automobiles and technology. He always strives to get better with a 'Never give up' attitude.",
+    });
+    Mentor.create({
+        name: "Rishab N",
+        dp: "https://swiftprep-main-mentor-images.s3.ap-south-1.amazonaws.com/RishabN.jpeg",
+        college: "PES University",
+        sem: 5,
+        subject: "Principles of Energy Conservation",
+        description:
+            "Rishab is a tech enthusiast with keen observation skills. He is always trying to take inspiration from nature and incorporate them to make more efficient, effective products.",
+    });
+    Mentor.create({
+        name: "Ananya Angadi",
+        dp: "https://swiftprep-main-mentor-images.s3.ap-south-1.amazonaws.com/AnanyaA.jpeg",
+        college: "PES University",
+        sem: 5,
+        subject: "Operating System",
+        description:
+            "Ananya is a third year CSE student who strongly believes that computer science cannot be studied in parts, but is best appreciated as a whole, with all of it's quirks and idiosyncrasies. She likes to read in her free time, and prefers fictional worlds to the real.",
+    });
+    Mentor.create({
+        name: "Rishith Bhowmick",
+        dp: "https://swiftprep-main-mentor-images.s3.ap-south-1.amazonaws.com/RishithB.jpeg",
+        college: "PES University",
+        sem: 5,
+        subject: "Machine Intelligence",
+        description:
+            "Rishith is a 3rd year CSE student, and he believes that the ability to pass on his intelligence to all things living and non-living is what got him interested in Machine Learning. He desires to make an impact on people’s lives in ways never thought of.",
+    });
     res.redirect("/");
 });
 
@@ -396,7 +504,7 @@ app.listen(process.env.PORT, process.env.IP, function () {
 // });
 
 // Mentor.create({name: "Haritha GB", dp: "https://storage.googleapis.com/swiftprep-mentor-images/HarithaGB.jpeg", college: "PES University", sem: 5, subject: "Digital Image Processing", description: "Haritha is passionate about image processing and computer vision. She believes in using deep learning and CV to accelerate change for good and aims to bring about change in her own way."});
-// Video.create({CBS: 'PES-ECE-5', Subject: 'Digital Image Processing', SubShort: 'DIP', Chapter: 1, VName: 'PES-ECE-5-DIP-1', Thumbnail: "https://swiftprep-web-images.s3.ap-south-1.amazonaws.com/unit-1.png", Notes: "https://storage.googleapis.com/swiftprep-notes/PES-ECE-5-DIP-1.pdf", Mentor: "5f6733def90fa90017e93d6b"});
+// Video.create({CBS: 'PES-ECE-5', Subject: 'Digital Image Processing', SubShort: 'DIP', Chapter: 1, VName: 'PES-ECE-5-DIP-1', Thumbnail: "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-1.png", Notes: "https://storage.googleapis.com/swiftprep-notes/PES-ECE-5-DIP-1.pdf", Mentor: "5f6733def90fa90017e93d6b"});
 // Video.create({
 //     CBS: "PES-ME-5",
 //     Subject: "Design of Machine Elements",
@@ -404,7 +512,7 @@ app.listen(process.env.PORT, process.env.IP, function () {
 //     Chapter: 2,
 //     VName: "PES-ME-5-DME-2",
 //     Thumbnail:
-//         "https://swiftprep-web-images.s3.ap-south-1.amazonaws.com/unit-2.png",
+//         "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-2.png",
 //     Notes: "#",
 //     Mentor: "5f6733def90fa90017e93d6c",
 // });
@@ -416,7 +524,7 @@ app.listen(process.env.PORT, process.env.IP, function () {
 //     Chapter: 1,
 //     VName: "VIT-CSE-5-DSA-1.mp4",
 //     Thumbnail:
-//         "https://swiftprep-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
+//         "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
 //     Notes:
 //         "https://swiftprep-notes.s3.ap-south-1.amazonaws.com/VIT-CSE-5-DSA-1.pptx",
 //     Mentor: "603d9ce12513240017f8ac95",
@@ -428,7 +536,7 @@ app.listen(process.env.PORT, process.env.IP, function () {
 //     Chapter: 2,
 //     VName: "VIT-CSE-5-DSA-2.wmv",
 //     Thumbnail:
-//         "https://swiftprep-web-images.s3.ap-south-1.amazonaws.com/unit-2.png",
+//         "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-2.png",
 //     Notes:
 //         "https://swiftprep-notes.s3.ap-south-1.amazonaws.com/VIT-CSE-5-DSA-2.pdf",
 //     Mentor: "603d9ce12513240017f8ac94",
@@ -440,7 +548,7 @@ app.listen(process.env.PORT, process.env.IP, function () {
 //     Chapter: 1,
 //     VName: "VIT-CSE-5-CAO-1.mp4",
 //     Thumbnail:
-//         "https://swiftprep-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
+//         "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
 //     Notes:
 //         "https://swiftprep-notes.s3.ap-south-1.amazonaws.com/VIT-CSE-5-COA-1.zip",
 //     Mentor: "603d9ce12513240017f8ac96",

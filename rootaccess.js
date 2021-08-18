@@ -2,9 +2,9 @@
 
 module.exports = {
     aws: {
-        bucket: "swiftprep-videos-vit",
+        bucket: "swiftprep-main-videos",
         link: "s3.ap-south-1.amazonaws.com",
-        bucketNotes: "swiftprep-notes",
+        bucketNotes: "swiftprep-main-notes",
     },
     google: {
         clientID:
