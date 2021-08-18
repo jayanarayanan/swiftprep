@@ -217,8 +217,9 @@
                                 Select College
                             </option>
                             <option value="VIT">VIT</option>
-                            <option value="PES">PES</option></select
-                        ><br />
+                            <option value="PES">PES</option>
+                        </select>
+                        <br />
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend texthead">
@@ -368,7 +369,12 @@
         var info = {
             "Select College": ["Select Stream (SS)"],
             VIT: ["Select Stream (SS)", "Computer Science Engineering (CSE)"],
-            PES: ["Sorry, we're coming soon to this college (SS)"],
+            PES: [
+                "Select Stream (SS)",
+                "Computer Science Engineering (CSE)",
+                "Electronics and Communication Engineering (ECE)",
+                "Mechanical Engineering (ME)",
+            ],
         };
 
         function filload() {
