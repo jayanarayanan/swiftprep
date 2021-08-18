@@ -185,204 +185,6 @@ app.get("/filter", function (req, res) {
 
 //add recors to database
 app.get("/database", function (req, res) {
-    Video.create({
-        CBS: "PES-CSE-5",
-        Subject: "Computer Networks",
-        SubShort: "CN",
-        Chapter: 1,
-        VName: "PES-CSE-5-CN-1",
-        Thumbnail:
-            "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
-        Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-CSE-5-CN-1.zip",
-        Mentor: "611d49b244ee680018edc1f1",
-    });
-    Video.create({
-        CBS: "PES-CSE-5",
-        Subject: "Computer Networks",
-        SubShort: "CN",
-        Chapter: 2,
-        VName: "PES-CSE-5-CN-2",
-        Thumbnail:
-            "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-2.png",
-        Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-CSE-5-CN-2.zip",
-        Mentor: "611d49b244ee680018edc1f1",
-    });
-    Video.create({
-        CBS: "PES-CSE-5",
-        Subject: "Operating System",
-        SubShort: "OS",
-        Chapter: 1,
-        VName: "PES-CSE-5-OS-1",
-        Thumbnail:
-            "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
-        Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-CSE-5-OS-1.pdf",
-        Mentor: "611d49b244ee680018edc1f0",
-    });
-    Video.create({
-        CBS: "PES-CSE-5",
-        Subject: "Operating System",
-        SubShort: "OS",
-        Chapter: 2,
-        VName: "PES-CSE-5-OS-2",
-        Thumbnail:
-            "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-2.png",
-        Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-CSE-5-OS-2.pdf",
-        Mentor: "611d49b244ee680018edc1f9",
-    });
-    Video.create({
-        CBS: "PES-CSE-5",
-        Subject: "Operating System",
-        SubShort: "OS",
-        Chapter: 3,
-        VName: "PES-CSE-5-OS-3",
-        Thumbnail:
-            "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-3.png",
-        Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-CSE-5-OS-3.pdf",
-        Mentor: "611d49b244ee680018edc1f9",
-    });
-    Video.create({
-        CBS: "PES-CSE-5",
-        Subject: "Machine Intelligence",
-        SubShort: "MI",
-        Chapter: 1,
-        VName: "PES-CSE-5-MI-1",
-        Thumbnail:
-            "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
-        Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-CSE-5-MI-1.pdf",
-        Mentor: "611d49b244ee680018edc1f2",
-    });
-    Video.create({
-        CBS: "PES-CSE-5",
-        Subject: "Machine Intelligence",
-        SubShort: "MI",
-        Chapter: 2,
-        VName: "PES-CSE-5-MI-2",
-        Thumbnail:
-            "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-2.png",
-        Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-CSE-5-MI-2.pdf",
-        Mentor: "611d49b244ee680018edc1fa",
-    });
-    Video.create({
-        CBS: "PES-ECE-5",
-        Subject: "Digital Image Processing",
-        SubShort: "DIP",
-        Chapter: 1,
-        VName: "PES-ECE-5-DIP-1",
-        Thumbnail:
-            "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
-        Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-ECE-5-DIP-1.pdf",
-        Mentor: "611d49b244ee680018edc1ef",
-    });
-    Video.create({
-        CBS: "PES-ECE-5",
-        Subject: "Digital Image Processing",
-        SubShort: "DIP",
-        Chapter: 2,
-        VName: "PES-ECE-5-DIP-2",
-        Thumbnail:
-            "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-2.png",
-        Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-ECE-5-DIP-2.zip",
-        Mentor: "611d49b244ee680018edc1ef",
-    });
-    Video.create({
-        CBS: "PES-ECE-5",
-        Subject: "Communication Engineering",
-        SubShort: "CE",
-        Chapter: 1,
-        VName: "PES-ECE-5-CE-1",
-        Thumbnail:
-            "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
-        Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-ECE-5-CE-1.pdf",
-        Mentor: "611d49b244ee680018edc1f5",
-    });
-    Video.create({
-        CBS: "PES-ECE-5",
-        Subject: "Communication Engineering",
-        SubShort: "CE",
-        Chapter: 2,
-        VName: "PES-ECE-5-CE-2",
-        Thumbnail:
-            "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-2.png",
-        Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-ECE-5-CE-2.pdf",
-        Mentor: "611d49b244ee680018edc1f5",
-    });
-    Video.create({
-        CBS: "PES-ECE-5",
-        Subject: "Computer Organization",
-        SubShort: "CO",
-        Chapter: 1,
-        VName: "PES-ECE-5-CO-1",
-        Thumbnail:
-            "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
-        Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-ECE-5-CO-1.pdf",
-        Mentor: "611d49b244ee680018edc1f4",
-    });
-    Video.create({
-        CBS: "PES-ECE-5",
-        Subject: "Microwave Engineering",
-        SubShort: "ME",
-        Chapter: 1,
-        VName: "PES-ECE-5-ME-1",
-        Thumbnail:
-            "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
-        Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-ECE-5-ME-1.zip",
-        Mentor: "611d49b244ee680018edc1f3",
-    });
-    Video.create({
-        CBS: "PES-ECE-5",
-        Subject: "Microwave Engineering",
-        SubShort: "ME",
-        Chapter: 2,
-        VName: "PES-ECE-5-ME-2",
-        Thumbnail:
-            "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-2.png",
-        Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-ECE-5-ME-2.zip",
-        Mentor: "611d49b244ee680018edc1f3",
-    });
-    Video.create({
-        CBS: "PES-ME-5",
-        Subject: "Design of Machine Elements",
-        SubShort: "DME",
-        Chapter: 1,
-        VName: "PES-ME-5-DME-1",
-        Thumbnail:
-            "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
-        Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-ME-5-DME-1.zip",
-        Mentor: "611d49b244ee680018edc1f7",
-    });
-    Video.create({
-        CBS: "PES-ME-5",
-        Subject: "Design of Machine Elements",
-        SubShort: "DME",
-        Chapter: 2,
-        VName: "PES-ME-5-DME-2",
-        Thumbnail:
-            "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-2.png",
-        Notes: "#",
-        Mentor: "611d49b244ee680018edc1f7",
-    });
-    Video.create({
-        CBS: "PES-ME-5",
-        Subject: "Principles of Energy Conservation",
-        SubShort: "PEC",
-        Chapter: 1,
-        VName: "PES-ME-5-PEC-1",
-        Thumbnail:
-            "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
-        Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-ME-5-PEC-1.pdf",
-        Mentor: "611d49b244ee680018edc1f8",
-    });
-    Video.create({
-        CBS: "PES-ME-5",
-        Subject: "Principles of Energy Conservation",
-        SubShort: "PEC",
-        Chapter: 2,
-        VName: "PES-ME-5-PEC-2",
-        Thumbnail:
-            "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-2.png",
-        Notes: "#",
-        Mentor: "611d49b244ee680018edc1f8",
-    });
     res.redirect("/");
 });
 
@@ -694,6 +496,204 @@ app.listen(process.env.PORT, process.env.IP, function () {
 //     Mentor: "5f6733def90fa90017e93d6c",
 // });
 
+// Video.create({
+//     CBS: "PES-CSE-5",
+//     Subject: "Computer Networks",
+//     SubShort: "CN",
+//     Chapter: 1,
+//     VName: "PES-CSE-5-CN-1",
+//     Thumbnail:
+//         "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
+//     Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-CSE-5-CN-1.zip",
+//     Mentor: "611d49b244ee680018edc1f1",
+// });
+// Video.create({
+//     CBS: "PES-CSE-5",
+//     Subject: "Computer Networks",
+//     SubShort: "CN",
+//     Chapter: 2,
+//     VName: "PES-CSE-5-CN-2",
+//     Thumbnail:
+//         "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-2.png",
+//     Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-CSE-5-CN-2.zip",
+//     Mentor: "611d49b244ee680018edc1f1",
+// });
+// Video.create({
+//     CBS: "PES-CSE-5",
+//     Subject: "Operating System",
+//     SubShort: "OS",
+//     Chapter: 1,
+//     VName: "PES-CSE-5-OS-1",
+//     Thumbnail:
+//         "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
+//     Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-CSE-5-OS-1.pdf",
+//     Mentor: "611d49b244ee680018edc1f0",
+// });
+// Video.create({
+//     CBS: "PES-CSE-5",
+//     Subject: "Operating System",
+//     SubShort: "OS",
+//     Chapter: 2,
+//     VName: "PES-CSE-5-OS-2",
+//     Thumbnail:
+//         "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-2.png",
+//     Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-CSE-5-OS-2.pdf",
+//     Mentor: "611d49b244ee680018edc1f9",
+// });
+// Video.create({
+//     CBS: "PES-CSE-5",
+//     Subject: "Operating System",
+//     SubShort: "OS",
+//     Chapter: 3,
+//     VName: "PES-CSE-5-OS-3",
+//     Thumbnail:
+//         "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-3.png",
+//     Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-CSE-5-OS-3.pdf",
+//     Mentor: "611d49b244ee680018edc1f9",
+// });
+// Video.create({
+//     CBS: "PES-CSE-5",
+//     Subject: "Machine Intelligence",
+//     SubShort: "MI",
+//     Chapter: 1,
+//     VName: "PES-CSE-5-MI-1",
+//     Thumbnail:
+//         "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
+//     Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-CSE-5-MI-1.pdf",
+//     Mentor: "611d49b244ee680018edc1f2",
+// });
+// Video.create({
+//     CBS: "PES-CSE-5",
+//     Subject: "Machine Intelligence",
+//     SubShort: "MI",
+//     Chapter: 2,
+//     VName: "PES-CSE-5-MI-2",
+//     Thumbnail:
+//         "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-2.png",
+//     Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-CSE-5-MI-2.pdf",
+//     Mentor: "611d49b244ee680018edc1fa",
+// });
+// Video.create({
+//     CBS: "PES-ECE-5",
+//     Subject: "Digital Image Processing",
+//     SubShort: "DIP",
+//     Chapter: 1,
+//     VName: "PES-ECE-5-DIP-1",
+//     Thumbnail:
+//         "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
+//     Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-ECE-5-DIP-1.pdf",
+//     Mentor: "611d49b244ee680018edc1ef",
+// });
+// Video.create({
+//     CBS: "PES-ECE-5",
+//     Subject: "Digital Image Processing",
+//     SubShort: "DIP",
+//     Chapter: 2,
+//     VName: "PES-ECE-5-DIP-2",
+//     Thumbnail:
+//         "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-2.png",
+//     Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-ECE-5-DIP-2.zip",
+//     Mentor: "611d49b244ee680018edc1ef",
+// });
+// Video.create({
+//     CBS: "PES-ECE-5",
+//     Subject: "Communication Engineering",
+//     SubShort: "CE",
+//     Chapter: 1,
+//     VName: "PES-ECE-5-CE-1",
+//     Thumbnail:
+//         "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
+//     Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-ECE-5-CE-1.pdf",
+//     Mentor: "611d49b244ee680018edc1f5",
+// });
+// Video.create({
+//     CBS: "PES-ECE-5",
+//     Subject: "Communication Engineering",
+//     SubShort: "CE",
+//     Chapter: 2,
+//     VName: "PES-ECE-5-CE-2",
+//     Thumbnail:
+//         "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-2.png",
+//     Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-ECE-5-CE-2.pdf",
+//     Mentor: "611d49b244ee680018edc1f5",
+// });
+// Video.create({
+//     CBS: "PES-ECE-5",
+//     Subject: "Computer Organization",
+//     SubShort: "CO",
+//     Chapter: 1,
+//     VName: "PES-ECE-5-CO-1",
+//     Thumbnail:
+//         "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
+//     Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-ECE-5-CO-1.pdf",
+//     Mentor: "611d49b244ee680018edc1f4",
+// });
+// Video.create({
+//     CBS: "PES-ECE-5",
+//     Subject: "Microwave Engineering",
+//     SubShort: "ME",
+//     Chapter: 1,
+//     VName: "PES-ECE-5-ME-1",
+//     Thumbnail:
+//         "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
+//     Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-ECE-5-ME-1.zip",
+//     Mentor: "611d49b244ee680018edc1f3",
+// });
+// Video.create({
+//     CBS: "PES-ECE-5",
+//     Subject: "Microwave Engineering",
+//     SubShort: "ME",
+//     Chapter: 2,
+//     VName: "PES-ECE-5-ME-2",
+//     Thumbnail:
+//         "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-2.png",
+//     Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-ECE-5-ME-2.zip",
+//     Mentor: "611d49b244ee680018edc1f3",
+// });
+// Video.create({
+//     CBS: "PES-ME-5",
+//     Subject: "Design of Machine Elements",
+//     SubShort: "DME",
+//     Chapter: 1,
+//     VName: "PES-ME-5-DME-1",
+//     Thumbnail:
+//         "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
+//     Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-ME-5-DME-1.zip",
+//     Mentor: "611d49b244ee680018edc1f7",
+// });
+// Video.create({
+//     CBS: "PES-ME-5",
+//     Subject: "Design of Machine Elements",
+//     SubShort: "DME",
+//     Chapter: 2,
+//     VName: "PES-ME-5-DME-2",
+//     Thumbnail:
+//         "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-2.png",
+//     Notes: "#",
+//     Mentor: "611d49b244ee680018edc1f7",
+// });
+// Video.create({
+//     CBS: "PES-ME-5",
+//     Subject: "Principles of Energy Conservation",
+//     SubShort: "PEC",
+//     Chapter: 1,
+//     VName: "PES-ME-5-PEC-1",
+//     Thumbnail:
+//         "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-1.png",
+//     Notes: "https://swiftprep-main-notes.s3.ap-south-1.amazonaws.com/PES-ME-5-PEC-1.pdf",
+//     Mentor: "611d49b244ee680018edc1f8",
+// });
+// Video.create({
+//     CBS: "PES-ME-5",
+//     Subject: "Principles of Energy Conservation",
+//     SubShort: "PEC",
+//     Chapter: 2,
+//     VName: "PES-ME-5-PEC-2",
+//     Thumbnail:
+//         "https://swiftprep-main-web-images.s3.ap-south-1.amazonaws.com/unit-2.png",
+//     Notes: "#",
+//     Mentor: "611d49b244ee680018edc1f8",
+// });
 // Video.create({
 //     CBS: "VIT-CSE-5",
 //     Subject: "Data Structures and Algorithms",
