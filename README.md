@@ -4,8 +4,4 @@
 
 ### This is the source code for [SwiftPrep](https://swiftprep.in).
 
-Contributors:
-
-1. Jayanarayanan
-2. Navneeth Gowda
-3. Niket Jain
+Designed and developed by [Jayanarayanan](https://github.com/jayanarayanan).
