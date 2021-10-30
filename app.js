@@ -178,6 +178,10 @@ app.get("/", function (req, res) {
     res.render("index");
 });
 
+app.get("/privacy", function (req, res) {
+    res.render("privacy");
+});
+
 // filter page
 app.get("/filter", function (req, res) {
     res.render("filter");
