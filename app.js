@@ -180,6 +180,7 @@ app.use(function (req, res, next) {
 //homepage
 app.get("/", function (req, res) {
     console.log(process.env.MY_URL);
+    console.log(process.env.MONGO_URL);
     res.render("index");
 });
 
