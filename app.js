@@ -14,12 +14,16 @@ const middleware = require("./middleware");
 const { PassThrough } = require("stream");
 
 const app = express();
+try {
+    mongoose.connect(process.env.MONGO_URL, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useFindAndModify: false,
+    });
+} catch (err) {
+    console.log(err);
+}
 
-mongoose.connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-});
 // mongoose.connect("mongodb://localhost:27017/swiftprep-videos", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 
 app.set("view engine", "ejs");
