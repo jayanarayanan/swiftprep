@@ -15,7 +15,7 @@ const { PassThrough } = require("stream");
 
 const app = express();
 
-mongoose.connect(process.env.DATABASEURL, {
+mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
