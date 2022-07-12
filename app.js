@@ -63,6 +63,28 @@ var mentorSchema = new mongoose.Schema({
 });
 var Mentor = mongoose.model("Mentor", mentorSchema);
 
+var videoSchema = new mongoose.Schema({
+    CBS: String,
+    Subject: String,
+    SubShort: String,
+    Chapter: Number,
+    VName: String,
+    Thumbnail: String,
+    Notes: String,
+    Likes: { type: Number, default: 0 },
+    Mentor: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Mentor",
+    },
+    comments: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Comment",
+        },
+    ],
+});
+var Video = mongoose.model("Video", videoSchema);
+
 var commentSchema = new mongoose.Schema({
     text: String,
     created: { type: Date, default: Date.now },
@@ -93,28 +115,6 @@ var commentSchema = new mongoose.Schema({
     ],
 });
 var Comment = mongoose.model("Comment", commentSchema);
-
-var videoSchema = new mongoose.Schema({
-    CBS: String,
-    Subject: String,
-    SubShort: String,
-    Chapter: Number,
-    VName: String,
-    Thumbnail: String,
-    Notes: String,
-    Likes: { type: Number, default: 0 },
-    Mentor: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Mentor",
-    },
-    comments: [
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "Comment",
-        },
-    ],
-});
-var Video = mongoose.model("Video", videoSchema);
 
 var Reply = {
     text: String,
@@ -152,7 +152,6 @@ passport.use(
             // passport callback function
             User.findOne({ googleID: profile.id }).then((currentUser) => {
                 if (currentUser) {
-                    console.log(profile);
                     console.log("user is : " + currentUser);
                     done(null, currentUser);
                 } else {
