@@ -220,6 +220,7 @@ app.post("/filter", function (req, res) {
                     if (err) {
                         console.log(err);
                     } else {
+                        console.log(subUnique);
                         res.render("list", {
                             videos: foundVideos,
                             subunique: subUnique,
