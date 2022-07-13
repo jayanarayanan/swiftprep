@@ -197,8 +197,7 @@ app.get("/database", function (req, res) {
 
 //listing subjects
 app.post("/filter", function (req, res) {
-    // var cbs = req.body.college + "-" + req.body.branch + "-" + "5";
-    var cbs = "PES-CSE-5";
+    var cbs = req.body.college + "-" + req.body.branch + "-" + "5";
     Video.find({ CBS: cbs }, function (err, foundVideos) {
         if (err) {
             console.log(err);
